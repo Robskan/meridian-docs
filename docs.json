@@ -1,14 +1,17 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "almond",
-  "name": "Product Guide",
-  "description": "Step-by-step guides for every product—platform setup, analytics, and integrations in one place.",
+  "name": "Meridian",
+  "description": "Step-by-step guides, product updates, and more for Meridian.",
   "colors": {
-    "primary": "#166E3F",
-    "light": "#26BD6C",
-    "dark": "#166E3F"
+    "primary": "#5369f5",
+    "light": "#7d8eff",
+    "dark": "#4A55D2"
   },
-  "favicon": "/favicon.ico",
+  "favicon": {
+    "light": "/images/Meridiannewlight.svg",
+    "dark": "/images/Meridiannewdark.svg"
+  },
   "icons": {
     "library": "lucide"
   },
@@ -16,19 +19,26 @@
     "eyebrows": "breadcrumbs"
   },
   "contextual": {
-    "options": ["copy", "view", "assistant", "mcp", "add-mcp"]
+    "options": [
+      "copy",
+      "view",
+      "aistudio",
+      "claude",
+      "chatgpt"
+    ]
   },
   "navigation": {
     "directory": "card",
     "pages": [
-      "home",
+      "welcome",
       "help",
       "discord"
     ]
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/images/Meridiannewlight.svg",
+    "dark": "/images/Meridiannewdark.svg",
+    "href": "https://meridian.surf/dashboard"
   },
   "navbar": {
     "links": [],
@@ -40,8 +50,78 @@
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/yourcompany",
-      "linkedin": "https://linkedin.com/company/yourcompany"
+      "discord": "https://discord.gg/6BEun7GpUt",
+      "github": "https://github.com/Robskan/meridian-docs"
+    },
+    "links": [
+      {
+        "header": "Meridian",
+        "items": [
+          {
+            "label": "Homepage",
+            "href": "https://meridian.surf"
+          },
+          {
+            "label": "Dashboard",
+            "href": "https://meridian.surf/dashboard"
+          }
+        ]
+      },
+      {
+        "header": "Support",
+        "items": [
+          {
+            "label": "Discord server",
+            "href": "https://discord.gg/6BEun7GpUt"
+          },
+          {
+            "label": "Help center",
+            "href": "https://meridian.surf/help"
+          },
+          {
+            "label": "Email us",
+            "href": "mailto:care@meridian.surf"
+          }
+        ]
+      },
+      {
+        "header": "Legal",
+        "items": [
+          {
+            "label": "Legal center",
+            "href": "https://meridian.surf/legal"
+          },
+          {
+            "label": "Terms of Service",
+            "href": "https://meridian.surf/legal/terms"
+          },
+          {
+            "label": "Privacy Policy",
+            "href": "https://meridian.surf/legal/privacy"
+          }
+        ]
+      }
+    ]
+  },
+  "banner": {
+    "content": "Meridian is currently in alpha, so things can and will change, so information provided on this documentation might not be up-to-date.",
+    "dismissible": true
+  },
+  "search": {
+    "prompt": "Search..."
+  },
+  "markdown": {
+    "schema": true
+  },
+  "fonts": {
+    "family": "Geist"
+  },
+  "errors": {
+    "404": {
+      "redirect": true
     }
+  },
+  "variables": {
+    "phase": "Alpha"
   }
 }
