@@ -21,7 +21,9 @@
   "navigation": {
     "directory": "card",
     "pages": [
-      "help"
+      "home",
+      "help",
+      "discord"
     ]
   },
   "logo": {
