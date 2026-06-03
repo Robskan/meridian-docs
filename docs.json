@@ -38,10 +38,15 @@
   "logo": {
     "light": "/images/Meridianlogodark.svg",
     "dark": "/images/Meridianlogowhite.svg",
-    "href": "https://meridian.surf/dashboard"
+    "href": "https://meridian.surf"
   },
   "navbar": {
-    "links": [],
+    "links": [
+      {
+        "href": "https://meridian.surf/dashboard",
+        "label": "Dashboard"
+      }
+    ],
     "primary": {
       "type": "button",
       "label": "Dashboard",
