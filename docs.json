@@ -9,8 +9,8 @@
     "dark": "#4A55D2"
   },
   "favicon": {
-    "light": "/images/Meridiannewlight.svg",
-    "dark": "/images/Meridiannewdark.svg"
+    "light": "/images/Meridianlogowhite.svg",
+    "dark": "/images/Meridianlogodark.svg"
   },
   "icons": {
     "library": "lucide"
@@ -36,8 +36,8 @@
     ]
   },
   "logo": {
-    "light": "/images/Meridiannewlight.svg",
-    "dark": "/images/Meridiannewdark.svg",
+    "light": "/images/Meridianlogowhite.svg",
+    "dark": "/images/Meridianlogodark.svg",
     "href": "https://meridian.surf/dashboard"
   },
   "navbar": {
