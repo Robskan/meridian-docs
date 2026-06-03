@@ -36,8 +36,8 @@
     ]
   },
   "logo": {
-    "light": "/images/Meridianlogowhite.svg",
-    "dark": "/images/Meridianlogodark.svg",
+    "light": "/images/Meridianlogodark.svg",
+    "dark": "/images/Meridianlogowhite.svg",
     "href": "https://meridian.surf/dashboard"
   },
   "navbar": {
