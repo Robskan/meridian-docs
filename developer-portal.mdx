@@ -1,0 +1,153 @@
+---
+title: "Developer portal"
+description: "Register OAuth applications and request Meridian user authorization."
+icon: "code"
+---
+
+The Meridian developer portal is where you register OAuth applications that request access to a Meridian user's account.
+
+[developer.meridian.surf](https://developer.meridian.surf)
+
+Use it to:
+
+- Create and manage OAuth applications
+- Configure redirect URIs and consent-screen metadata
+- Copy client credentials and build authorization URLs
+- Integrate with Meridian's OAuth 2.0 authorization code flow
+
+<Note>
+  This portal is for Meridian OAuth integrations. It is not the [Discord Developer Portal](https://discord.com/developers/applications), which is for Discord bot tokens and application settings.
+</Note>
+
+## Endpoints
+
+| Surface | URL |
+| --- | --- |
+| Developer portal | `https://developer.meridian.surf` |
+| OAuth consent | `https://meridian.surf/auth/consent` |
+| Token | `https://meridian.surf/api/oauth/token` |
+| Userinfo | `https://meridian.surf/api/oauth/userinfo` |
+| Revoke | `https://meridian.surf/api/oauth/revoke` |
+
+Sign in with your Meridian account. If you are not signed in, you are redirected to Meridian auth and returned to the portal afterward.
+
+## Register an application
+
+1. Open the [developer portal](https://developer.meridian.surf) and click **New application**.
+2. Provide:
+   - **Name** (required, max 80 characters)
+   - **Description** (max 400 characters; shown on the consent screen)
+   - **Website URL** (required; valid `https://` URL)
+   - **Redirect URIs** (at least one; see [Redirect URIs](#redirect-uris))
+3. Click **Create application**.
+
+New applications are confidential clients with a client secret. The secret is shown once on the confirmation screen. Copy it before leaving the page.
+
+<Warning>
+  Client secrets are only shown at creation or after rotation. After that, the portal displays a masked value. Store secrets in your own secret manager immediately.
+</Warning>
+
+## Manage an application
+
+Each application has three tabs.
+
+### Credentials
+
+| Field | Notes |
+| --- | --- |
+| **Client id** | Public identifier. Safe to embed in authorization links. |
+| **Client secret** | Required when exchanging codes or refresh tokens at `/api/oauth/token`. |
+
+All applications require a client secret. Public clients are not supported.
+
+### Authorization
+
+The **Authorization URL generator** helps you build and test consent links:
+
+- Pick a registered redirect URI
+- Select scopes
+- Optionally set `state`
+- Optionally enable **Skip consent when already granted** (`consent=skip`)
+
+### Settings
+
+Update name, description, website URL, and redirect URIs. These fields appear on the consent screen.
+
+**Revoke application** permanently disables the app, removes all user authorizations, and invalidates outstanding tokens. Revocation requires confirmation with your pre-set PIN or passkey, if eligible.
+
+## Connected apps (end users)
+
+Meridian users manage authorized apps from their account under **Connected apps**. When a user revokes access, their authorization is deleted and that app's tokens for that user are invalidated.
+
+---
+
+## OAuth 2.0 flow
+
+Meridian supports the **authorization code** grant with optional refresh tokens.
+
+<Steps>
+  <Step title="Redirect the user to consent">
+    Send the user to `https://meridian.surf/auth/consent` with `response_type=code`.
+  </Step>
+  <Step title="User approves">
+    Meridian redirects to your `redirect_uri` with `code` and optional `state`.
+  </Step>
+  <Step title="Exchange the code">
+    `POST` the code to `https://meridian.surf/api/oauth/token` with your client id and secret.
+  </Step>
+  <Step title="Use the access token">
+    Call `https://meridian.surf/api/oauth/userinfo` with `Authorization: Bearer {access_token}`.
+  </Step>
+  <Step title="Refresh (optional)">
+    If you requested `offline_access`, refresh with `grant_type=refresh_token`.
+  </Step>
+</Steps>
+
+---
+
+## Redirect URIs
+
+- At least one redirect URI is required per application.
+- URIs must use `https://`.
+- Authorization requests must match a registered URI **exactly** (path included). Meridian appends query parameters on callback.
+
+<Tip>
+  Register every callback URL your app uses. Meridian does not support wildcard or pattern matching.
+</Tip>
+
+---
+
+## Security
+
+- Store client secrets server-side only. Never ship them in client-side code or mobile apps.
+- Send `state` on every authorization request.
+- Exchange authorization codes immediately. They expire in 5 minutes.
+- Rotate client secrets if you suspect exposure. Rotation invalidates the old secret immediately.
+- Treat access tokens as bearer credentials.
+- Do not log client secrets, authorization codes, or access tokens.
+
+---
+
+## Quick start
+
+<AccordionGroup>
+  <Accordion title="1. Register your app">
+    Sign in at [developer.meridian.surf](http://developer.meridian.surf), create an application, and copy the client id and secret.
+  </Accordion>
+
+  <Accordion title="2. Add redirect URIs">
+    Register every `https://` callback URL your app uses.
+  </Accordion>
+
+  <Accordion title="3. Build the consent link">
+    Use the Authorization tab URL generator, or construct the consent URL manually.
+  </Accordion>
+
+  <Accordion title="4. Handle the callback">
+    Read `code` from the query string. Handle `error=access_denied` and `error=consent_required` for better user experience when an error occurs.
+  </Accordion>
+
+  <Accordion title="5. Exchange and call userinfo">
+    POST to `/api/oauth/token`, then GET `/api/oauth/userinfo` with the access token.
+  </Accordion>
+</AccordionGroup>
