@@ -11,29 +11,33 @@ Changes channel name, topic, or NSFW flag for channels and threads.
 
 
 
-
-
-
-
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
 
-<ParamField path="channel_id" type="channel" required>
-  Target channel, variable, or Create Channel block reference.
-</ParamField>
+### `channel_id`
 
-<ParamField path="new_name" type="string">
-  Updated name.
-</ParamField>
+**Type:** `channel`. Required.
 
-<ParamField path="new_topic" type="string">
-  Updated topic.
-</ParamField>
+Target channel, variable, or Create Channel block reference.
 
-<ParamField path="nsfw" type="boolean">
-  Age-restricted flag.
-</ParamField>
+### `new_name`
+
+**Type:** `string`.
+
+Updated name.
+
+### `new_topic`
+
+**Type:** `string`.
+
+Updated topic.
+
+### `nsfw`
+
+**Type:** `boolean`.
+
+Age-restricted flag.
 
 
 
@@ -43,12 +47,6 @@ Open the block in the builder sidebar to configure these fields.
 
 
 
+## See also
 
-
-## Related blocks
-
-<CardGroup cols={2}>
-  <Card title="Channels" icon="cube" href="/builder/action-blocks/channels">
-    Browse all blocks in the Channels category.
-  </Card>
-</CardGroup>
+- [Channels](/builder/action-blocks/channels) — Browse all blocks in the Channels category.

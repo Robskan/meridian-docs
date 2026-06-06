@@ -11,60 +11,64 @@ Runs chat or image models from providers you configure. The model reply and mode
 
 
 
-
-
-
-
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
 
-<ParamField path="api_key_env" type="string" required>
-  Raw key or Storage variable name (recommended).
-</ParamField>
+### `api_key_env`
 
-<ParamField path="model" type="string" required>
-  Pick from the list or pass a dynamic id via variable.
-</ParamField>
+**Type:** `string`. Required.
 
-<ParamField path="system_prompt" type="string">
-  Instructions that shape tone and behavior.
-</ParamField>
+Raw key or Storage variable name (recommended).
 
-<ParamField path="prompt" type="string" required>
-  User message sent to the model. Variables allowed.
-</ParamField>
+### `model`
 
-<ParamField path="max_tokens" type="number">
-  Response length cap (1 to 8192).
-</ParamField>
+**Type:** `string`. Required.
 
-<ParamField path="temperature" type="number">
-  Optional creativity from 0 (focused) to 2 (varied).
-</ParamField>
+Pick from the list or pass a dynamic id via variable.
 
-<ParamField path="save_response" type="string">
-  Temporary variable for text reply (`{vars.name}`) and model id (`{name.model}`).
-</ParamField>
+### `system_prompt`
+
+**Type:** `string`.
+
+Instructions that shape tone and behavior.
+
+### `prompt`
+
+**Type:** `string`. Required.
+
+User message sent to the model. Variables allowed.
+
+### `max_tokens`
+
+**Type:** `number`.
+
+Response length cap (1 to 8192).
+
+### `temperature`
+
+**Type:** `number`.
+
+Optional creativity from 0 (focused) to 2 (varied).
+
+### `save_response`
+
+**Type:** `string`.
+
+Temporary variable for text reply (`{vars.name}`) and model id (`{name.model}`).
 
 
 
 
 
+## Tips
 
+- Combine with Send a Message to post AI replies in Discord channels.
 
-<Tip>
-  Combine with Send a Message to post AI replies in Discord channels.
-</Tip>
+## Important
 
-<Warning>
-  Gemini image models return JSON with base64 image data. Parse the JSON in later blocks if you need bytes.
-</Warning>
+- Gemini image models return JSON with base64 image data. Parse the JSON in later blocks if you need bytes.
 
-## Related blocks
+## See also
 
-<CardGroup cols={2}>
-  <Card title="API & Third Party" icon="cube" href="/builder/action-blocks/api-and-third-party">
-    Browse all blocks in the API & Third Party category.
-  </Card>
-</CardGroup>
+- [API & Third Party](/builder/action-blocks/api-and-third-party) — Browse all blocks in the API & Third Party category.

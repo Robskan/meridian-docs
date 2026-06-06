@@ -11,33 +11,39 @@ Create a new role in the server.
 
 
 
-
-
-
-
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
 
-<ParamField path="role_name" type="string" required>
-  Display name for the new role.
-</ParamField>
+### `role_name`
 
-<ParamField path="color" type="string">
-  Hex color such as `#5865F2`.
-</ParamField>
+**Type:** `string`. Required.
 
-<ParamField path="hoist" type="boolean">
-  When on, members with this role appear in a separate section in the member list.
-</ParamField>
+Display name for the new role.
 
-<ParamField path="mentionable" type="boolean">
-  When on, anyone can @mention this role.
-</ParamField>
+### `color`
 
-<ParamField path="save_role_id_var" type="string">
-  Optional flow variable name. Stores the new role id as `{vars.name}` for later blocks.
-</ParamField>
+**Type:** `string`.
+
+Hex color such as `#5865F2`.
+
+### `hoist`
+
+**Type:** `boolean`.
+
+When on, members with this role appear in a separate section in the member list.
+
+### `mentionable`
+
+**Type:** `boolean`.
+
+When on, anyone can @mention this role.
+
+### `save_role_id_var`
+
+**Type:** `string`.
+
+Optional flow variable name. Stores the new role id as `{vars.name}` for later blocks.
 
 
 
@@ -47,12 +53,6 @@ Open the block in the builder sidebar to configure these fields.
 
 
 
+## See also
 
-
-## Related blocks
-
-<CardGroup cols={2}>
-  <Card title="Roles" icon="cube" href="/builder/action-blocks/roles">
-    Browse all blocks in the Roles category.
-  </Card>
-</CardGroup>
+- [Roles](/builder/action-blocks/roles) — Browse all blocks in the Roles category.

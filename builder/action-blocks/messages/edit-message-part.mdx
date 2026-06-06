@@ -11,48 +11,44 @@ Surgical edits: change one embed field, content line, or timestamp without resen
 
 
 
-
-
-
-
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
 
-<ParamField path="message_id" type="block-reference" required>
-  Target message from a prior Send a Message block or a snowflake variable.
-</ParamField>
+### `message_id`
 
-<ParamField path="target_part" type="string" required>
-  Which piece to change (content, embed title, footer, image URL, etc.).
-</ParamField>
+**Type:** `block-reference`. Required.
 
-<ParamField path="mode" type="string">
-  Set a new value or clear the part entirely.
+Target message from a prior Send a Message block or a snowflake variable.
 
-Options: `set`, `clear`.
-</ParamField>
+### `target_part`
 
-<ParamField path="new_value" type="string">
-  Replacement text, URL, hex color, or ISO timestamp.
-</ParamField>
+**Type:** `string`. Required.
 
+Which piece to change (content, embed title, footer, image URL, etc.).
 
+### `mode`
 
+**Type:** `string`.
 
+Set a new value or clear the part entirely. Accepted values: `set`, `clear`.
 
+### `new_value`
 
+**Type:** `string`.
 
-<Tip>
-  Use this for counters and status lines instead of editing the entire message payload.
-</Tip>
+Replacement text, URL, hex color, or ISO timestamp.
 
 
 
-## Related blocks
 
-<CardGroup cols={2}>
-  <Card title="Messages" icon="cube" href="/builder/action-blocks/messages">
-    Browse all blocks in the Messages category.
-  </Card>
-</CardGroup>
+
+## Tips
+
+- Use this for counters and status lines instead of editing the entire message payload.
+
+
+
+## See also
+
+- [Messages](/builder/action-blocks/messages) — Browse all blocks in the Messages category.

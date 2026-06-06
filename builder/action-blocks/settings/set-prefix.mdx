@@ -11,27 +11,21 @@ Change the bot command prefix globally or per server.
 
 
 
-
-
-
-
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
 
-<ParamField path="scope" type="string" required>
-  Apply prefix globally or only in the current server.
+### `scope`
 
-Options: `server`, `global`.
-</ParamField>
+**Type:** `string`. Required.
 
-<ParamField path="new_prefix" type="string" required>
-  Character(s) users type before prefix commands (for example `!` or `?`).
-</ParamField>
+Apply prefix globally or only in the current server. Accepted values: `server`, `global`.
 
+### `new_prefix`
 
+**Type:** `string`. Required.
 
-
+Character(s) users type before prefix commands (for example `!` or `?`).
 
 
 
@@ -39,10 +33,8 @@ Options: `server`, `global`.
 
 
 
-## Related blocks
 
-<CardGroup cols={2}>
-  <Card title="Settings" icon="cube" href="/builder/action-blocks/settings">
-    Browse all blocks in the Settings category.
-  </Card>
-</CardGroup>
+
+## See also
+
+- [Settings](/builder/action-blocks/settings) — Browse all blocks in the Settings category.

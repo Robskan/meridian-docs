@@ -11,43 +11,32 @@ Runs string operations (uppercase, replace, split, extract pings, etc.) and save
 
 
 
-
-
-
-
 ## Configuration
 
-<ParamField path="text_input" type="string" required>
-  Source text. Variables allowed.
-</ParamField>
+Open the block in the builder sidebar to configure these fields.
 
-<ParamField path="operation" type="string" required>
-  String method to apply: uppercase, lowercase, trim, replace, split, substring, extract pings, and more.
-</ParamField>
+### `text_input`
 
-<AccordionGroup>
-  <Accordion title="Replace and split">
-    **Replace** needs search and replacement strings. **Split** needs a delimiter and saves an array you can loop with Repeat for Each.
-  </Accordion>
-  <Accordion title="Extract pings">
-    Pulls mention ids into a JSON array. Optionally filter to mentions that would notify based on a Send a Message block's ping rules.
-  </Accordion>
-</AccordionGroup>
+**Type:** `string`. Required.
+
+Source text. Variables allowed.
+
+### `operation`
+
+**Type:** `string`. Required.
+
+String method to apply: uppercase, lowercase, trim, replace, split, substring, extract pings, and more.
 
 
 
+**Replace** needs search and replacement strings. **Split** needs a delimiter and saves an array you can loop with Repeat for Each.
 
-
+**Extract pings** pulls mention ids into a JSON array. Optionally filter to mentions that would notify based on a Send a Message block's ping rules.
 
 
 
 
 
+## See also
 
-## Related blocks
-
-<CardGroup cols={2}>
-  <Card title="Other" icon="cube" href="/builder/action-blocks/other">
-    Browse all blocks in the Other category.
-  </Card>
-</CardGroup>
+- [Other](/builder/action-blocks/other) — Browse all blocks in the Other category.

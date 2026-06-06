@@ -11,42 +11,36 @@ Server mute or unmute a member.
 
 
 
-
-
-
-
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
 
-<ParamField path="action" type="string" required>
-  Server mute state to apply.
+### `action`
 
-Options: `mute`, `unmute`, `toggle`.
-</ParamField>
+**Type:** `string`. Required.
 
-<ParamField path="user_id" type="user" required>
-  Target member. Can include the bot itself.
-</ParamField>
+Server mute state to apply. Accepted values: `mute`, `unmute`, `toggle`.
 
-<ParamField path="reason" type="string">
-  Optional audit log reason.
-</ParamField>
+### `user_id`
 
+**Type:** `user`. Required.
 
+Target member. Can include the bot itself.
 
+### `reason`
 
+**Type:** `string`.
 
-
+Optional audit log reason.
 
 
 
 
 
-## Related blocks
 
-<CardGroup cols={2}>
-  <Card title="Voice" icon="cube" href="/builder/action-blocks/voice">
-    Browse all blocks in the Voice category.
-  </Card>
-</CardGroup>
+
+
+
+## See also
+
+- [Voice](/builder/action-blocks/voice) — Browse all blocks in the Voice category.

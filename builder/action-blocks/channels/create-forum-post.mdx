@@ -11,33 +11,39 @@ Opens a new forum post (thread) in a forum channel with title, body, tags, and s
 
 
 
-
-
-
-
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
 
-<ParamField path="channel_id" type="channel" required>
-  Forum channel.
-</ParamField>
+### `channel_id`
 
-<ParamField path="name" type="string" required>
-  Post title.
-</ParamField>
+**Type:** `channel`. Required.
 
-<ParamField path="content" type="string" required>
-  First message body.
-</ParamField>
+Forum channel.
 
-<ParamField path="applied_tags" type="forum-tags">
-  Tags applied to the post.
-</ParamField>
+### `name`
 
-<ParamField path="save_channel_id_var" type="string">
-  Stores the thread id.
-</ParamField>
+**Type:** `string`. Required.
+
+Post title.
+
+### `content`
+
+**Type:** `string`. Required.
+
+First message body.
+
+### `applied_tags`
+
+**Type:** `forum-tags`.
+
+Tags applied to the post.
+
+### `save_channel_id_var`
+
+**Type:** `string`.
+
+Stores the thread id.
 
 
 
@@ -47,12 +53,6 @@ Open the block in the builder sidebar to configure these fields.
 
 
 
+## See also
 
-
-## Related blocks
-
-<CardGroup cols={2}>
-  <Card title="Channels" icon="cube" href="/builder/action-blocks/channels">
-    Browse all blocks in the Channels category.
-  </Card>
-</CardGroup>
+- [Channels](/builder/action-blocks/channels) — Browse all blocks in the Channels category.

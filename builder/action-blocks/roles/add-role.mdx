@@ -11,40 +11,36 @@ Assign a role to a member.
 
 
 
-
-
-
-
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
 
-<ParamField path="user_id" type="user">
-  Who receives the role. Defaults to the command user, or pick from the server / a variable.
-</ParamField>
+### `user_id`
 
-<ParamField path="role_id" type="role" required>
-  The role to assign. Pick from your server role list.
-</ParamField>
+**Type:** `user`.
 
-<ParamField path="reason" type="string">
-  Optional audit log reason shown in Discord server audit logs.
-</ParamField>
+Who receives the role. Defaults to the command user, or pick from the server / a variable.
 
+### `role_id`
 
+**Type:** `role`. Required.
 
+The role to assign. Pick from your server role list.
 
+### `reason`
 
+**Type:** `string`.
 
-
-
+Optional audit log reason shown in Discord server audit logs.
 
 
 
-## Related blocks
 
-<CardGroup cols={2}>
-  <Card title="Roles" icon="cube" href="/builder/action-blocks/roles">
-    Browse all blocks in the Roles category.
-  </Card>
-</CardGroup>
+
+
+
+
+
+## See also
+
+- [Roles](/builder/action-blocks/roles) — Browse all blocks in the Roles category.

@@ -5,24 +5,16 @@ description: "Marks where a reusable function starts when called from an Execute
 
 Function flows are reusable subgraphs you call from commands, events, or other functions.
 
+This block is placed automatically by the builder. You cannot add it from the block palette.
+
 ## What it does
 
 Marks the entry point of a function flow. Execution jumps here when an **Execute a Function** block calls this function by name.
 
 ## Common uses
 
-<CardGroup cols={2}>
-  <Card title="Shared utilities" icon="toolbox">
-    Centralize logging, permission checks, or formatting.
-  </Card>
-  <Card title="Cleaner canvases" icon="layout">
-    Move repeated sequences out of large command flows.
-  </Card>
-</CardGroup>
-
-<Note>
-  This block is placed automatically by the builder. You cannot add it from the block palette.
-</Note>
+- **Shared utilities** — Centralize logging, permission checks, or formatting.
+- **Cleaner canvases** — Move repeated sequences out of large command flows.
 
 
 
@@ -30,20 +22,12 @@ Marks the entry point of a function flow. Execution jumps here when an **Execute
 
 
 
+## Tips
+
+- Use the hint field to document expected inputs for collaborators.
 
 
 
+## See also
 
-<Tip>
-  Use the hint field to document expected inputs for collaborators.
-</Tip>
-
-
-
-## Related blocks
-
-<CardGroup cols={2}>
-  <Card title="Execute a Function" icon="cube" href="/builder/action-blocks/functions/exec-function">
-    Call this function from another flow.
-  </Card>
-</CardGroup>
+- [Execute a Function](/builder/action-blocks/functions/exec-function) — Call this function from another flow.

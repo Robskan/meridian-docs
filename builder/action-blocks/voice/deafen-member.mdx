@@ -11,42 +11,36 @@ Server deafen or undeafen a member.
 
 
 
-
-
-
-
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
 
-<ParamField path="action" type="string" required>
-  Server deafen state to apply.
+### `action`
 
-Options: `deafen`, `undeafen`, `toggle`.
-</ParamField>
+**Type:** `string`. Required.
 
-<ParamField path="user_id" type="user" required>
-  Target member.
-</ParamField>
+Server deafen state to apply. Accepted values: `deafen`, `undeafen`, `toggle`.
 
-<ParamField path="reason" type="string">
-  Optional audit log reason.
-</ParamField>
+### `user_id`
 
+**Type:** `user`. Required.
 
+Target member.
 
+### `reason`
 
+**Type:** `string`.
 
-
+Optional audit log reason.
 
 
 
 
 
-## Related blocks
 
-<CardGroup cols={2}>
-  <Card title="Voice" icon="cube" href="/builder/action-blocks/voice">
-    Browse all blocks in the Voice category.
-  </Card>
-</CardGroup>
+
+
+
+## See also
+
+- [Voice](/builder/action-blocks/voice) — Browse all blocks in the Voice category.

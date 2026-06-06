@@ -11,33 +11,39 @@ Modify role name, color, hoist, or mentionable settings.
 
 
 
-
-
-
-
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
 
-<ParamField path="role_id" type="role" required>
-  Role to modify.
-</ParamField>
+### `role_id`
 
-<ParamField path="new_name" type="string">
-  Leave blank to keep the current name.
-</ParamField>
+**Type:** `role`. Required.
 
-<ParamField path="new_color" type="string">
-  Hex color. Leave blank to keep the current color.
-</ParamField>
+Role to modify.
 
-<ParamField path="hoist" type="boolean">
-  Display separately in the member list.
-</ParamField>
+### `new_name`
 
-<ParamField path="mentionable" type="boolean">
-  Allow @mentions for this role.
-</ParamField>
+**Type:** `string`.
+
+Leave blank to keep the current name.
+
+### `new_color`
+
+**Type:** `string`.
+
+Hex color. Leave blank to keep the current color.
+
+### `hoist`
+
+**Type:** `boolean`.
+
+Display separately in the member list.
+
+### `mentionable`
+
+**Type:** `boolean`.
+
+Allow @mentions for this role.
 
 
 
@@ -47,12 +53,6 @@ Open the block in the builder sidebar to configure these fields.
 
 
 
+## See also
 
-
-## Related blocks
-
-<CardGroup cols={2}>
-  <Card title="Roles" icon="cube" href="/builder/action-blocks/roles">
-    Browse all blocks in the Roles category.
-  </Card>
-</CardGroup>
+- [Roles](/builder/action-blocks/roles) — Browse all blocks in the Roles category.

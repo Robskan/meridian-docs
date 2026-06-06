@@ -11,25 +11,27 @@ Deletes one or more messages by snowflake id, variable, or reference to a Send a
 
 
 
-
-
-
-
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
 
-<ParamField path="channel_id" type="channel">
-  Optional when message ids reference a Send a Message block from this flow.
-</ParamField>
+### `channel_id`
 
-<ParamField path="message_ids" type="block-reference" required>
-  Snowflakes, variables, or canvas block picks. Separate multiple ids with commas or spaces.
-</ParamField>
+**Type:** `channel`.
 
-<ParamField path="reason" type="string">
-  Audit log reason.
-</ParamField>
+Optional when message ids reference a Send a Message block from this flow.
+
+### `message_ids`
+
+**Type:** `block-reference`. Required.
+
+Snowflakes, variables, or canvas block picks. Separate multiple ids with commas or spaces.
+
+### `reason`
+
+**Type:** `string`.
+
+Audit log reason.
 
 
 
@@ -37,16 +39,10 @@ Open the block in the builder sidebar to configure these fields.
 
 
 
+## Important
 
+- Bulk delete only works on messages younger than 14 days in most cases.
 
-<Warning>
-  Bulk delete only works on messages younger than 14 days in most cases.
-</Warning>
+## See also
 
-## Related blocks
-
-<CardGroup cols={2}>
-  <Card title="Messages" icon="cube" href="/builder/action-blocks/messages">
-    Browse all blocks in the Messages category.
-  </Card>
-</CardGroup>
+- [Messages](/builder/action-blocks/messages) — Browse all blocks in the Messages category.

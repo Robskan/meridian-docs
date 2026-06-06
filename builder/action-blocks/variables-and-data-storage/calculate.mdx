@@ -11,46 +11,42 @@ Perform math operations and save the result to a variable.
 
 
 
-
-
-
-
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
 
-<ParamField path="operation" type="string" required>
-  Math operation to run.
+### `operation`
 
-Options: `add`, `sub`, `mul`, `div`.
-</ParamField>
+**Type:** `string`. Required.
 
-<ParamField path="value_1" type="string" required>
-  First operand. Numbers or variables.
-</ParamField>
+Math operation to run. Accepted values: `add`, `sub`, `mul`, `div`.
 
-<ParamField path="value_2" type="string" required>
-  Second operand.
-</ParamField>
+### `value_1`
 
-<ParamField path="save_var" type="string" required>
-  Flow variable that stores the result as `{vars.name}`.
-</ParamField>
+**Type:** `string`. Required.
 
+First operand. Numbers or variables.
 
+### `value_2`
 
+**Type:** `string`. Required.
 
+Second operand.
 
+### `save_var`
 
+**Type:** `string`. Required.
 
-
+Flow variable that stores the result as `{vars.name}`.
 
 
 
-## Related blocks
 
-<CardGroup cols={2}>
-  <Card title="Variables & Data storage" icon="cube" href="/builder/action-blocks/variables-and-data-storage">
-    Browse all blocks in the Variables & Data storage category.
-  </Card>
-</CardGroup>
+
+
+
+
+
+## See also
+
+- [Variables & Data storage](/builder/action-blocks/variables-and-data-storage) — Browse all blocks in the Variables & Data storage category.
