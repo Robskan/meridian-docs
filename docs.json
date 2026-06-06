@@ -30,183 +30,411 @@
   "navigation": {
     "directory": "card",
     "pages": [
-      "welcome",
-      "help",
-      "discord",
+      { "page": "welcome", "icon": "hand" },
+      { "page": "help", "icon": "circle-help" },
+      { "page": "discord", "icon": "messages-square" },
       {
         "group": "Builder",
         "icon": "wrench",
         "pages": [
-          "builder/action-blocks/overview.mdx",
+          {
+            "page": "builder/action-blocks/overview.mdx",
+            "icon": "cubes"
+          },
           {
             "group": "Command flow",
             "icon": "terminal",
             "pages": [
-              "builder/action-blocks/command-flow.mdx",
-              "builder/action-blocks/command-flow/command-start.mdx",
-              "builder/action-blocks/command-flow/command-error-handler.mdx",
-              "builder/action-blocks/command-flow/command-option.mdx"
+              {
+                "page": "builder/action-blocks/command-flow.mdx",
+                "icon": "terminal"
+              },
+              {
+                "page": "builder/action-blocks/command-flow/command-start.mdx",
+                "icon": "zap"
+              },
+              {
+                "page": "builder/action-blocks/command-flow/command-error-handler.mdx",
+                "icon": "alert-triangle"
+              },
+              {
+                "page": "builder/action-blocks/command-flow/command-option.mdx",
+                "icon": "list"
+              }
             ]
           },
           {
             "group": "Event flow",
             "icon": "bolt",
             "pages": [
-              "builder/action-blocks/event-flow.mdx",
-              "builder/action-blocks/event-flow/event-start.mdx"
+              {
+                "page": "builder/action-blocks/event-flow.mdx",
+                "icon": "bolt"
+              },
+              {
+                "page": "builder/action-blocks/event-flow/event-start.mdx",
+                "icon": "radio"
+              }
             ]
           },
           {
             "group": "Function flow",
             "icon": "function",
             "pages": [
-              "builder/action-blocks/function-flow.mdx",
-              "builder/action-blocks/function-flow/function-start.mdx"
+              {
+                "page": "builder/action-blocks/function-flow.mdx",
+                "icon": "function"
+              },
+              {
+                "page": "builder/action-blocks/function-flow/function-start.mdx",
+                "icon": "function-square"
+              }
             ]
           },
           {
             "group": "Messages",
             "icon": "message",
             "pages": [
-              "builder/action-blocks/messages.mdx",
-              "builder/action-blocks/messages/send-message.mdx",
-              "builder/action-blocks/messages/send-form.mdx",
-              "builder/action-blocks/messages/delete-message.mdx",
-              "builder/action-blocks/messages/edit-message-part.mdx",
-              "builder/action-blocks/messages/pin-message.mdx",
-              "builder/action-blocks/messages/reaction-message.mdx",
-              "builder/action-blocks/messages/forward-message.mdx"
+              {
+                "page": "builder/action-blocks/messages.mdx",
+                "icon": "message"
+              },
+              {
+                "page": "builder/action-blocks/messages/send-message.mdx",
+                "icon": "send"
+              },
+              {
+                "page": "builder/action-blocks/messages/send-form.mdx",
+                "icon": "form-input"
+              },
+              {
+                "page": "builder/action-blocks/messages/delete-message.mdx",
+                "icon": "message-square-x"
+              },
+              {
+                "page": "builder/action-blocks/messages/edit-message-part.mdx",
+                "icon": "pencil"
+              },
+              {
+                "page": "builder/action-blocks/messages/pin-message.mdx",
+                "icon": "pin"
+              },
+              {
+                "page": "builder/action-blocks/messages/reaction-message.mdx",
+                "icon": "smile-plus"
+              },
+              {
+                "page": "builder/action-blocks/messages/forward-message.mdx",
+                "icon": "forward"
+              }
             ]
           },
           {
             "group": "API & Third Party",
             "icon": "globe",
             "pages": [
-              "builder/action-blocks/api-and-third-party.mdx",
-              "builder/action-blocks/api-and-third-party/api-request.mdx",
-              "builder/action-blocks/api-and-third-party/ask-ai.mdx"
+              {
+                "page": "builder/action-blocks/api-and-third-party.mdx",
+                "icon": "globe"
+              },
+              {
+                "page": "builder/action-blocks/api-and-third-party/api-request.mdx",
+                "icon": "globe"
+              },
+              {
+                "page": "builder/action-blocks/api-and-third-party/ask-ai.mdx",
+                "icon": "sparkles"
+              }
             ]
           },
           {
             "group": "Loops",
             "icon": "rotate",
             "pages": [
-              "builder/action-blocks/loops.mdx",
-              "builder/action-blocks/loops/run-loop.mdx",
-              "builder/action-blocks/loops/run-loop-each.mdx",
-              "builder/action-blocks/loops/loop-after.mdx",
-              "builder/action-blocks/loops/break-loop.mdx"
+              {
+                "page": "builder/action-blocks/loops.mdx",
+                "icon": "rotate"
+              },
+              {
+                "page": "builder/action-blocks/loops/run-loop.mdx",
+                "icon": "repeat"
+              },
+              {
+                "page": "builder/action-blocks/loops/run-loop-each.mdx",
+                "icon": "list-ordered"
+              },
+              {
+                "page": "builder/action-blocks/loops/loop-after.mdx",
+                "icon": "corner-down-right"
+              },
+              {
+                "page": "builder/action-blocks/loops/break-loop.mdx",
+                "icon": "octagon-x"
+              }
             ]
           },
           {
             "group": "Logic",
             "icon": "code-branch",
             "pages": [
-              "builder/action-blocks/logic.mdx",
-              "builder/action-blocks/logic/if-statement.mdx",
-              "builder/action-blocks/logic/if-branch.mdx"
+              {
+                "page": "builder/action-blocks/logic.mdx",
+                "icon": "code-branch"
+              },
+              {
+                "page": "builder/action-blocks/logic/if-statement.mdx",
+                "icon": "git-branch"
+              },
+              {
+                "page": "builder/action-blocks/logic/if-branch.mdx",
+                "icon": "split"
+              }
             ]
           },
           {
             "group": "Roles",
             "icon": "user-tag",
             "pages": [
-              "builder/action-blocks/roles.mdx",
-              "builder/action-blocks/roles/add-role.mdx",
-              "builder/action-blocks/roles/remove-role.mdx",
-              "builder/action-blocks/roles/create-role.mdx",
-              "builder/action-blocks/roles/delete-role.mdx",
-              "builder/action-blocks/roles/edit-role.mdx"
+              {
+                "page": "builder/action-blocks/roles.mdx",
+                "icon": "user-tag"
+              },
+              {
+                "page": "builder/action-blocks/roles/add-role.mdx",
+                "icon": "user-plus"
+              },
+              {
+                "page": "builder/action-blocks/roles/remove-role.mdx",
+                "icon": "user-minus"
+              },
+              {
+                "page": "builder/action-blocks/roles/create-role.mdx",
+                "icon": "plus"
+              },
+              {
+                "page": "builder/action-blocks/roles/delete-role.mdx",
+                "icon": "minus"
+              },
+              {
+                "page": "builder/action-blocks/roles/edit-role.mdx",
+                "icon": "user-cog"
+              }
             ]
           },
           {
             "group": "Channels",
             "icon": "hashtag",
             "pages": [
-              "builder/action-blocks/channels.mdx",
-              "builder/action-blocks/channels/create-channel.mdx",
-              "builder/action-blocks/channels/create-forum-post.mdx",
-              "builder/action-blocks/channels/edit-forum-post.mdx",
-              "builder/action-blocks/channels/delete-channel.mdx",
-              "builder/action-blocks/channels/edit-channel.mdx",
-              "builder/action-blocks/channels/create-transcript.mdx"
+              {
+                "page": "builder/action-blocks/channels.mdx",
+                "icon": "hashtag"
+              },
+              {
+                "page": "builder/action-blocks/channels/create-channel.mdx",
+                "icon": "square-plus"
+              },
+              {
+                "page": "builder/action-blocks/channels/create-forum-post.mdx",
+                "icon": "messages-square"
+              },
+              {
+                "page": "builder/action-blocks/channels/edit-forum-post.mdx",
+                "icon": "message-square"
+              },
+              {
+                "page": "builder/action-blocks/channels/delete-channel.mdx",
+                "icon": "trash-2"
+              },
+              {
+                "page": "builder/action-blocks/channels/edit-channel.mdx",
+                "icon": "pencil-line"
+              },
+              {
+                "page": "builder/action-blocks/channels/create-transcript.mdx",
+                "icon": "file-text"
+              }
             ]
           },
           {
             "group": "Voice",
             "icon": "microphone",
             "pages": [
-              "builder/action-blocks/voice.mdx",
-              "builder/action-blocks/voice/leave-vc.mdx",
-              "builder/action-blocks/voice/join-vc.mdx",
-              "builder/action-blocks/voice/mute-member.mdx",
-              "builder/action-blocks/voice/deafen-member.mdx",
-              "builder/action-blocks/voice/set-voice-status.mdx",
-              "builder/action-blocks/voice/move-vc.mdx",
-              "builder/action-blocks/voice/kick-vc.mdx"
+              {
+                "page": "builder/action-blocks/voice.mdx",
+                "icon": "microphone"
+              },
+              {
+                "page": "builder/action-blocks/voice/join-vc.mdx",
+                "icon": "phone"
+              },
+              {
+                "page": "builder/action-blocks/voice/leave-vc.mdx",
+                "icon": "phone-off"
+              },
+              {
+                "page": "builder/action-blocks/voice/move-vc.mdx",
+                "icon": "move"
+              },
+              {
+                "page": "builder/action-blocks/voice/kick-vc.mdx",
+                "icon": "user-x"
+              },
+              {
+                "page": "builder/action-blocks/voice/mute-member.mdx",
+                "icon": "mic-off"
+              },
+              {
+                "page": "builder/action-blocks/voice/deafen-member.mdx",
+                "icon": "volume-x"
+              },
+              {
+                "page": "builder/action-blocks/voice/set-voice-status.mdx",
+                "icon": "mic"
+              }
             ]
           },
           {
             "group": "Variables & Data storage",
             "icon": "database",
             "pages": [
-              "builder/action-blocks/variables-and-data-storage.mdx",
-              "builder/action-blocks/variables-and-data-storage/set-variable.mdx",
-              "builder/action-blocks/variables-and-data-storage/create-var.mdx",
-              "builder/action-blocks/variables-and-data-storage/create-temp-var.mdx",
-              "builder/action-blocks/variables-and-data-storage/delete-temp-var.mdx",
-              "builder/action-blocks/variables-and-data-storage/calculate.mdx",
-              "builder/action-blocks/variables-and-data-storage/delete-var.mdx",
-              "builder/action-blocks/variables-and-data-storage/find-something.mdx"
+              {
+                "page": "builder/action-blocks/variables-and-data-storage.mdx",
+                "icon": "database"
+              },
+              {
+                "page": "builder/action-blocks/variables-and-data-storage/set-variable.mdx",
+                "icon": "pencil"
+              },
+              {
+                "page": "builder/action-blocks/variables-and-data-storage/create-var.mdx",
+                "icon": "square-plus"
+              },
+              {
+                "page": "builder/action-blocks/variables-and-data-storage/create-temp-var.mdx",
+                "icon": "square-dashed"
+              },
+              {
+                "page": "builder/action-blocks/variables-and-data-storage/delete-temp-var.mdx",
+                "icon": "square-minus"
+              },
+              {
+                "page": "builder/action-blocks/variables-and-data-storage/calculate.mdx",
+                "icon": "calculator"
+              },
+              {
+                "page": "builder/action-blocks/variables-and-data-storage/delete-var.mdx",
+                "icon": "square-minus"
+              },
+              {
+                "page": "builder/action-blocks/variables-and-data-storage/find-something.mdx",
+                "icon": "search"
+              }
             ]
           },
           {
             "group": "Users",
             "icon": "users",
             "pages": [
-              "builder/action-blocks/users.mdx",
-              "builder/action-blocks/users/kick-ban.mdx",
-              "builder/action-blocks/users/timeout.mdx",
-              "builder/action-blocks/users/rename-user.mdx",
-              "builder/action-blocks/users/leave-server.mdx"
+              {
+                "page": "builder/action-blocks/users.mdx",
+                "icon": "users"
+              },
+              {
+                "page": "builder/action-blocks/users/kick-ban.mdx",
+                "icon": "user-x"
+              },
+              {
+                "page": "builder/action-blocks/users/timeout.mdx",
+                "icon": "timer"
+              },
+              {
+                "page": "builder/action-blocks/users/rename-user.mdx",
+                "icon": "user-pen"
+              },
+              {
+                "page": "builder/action-blocks/users/leave-server.mdx",
+                "icon": "door-open"
+              }
             ]
           },
           {
             "group": "Functions",
             "icon": "code",
             "pages": [
-              "builder/action-blocks/functions.mdx",
-              "builder/action-blocks/functions/exec-function.mdx"
+              {
+                "page": "builder/action-blocks/functions.mdx",
+                "icon": "code"
+              },
+              {
+                "page": "builder/action-blocks/functions/exec-function.mdx",
+                "icon": "play"
+              }
             ]
           },
           {
             "group": "Other",
             "icon": "ellipsis",
             "pages": [
-              "builder/action-blocks/other.mdx",
-              "builder/action-blocks/other/wait.mdx",
-              "builder/action-blocks/other/wait-for-interaction.mdx",
-              "builder/action-blocks/other/text-functions.mdx",
-              "builder/action-blocks/other/send-log.mdx"
+              {
+                "page": "builder/action-blocks/other.mdx",
+                "icon": "ellipsis"
+              },
+              {
+                "page": "builder/action-blocks/other/wait.mdx",
+                "icon": "hourglass"
+              },
+              {
+                "page": "builder/action-blocks/other/wait-for-interaction.mdx",
+                "icon": "mouse-pointer-click"
+              },
+              {
+                "page": "builder/action-blocks/other/text-functions.mdx",
+                "icon": "type"
+              },
+              {
+                "page": "builder/action-blocks/other/send-log.mdx",
+                "icon": "scroll-text"
+              }
             ]
           },
           {
             "group": "Settings",
             "icon": "gear",
             "pages": [
-              "builder/action-blocks/settings.mdx",
-              "builder/action-blocks/settings/set-prefix.mdx",
-              "builder/action-blocks/settings/set-status.mdx",
-              "builder/action-blocks/settings/change-bot-server-profile.mdx",
-              "builder/action-blocks/settings/restart-bot.mdx"
+              {
+                "page": "builder/action-blocks/settings.mdx",
+                "icon": "gear"
+              },
+              {
+                "page": "builder/action-blocks/settings/set-prefix.mdx",
+                "icon": "at-sign"
+              },
+              {
+                "page": "builder/action-blocks/settings/set-status.mdx",
+                "icon": "circle-user"
+              },
+              {
+                "page": "builder/action-blocks/settings/change-bot-server-profile.mdx",
+                "icon": "user-circle"
+              },
+              {
+                "page": "builder/action-blocks/settings/restart-bot.mdx",
+                "icon": "refresh-cw"
+              }
             ]
           },
           {
             "group": "Developer",
             "icon": "wrench",
             "pages": [
-              "builder/action-blocks/developer.mdx",
-              "builder/action-blocks/developer/post-flow-error-card.mdx"
+              {
+                "page": "builder/action-blocks/developer.mdx",
+                "icon": "wrench"
+              },
+              {
+                "page": "builder/action-blocks/developer/post-flow-error-card.mdx",
+                "icon": "alert-circle"
+              }
             ]
           }
         ]
@@ -215,7 +443,7 @@
         "group": "Authenticate with Meridian",
         "icon": "lock",
         "pages": [
-          "developer-portal",
+          { "page": "developer-portal", "icon": "code" },
           {
             "group": "API reference",
             "icon": "globe",
