@@ -1,0 +1,37 @@
+---
+title: "Mute or Unmute"
+description: "Server mute or unmute a member."
+icon: "mic-off"
+---
+
+The **Mute or Unmute** block lives in the **Voice** palette category. Server mute or unmute a member.
+
+## What it does
+
+Server mute or unmute a member.
+
+## Configuration
+
+Open the block in the builder sidebar to configure these fields.
+
+### `action`
+
+**Type:** `string`. Required.
+
+Server mute state to apply. Accepted values: `mute`, `unmute`, `toggle`.
+
+### `user_id`
+
+**Type:** `user`. Required.
+
+Target member. Can include the bot itself.
+
+### `reason`
+
+**Type:** `string`.
+
+Optional audit log reason.
+
+## See also
+
+- [Voice](/builder/action-blocks/voice) — Browse all blocks in the Voice category.

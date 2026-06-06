@@ -1,0 +1,86 @@
+---
+title: "Send a Message"
+description: "Send a text message, embed, or Components v2 layout to a channel or user."
+icon: "send"
+---
+
+Send a Message is the primary way to post content in Discord from a flow.
+
+## What it does
+
+Composes text, embeds, buttons, and select menus in the visual message editor, then sends, DMs, or edits a message. Supports Components v2 layouts with ping rules and private replies.
+
+## Common uses
+
+- **Replies** — Reply in the current channel or ephemerally to the command user.
+- **Announcements** — Post to a specific channel by id or picker.
+- **Live dashboards** — Send once, save the message id, then Edit Part of a Message to update stats.
+
+## Configuration
+
+Use **Edit content** in the sidebar to build the message. Then choose whether to send, DM, or edit an existing message.
+
+### `edit_content`
+
+**Type:** `button`. Required.
+
+Opens the visual message editor for text, embeds, buttons, and select menus. Button and menu clicks can branch to other blocks on the canvas.
+
+### `action`
+
+**Type:** `string`. Required.
+
+Choose Send, Direct Message, or Edit. Accepted values: `send`, `dm`, `edit`.
+
+### `destination`
+
+**Type:** `string`.
+
+For Send: current channel/reply or a specific channel.
+
+### `channel_id`
+
+**Type:** `channel`.
+
+Required when destination is a specific channel.
+
+### `is_reply`
+
+**Type:** `boolean`.
+
+Reply to the triggering message when sending in the current channel.
+
+### `ephemeral`
+
+**Type:** `boolean`.
+
+Only visible to the command user. Works when replying to a slash command interaction.
+
+### `save_message_id_var`
+
+**Type:** `string`.
+
+Flow variable name for the sent message snowflake (`{vars.name}`). Save this when you plan to edit or delete the message later.
+
+### `user_id`
+
+**Type:** `user`.
+
+For Direct Message: recipient. Defaults to the command user, or pick from the server / variables.
+
+### `message_id`
+
+**Type:** `block-reference`.
+
+For Edit: pick a Send a Message block from this flow or provide a message id variable.
+
+## Example workflow
+
+1. **Edit content** — Build the message layout and any interactive components.
+2. **Choose action** — Send publicly, DM the user, or edit an earlier message.
+3. **Save message id** — Optional. Store the id if later blocks delete, pin, or partially edit the message.
+
+## See also
+
+- [Edit Part of a Message](/builder/action-blocks/messages/edit-message-part) — Update one field without rebuilding the whole message.
+- [Wait for interaction](/builder/action-blocks/other/wait-for-interaction) — Pause until someone clicks a button on this message.

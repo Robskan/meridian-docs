@@ -1,0 +1,49 @@
+---
+title: "Create a Role"
+description: "Create a new role in the server."
+icon: "plus"
+---
+
+The **Create a Role** block lives in the **Roles** palette category. Create a new role in the server.
+
+## What it does
+
+Create a new role in the server.
+
+## Configuration
+
+Open the block in the builder sidebar to configure these fields.
+
+### `role_name`
+
+**Type:** `string`. Required.
+
+Display name for the new role.
+
+### `color`
+
+**Type:** `string`.
+
+Hex color such as `#5865F2`.
+
+### `hoist`
+
+**Type:** `boolean`.
+
+When on, members with this role appear in a separate section in the member list.
+
+### `mentionable`
+
+**Type:** `boolean`.
+
+When on, anyone can @mention this role.
+
+### `save_role_id_var`
+
+**Type:** `string`.
+
+Optional flow variable name. Stores the new role id as `{vars.name}` for later blocks.
+
+## See also
+
+- [Roles](/builder/action-blocks/roles) — Browse all blocks in the Roles category.

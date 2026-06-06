@@ -1,0 +1,71 @@
+---
+title: "Event"
+description: "Starts when Discord emits this client event or when a webhook hits your bot."
+icon: "radio"
+---
+
+Event flows react to Discord activity or inbound webhooks instead of user commands.
+
+This block is placed automatically by the builder. You cannot add it from the block palette.
+
+## What it does
+
+Subscribes to a discord.js client event (such as `messageCreate` or `guildMemberAdd`) or exposes an HTTP webhook path. When the event fires, blocks connected below run in order.
+
+## Common uses
+
+- **Welcome messages** — Run on `guildMemberAdd` to greet new members.
+- **Auto moderation** — React to `messageCreate` with filters and actions.
+- **External triggers** — Start flows from outside Discord via webhook POST requests.
+
+## Configuration
+
+Open the block in the builder sidebar to configure these fields.
+
+### `friendly_name`
+
+**Type:** `string`. Required.
+
+Dashboard title for this event flow.
+
+### `friendly_description`
+
+**Type:** `string`.
+
+Optional notes shown on the card and in your event list.
+
+### `client_event`
+
+**Type:** `string`. Required.
+
+discord.js event name (for example `messageCreate`, `voiceStateUpdate`).
+
+### `trigger_on_users`
+
+**Type:** `boolean`.
+
+Allow human accounts to trigger the flow.
+
+### `trigger_on_bots`
+
+**Type:** `boolean`.
+
+Allow other bot accounts to trigger the flow.
+
+### `trigger_on_webhooks`
+
+**Type:** `boolean`.
+
+Allow channel webhook posts to trigger the flow.
+
+## Tips
+
+- For webhook events, configure path suffix and optional `mrdn-key` authentication in the block sidebar.
+
+## Important
+
+- This bot's own messages never trigger event flows, even when author filters are broad.
+
+## See also
+
+- [Event flow](/builder/action-blocks/event-flow) — Browse all blocks in the Event flow category.

@@ -1,0 +1,43 @@
+---
+title: "Post flow error card"
+description: "Trigger runtime flow errors to test error handling. Meridian team only."
+icon: "alert-circle"
+---
+
+The **Post flow error card** block lives in the **Developer** palette category. Trigger runtime flow errors to test error handling. Meridian team only.
+
+This block is only visible to Meridian team accounts in the builder palette.
+
+## What it does
+
+Intentionally triggers a runtime flow error card in Discord to test error handling UX.
+
+## Configuration
+
+Open the block in the builder sidebar to configure these fields.
+
+### `highlight_target`
+
+**Type:** `block-reference`. Required.
+
+Block highlighted when users click Highlight in Discord.
+
+### `error_detail`
+
+**Type:** `string`.
+
+Code-style error body text.
+
+### `destination`
+
+**Type:** `string`.
+
+Where the error card appears. Accepted values: `current`, `channel`.
+
+## Important
+
+- Meridian team palette only. Do not use in production user flows.
+
+## See also
+
+- [Developer](/builder/action-blocks/developer) — Browse all blocks in the Developer category.

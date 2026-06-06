@@ -1,0 +1,81 @@
+---
+title: "Command"
+description: "Starts when someone runs this slash command, prefix command, or context menu action."
+icon: "zap"
+---
+
+Every **command flow** begins with a Command block. It defines how users invoke the flow in Discord and what metadata Discord shows in autocomplete.
+
+This block is placed automatically by the builder. You cannot add it from the block palette.
+
+## What it does
+
+Listens for a slash command, prefix command, or context menu action and starts the connected blocks. The Command block is the root of the canvas: you cannot delete it or add another from the palette.
+
+## Common uses
+
+- **Slash commands** — Register `/ping` style commands with Discord descriptions and options.
+- **Prefix commands** — Run flows when someone types `!help` or your configured prefix.
+- **Context menus** — Right-click a user or message to run a flow from the apps menu.
+
+## Configuration
+
+Open the block in the builder sidebar to configure these fields.
+
+### `trigger_type`
+
+**Type:** `string`. Required.
+
+How users start this flow. Accepted values: `slash`, `prefix`, `user`, `message`.
+
+### `friendly_name`
+
+**Type:** `string`. Required.
+
+Title on the canvas card and in your command list.
+
+### `discord_name`
+
+**Type:** `string`.
+
+Slash command name Discord registers. Lowercase, no spaces.
+
+### `discord_description`
+
+**Type:** `string`.
+
+Shown in Discord slash command autocomplete.
+
+### `prefix_command_name`
+
+**Type:** `string`.
+
+Word after your prefix (for example `ping` in `!ping`).
+
+### `prefix_command_aliases`
+
+**Type:** `list`.
+
+Up to five alternate prefix names that run the same flow.
+
+### `safe_test_mode`
+
+**Type:** `boolean`.
+
+Skips destructive steps (moderation, API calls, Ask AI, persisted variables) and posts a short notice instead.
+
+## Example workflow
+
+1. **Pick a trigger type** — Slash is the default for new commands. Use prefix if your server relies on a text prefix.
+2. **Name the command** — Set a friendly name for your dashboard, then the Discord-facing name and description.
+3. **Add options (slash only)** — Attach Command option blocks under the Command node for typed parameters.
+4. **Connect actions** — Draw a connection from the bottom handle to your first action block.
+
+## Tips
+
+- Enable **Test mode** while building flows that touch roles, channels, or external APIs so you can run them safely in a live server.
+
+## See also
+
+- [Command option](/builder/action-blocks/command-flow/command-option) — Add slash command parameters.
+- [Error handler](/builder/action-blocks/command-flow/command-error-handler) — Customize what happens when this command fails.

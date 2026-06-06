@@ -1,0 +1,43 @@
+---
+title: "Kick or Ban a member"
+description: "Remove a member from the server by kick or ban."
+icon: "user-x"
+---
+
+The **Kick or Ban a member** block lives in the **Users** palette category. Remove a member from the server by kick or ban.
+
+## What it does
+
+Remove a member from the server by kick or ban.
+
+## Configuration
+
+Open the block in the builder sidebar to configure these fields.
+
+### `action`
+
+**Type:** `string`. Required.
+
+Kick removes the member; ban prevents them from rejoining. Accepted values: `kick`, `ban`.
+
+### `user_id`
+
+**Type:** `user`. Required.
+
+Member to remove.
+
+### `reason`
+
+**Type:** `string`.
+
+Shown in audit logs.
+
+### `delete_msgs`
+
+**Type:** `number`.
+
+For bans only. Delete recent messages from this user (0 to 7 days).
+
+## See also
+
+- [Users](/builder/action-blocks/users) — Browse all blocks in the Users category.

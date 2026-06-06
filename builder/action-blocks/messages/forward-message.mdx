@@ -1,0 +1,43 @@
+---
+title: "Forward or Publish a Message"
+description: "Forward a message to another channel or publish an announcement."
+icon: "forward"
+---
+
+The **Forward or Publish a Message** block lives in the **Messages** palette category. Forward a message to another channel or publish an announcement.
+
+## What it does
+
+Forwards a message to another channel or publishes an announcement to follower channels.
+
+## Configuration
+
+Open the block in the builder sidebar to configure these fields.
+
+### `action`
+
+**Type:** `string`. Required.
+
+Accepted values: `forward`, `publish`.
+
+### `source_channel_id`
+
+**Type:** `channel`. Required.
+
+Channel containing the source message.
+
+### `message_id`
+
+**Type:** `string`. Required.
+
+Snowflake of the message to forward or publish.
+
+### `target_channel_id`
+
+**Type:** `channel`.
+
+Required for forward action.
+
+## See also
+
+- [Messages](/builder/action-blocks/messages) — Browse all blocks in the Messages category.

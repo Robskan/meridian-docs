@@ -1,0 +1,49 @@
+---
+title: "Create a Channel"
+description: "Create a text, voice, category, or thread channel."
+icon: "square-plus"
+---
+
+The **Create a Channel** block lives in the **Channels** palette category. Create a text, voice, category, or thread channel.
+
+## What it does
+
+Creates a text channel, voice channel, category, or thread in the current server.
+
+## Configuration
+
+Open the block in the builder sidebar to configure these fields.
+
+### `type`
+
+**Type:** `string`. Required.
+
+Accepted values: `text`, `voice`, `category`, `thread`.
+
+### `channel_name`
+
+**Type:** `string`. Required.
+
+Name Discord displays.
+
+### `parent_id`
+
+**Type:** `channel`.
+
+Parent category or channel for organization.
+
+### `topic`
+
+**Type:** `string`.
+
+Channel topic (text channels).
+
+### `save_channel_id_var`
+
+**Type:** `string`.
+
+Flow variable for the new channel id.
+
+## See also
+
+- [Channels](/builder/action-blocks/channels) — Browse all blocks in the Channels category.

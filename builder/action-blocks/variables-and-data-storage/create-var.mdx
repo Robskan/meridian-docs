@@ -1,0 +1,54 @@
+---
+title: "Create a Variable"
+description: "Create persistent Storage data that survives between runs."
+icon: "square-plus"
+---
+
+The **Create a Variable** block lives in the **Variables & Data storage** palette category. Create persistent Storage data that survives between runs.
+
+## What it does
+
+Defines a new Storage variable with type, scope, and default value that persists across flow runs.
+
+## Configuration
+
+Open the block in the builder sidebar to configure these fields.
+
+### `var_name`
+
+**Type:** `string`. Required.
+
+Letters, numbers, underscores. No dots.
+
+### `var_type`
+
+**Type:** `string`. Required.
+
+Accepted values: `text`, `number`, `collection`, `object`.
+
+### `var_partition`
+
+**Type:** `string`.
+
+Global shares one value everywhere; Server keeps separate values per guild. Accepted values: `global`, `per_server`.
+
+### `var_subject`
+
+**Type:** `string`.
+
+Whether each user, channel, or role gets its own value. Accepted values: `none`, `user`, `channel`, `role`.
+
+### `var_value`
+
+**Type:** `string`.
+
+Initial value.
+
+| Scope | Meaning |
+| --- | --- |
+| Global \+ Shared | One value for the entire bot |
+| Server \+ Per user | Each member has their own counter per guild |
+
+## See also
+
+- [Variables & Data storage](/builder/action-blocks/variables-and-data-storage) — Browse all blocks in the Variables & Data storage category.

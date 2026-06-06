@@ -1,0 +1,48 @@
+---
+title: "Repeat"
+description: "Repeat a section of your flow while a condition is true or for a fixed number of times."
+icon: "repeat"
+---
+
+The **Repeat** block lives in the **Loops** palette category. Repeat a section of your flow while a condition is true or for a fixed number of times.
+
+## What it does
+
+Repeats connected blocks inside the loop body until a condition fails or a fixed count is reached.
+
+## Configuration
+
+Open the block in the builder sidebar to configure these fields.
+
+### `repeat_type`
+
+**Type:** `string`. Required.
+
+Accepted values: `while`, `times`.
+
+### `condition`
+
+**Type:** `string`.
+
+Expression evaluated before each iteration for while loops.
+
+### `times`
+
+**Type:** `number`.
+
+Iteration count for fixed loops.
+
+## Loop anatomy
+
+```text
+Repeat
+ ├─ (loop body blocks)
+ └─ After loop → continues here when done
+```
+
+Connect **Break a Loop** inside the body to exit early.
+
+## See also
+
+- [Repeat for Each](/builder/action-blocks/loops/run-loop-each) — Iterate a list variable instead of a condition.
+- [Break a Loop](/builder/action-blocks/loops/break-loop) — Exit the loop immediately.

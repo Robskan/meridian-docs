@@ -1,0 +1,41 @@
+---
+title: "API"
+description: "Make HTTP or third-party API requests from your flow."
+icon: "globe"
+---
+
+The API block sends HTTP requests to external services from your flow.
+
+## What it does
+
+Configure method, URL, headers, query params, and body in the request builder. Responses can be stored in variables for use in later blocks.
+
+## Configuration
+
+Open the block in the builder sidebar to configure these fields.
+
+### `edit_request`
+
+**Type:** `button`. Required.
+
+Open the request builder for method, URL, auth headers, and JSON body.
+
+### `save_response`
+
+**Type:** `string`.
+
+Base variable name. Access nested fields like `{myApi.response.data.id}` and headers like `{myApi.headers.content-type}`.
+
+## Example workflow
+
+1. **Build the request** — Set URL, method, and body. Use variables for dynamic tokens or ids.
+2. **Save the response** — Pick a variable prefix to read status, headers, and JSON body later.
+3. **Branch on status** — Follow with an If statement checking response variables.
+
+## Tips
+
+- Store API keys in Storage variables instead of pasting secrets directly into the request builder.
+
+## See also
+
+- [API & Third Party](/builder/action-blocks/api-and-third-party) — Browse all blocks in the API & Third Party category.

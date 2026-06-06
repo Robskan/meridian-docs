@@ -1,0 +1,37 @@
+---
+title: "Add Role"
+description: "Assign a role to a member."
+icon: "user-plus"
+---
+
+The **Add Role** block lives in the **Roles** palette category. Assign a role to a member.
+
+## What it does
+
+Assign a role to a member.
+
+## Configuration
+
+Open the block in the builder sidebar to configure these fields.
+
+### `user_id`
+
+**Type:** `user`.
+
+Who receives the role. Defaults to the command user, or pick from the server / a variable.
+
+### `role_id`
+
+**Type:** `role`. Required.
+
+The role to assign. Pick from your server role list.
+
+### `reason`
+
+**Type:** `string`.
+
+Optional audit log reason shown in Discord server audit logs.
+
+## See also
+
+- [Roles](/builder/action-blocks/roles) — Browse all blocks in the Roles category.

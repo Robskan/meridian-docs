@@ -1,0 +1,69 @@
+---
+title: "Ask AI"
+description: "Send a prompt to an AI model using your own API key."
+icon: "sparkles"
+---
+
+Ask AI sends a prompt to a supported model using **your own API key** (BYOK). Meridian does not bill for BYOK usage.
+
+## What it does
+
+Runs chat or image models from providers you configure. The model reply and model id can be saved to temporary flow variables for follow-up blocks.
+
+## Configuration
+
+Open the block in the builder sidebar to configure these fields.
+
+### `api_key_env`
+
+**Type:** `string`. Required.
+
+Raw key or Storage variable name (recommended).
+
+### `model`
+
+**Type:** `string`. Required.
+
+Pick from the list or pass a dynamic id via variable.
+
+### `system_prompt`
+
+**Type:** `string`.
+
+Instructions that shape tone and behavior.
+
+### `prompt`
+
+**Type:** `string`. Required.
+
+User message sent to the model. Variables allowed.
+
+### `max_tokens`
+
+**Type:** `number`.
+
+Response length cap (1 to 8192).
+
+### `temperature`
+
+**Type:** `number`.
+
+Optional creativity from 0 (focused) to 2 (varied).
+
+### `save_response`
+
+**Type:** `string`.
+
+Temporary variable for text reply (`{vars.name}`) and model id (`{name.model}`).
+
+## Tips
+
+- Combine with Send a Message to post AI replies in Discord channels.
+
+## Important
+
+- Gemini image models return JSON with base64 image data. Parse the JSON in later blocks if you need bytes.
+
+## See also
+
+- [API & Third Party](/builder/action-blocks/api-and-third-party) — Browse all blocks in the API & Third Party category.

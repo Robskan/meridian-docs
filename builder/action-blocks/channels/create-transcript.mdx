@@ -1,0 +1,47 @@
+---
+title: "Create a Transcript"
+description: "Export channel history to a hosted HTML transcript."
+icon: "file-text"
+---
+
+Create a Transcript exports channel history to a hosted HTML page on Meridian.
+
+## What it does
+
+Collects messages, renders a shareable transcript, and stores URLs (and optional passwords) in flow variables.
+
+## Configuration
+
+Open the block in the builder sidebar to configure these fields.
+
+### `channel_source`
+
+**Type:** `string`. Required.
+
+Accepted values: `current`, `specific`, `variable`, `block`.
+
+### `transcript_name`
+
+**Type:** `string`.
+
+Download filename and page title.
+
+### `output_prefix`
+
+**Type:** `string`.
+
+Variable prefix (`{vars.ticket_log_url}`, etc.).
+
+### `access_mode`
+
+**Type:** `string`.
+
+Accepted values: `public`, `roles`, `password`, `roles_and_password`.
+
+## Tips
+
+- Use role-gated transcripts for ticket logs visible only to staff.
+
+## See also
+
+- [Channels](/builder/action-blocks/channels) — Browse all blocks in the Channels category.

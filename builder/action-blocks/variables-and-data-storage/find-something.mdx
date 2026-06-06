@@ -1,0 +1,43 @@
+---
+title: "Find something"
+description: "Find and cache a user, role, or channel by name, ID, or mention."
+icon: "search"
+---
+
+The **Find something** block lives in the **Variables & Data storage** palette category. Find and cache a user, role, or channel by name, ID, or mention.
+
+## What it does
+
+Searches the server cache for a user, role, or channel by name, id, or mention and stores the result in a variable.
+
+## Configuration
+
+Open the block in the builder sidebar to configure these fields.
+
+### `find_type`
+
+**Type:** `string`. Required.
+
+Accepted values: `user`, `role`, `channel`.
+
+### `query`
+
+**Type:** `string`. Required.
+
+Username, snowflake, @mention, or channel name.
+
+### `fuzzy_search`
+
+**Type:** `boolean`.
+
+Looser matching when exact names are unknown.
+
+### `save_var`
+
+**Type:** `string`. Required.
+
+Variable that receives the found id.
+
+## See also
+
+- [Variables & Data storage](/builder/action-blocks/variables-and-data-storage) — Browse all blocks in the Variables & Data storage category.

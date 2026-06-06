@@ -1,0 +1,47 @@
+---
+title: "Edit Part of a Message"
+description: "Change a single part of a message and leave the rest untouched."
+icon: "pencil"
+---
+
+The **Edit Part of a Message** block lives in the **Messages** palette category. Change a single part of a message and leave the rest untouched.
+
+## What it does
+
+Surgical edits: change one embed field, content line, or timestamp without resending the full message.
+
+## Configuration
+
+Open the block in the builder sidebar to configure these fields.
+
+### `message_id`
+
+**Type:** `block-reference`. Required.
+
+Target message from a prior Send a Message block or a snowflake variable.
+
+### `target_part`
+
+**Type:** `string`. Required.
+
+Which piece to change (content, embed title, footer, image URL, etc.).
+
+### `mode`
+
+**Type:** `string`.
+
+Set a new value or clear the part entirely. Accepted values: `set`, `clear`.
+
+### `new_value`
+
+**Type:** `string`.
+
+Replacement text, URL, hex color, or ISO timestamp.
+
+## Tips
+
+- Use this for counters and status lines instead of editing the entire message payload.
+
+## See also
+
+- [Messages](/builder/action-blocks/messages) — Browse all blocks in the Messages category.
