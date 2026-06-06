@@ -34,14 +34,16 @@
       "help",
       "discord",
       {
-        "group": "OAuth2",
+        "group": "Authenticate with Meridian",
         "pages": [
           "developer-portal",
           {
             "group": "API reference",
-            "openapi": "https://docs-backend.meridian.surf/openapi.json"
+            "openapi": "https://docs-backend.meridian.surf/openapi.json",
+            "icon": "globe"
           }
-        ]
+        ],
+        "icon": "lock"
       }
     ]
   },
