@@ -10,35 +10,27 @@ The **Repeat** block lives in the **Loops** palette category. Repeat a section o
 
 Repeats connected blocks inside the loop body until a condition fails or a fixed count is reached.
 
-
-
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
 
-### `repeat_type`
+<ParamField path="repeat_type" type="string" required>
+  undefined
 
-**Type:** `string`. Required.
+  Options: `while`, `times`.
+</ParamField>
 
- Accepted values: `while`, `times`.
+<ParamField path="condition" type="string">
+  Expression evaluated before each iteration for while loops.
+</ParamField>
 
-### `condition`
-
-**Type:** `string`.
-
-Expression evaluated before each iteration for while loops.
-
-### `times`
-
-**Type:** `number`.
-
-Iteration count for fixed loops.
-
-
+<ParamField path="times" type="number">
+  Iteration count for fixed loops.
+</ParamField>
 
 ## Loop anatomy
 
-```
+```text
 Repeat
  ├─ (loop body blocks)
  └─ After loop → continues here when done
@@ -46,11 +38,14 @@ Repeat
 
 Connect **Break a Loop** inside the body to exit early.
 
+## Related blocks
 
+<CardGroup cols={2}>
+  <Card title="Repeat for Each" icon="cube" href="/builder/action-blocks/loops/run-loop-each">
+    Iterate a list variable instead of a condition.
+  </Card>
 
-
-
-## See also
-
-- [Repeat for Each](/builder/action-blocks/loops/run-loop-each) — Iterate a list variable instead of a condition.
-- [Break a Loop](/builder/action-blocks/loops/break-loop) — Exit the loop immediately.
+  <Card title="Break a Loop" icon="cube" href="/builder/action-blocks/loops/break-loop">
+    Exit the loop immediately.
+  </Card>
+</CardGroup>

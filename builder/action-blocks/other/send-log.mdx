@@ -10,32 +10,24 @@ The **Send a log** block lives in the **Other** palette category. Write debug ou
 
 Write debug output to your bot logs.
 
-
-
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
 
-### `log_level`
+<ParamField path="log_level" type="string">
+  Severity for the log entry.
 
-**Type:** `string`.
+  Options: `info`, `warning`, `error`, `debug`.
+</ParamField>
 
-Severity for the log entry. Accepted values: `info`, `warning`, `error`, `debug`.
+<ParamField path="message" type="string" required>
+  Text written to your bot logs. Variables are supported.
+</ParamField>
 
-### `message`
+## Related blocks
 
-**Type:** `string`. Required.
-
-Text written to your bot logs. Variables are supported.
-
-
-
-
-
-
-
-
-
-## See also
-
-- [Other](/builder/action-blocks/other) — Browse all blocks in the Other category.
+<CardGroup cols={2}>
+  <Card title="Other" icon="cube" href="/builder/action-blocks/other">
+    Browse all blocks in the Other category.
+  </Card>
+</CardGroup>

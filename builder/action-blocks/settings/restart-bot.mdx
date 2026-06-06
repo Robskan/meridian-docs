@@ -10,26 +10,18 @@ The **Restart Bot** block lives in the **Settings** palette category. Restart th
 
 Restart the bot process to clear memory or resolve hanging.
 
-
-
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
 
-### `note`
+<ParamField path="note" type="note">
+  Limited to two restarts per 30 minutes. Excessive restarts may trigger Discord rate limits.
+</ParamField>
 
-**Type:** `note`.
+## Related blocks
 
-Limited to two restarts per 30 minutes. Excessive restarts may trigger Discord rate limits.
-
-
-
-
-
-
-
-
-
-## See also
-
-- [Settings](/builder/action-blocks/settings) — Browse all blocks in the Settings category.
+<CardGroup cols={2}>
+  <Card title="Settings" icon="cube" href="/builder/action-blocks/settings">
+    Browse all blocks in the Settings category.
+  </Card>
+</CardGroup>

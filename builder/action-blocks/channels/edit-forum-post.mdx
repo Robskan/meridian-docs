@@ -10,38 +10,26 @@ The **Edit Forum Post** block lives in the **Channels** palette category. Modify
 
 Updates forum post title, tags, archive state, lock state, and slowmode.
 
-
-
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
 
-### `channel_id`
+<ParamField path="channel_id" type="channel" required>
+  Thread/post to edit.
+</ParamField>
 
-**Type:** `channel`. Required.
+<ParamField path="new_name" type="string">
+  Updated title.
+</ParamField>
 
-Thread/post to edit.
+<ParamField path="applied_tags" type="forum-tags">
+  Set, add, or remove tags.
+</ParamField>
 
-### `new_name`
+## Related blocks
 
-**Type:** `string`.
-
-Updated title.
-
-### `applied_tags`
-
-**Type:** `forum-tags`.
-
-Set, add, or remove tags.
-
-
-
-
-
-
-
-
-
-## See also
-
-- [Channels](/builder/action-blocks/channels) — Browse all blocks in the Channels category.
+<CardGroup cols={2}>
+  <Card title="Channels" icon="cube" href="/builder/action-blocks/channels">
+    Browse all blocks in the Channels category.
+  </Card>
+</CardGroup>

@@ -6,62 +6,62 @@ icon: "alert-triangle"
 
 The Error handler sits beside your Command block and runs when any block in the command flow throws or fails at runtime.
 
-This block is placed automatically by the builder. You cannot add it from the block palette.
-
 ## What it does
 
 Gives you a dedicated branch for custom failure messages, logging, or recovery steps. If you disable it, Meridian shows the built-in flow error card in Discord instead.
 
 ## Common uses
 
-- **Friendly errors** — Send a custom embed explaining what went wrong instead of a generic card.
-- **Staff alerts** — Mirror errors to a Discord webhook for your moderation or dev channel.
-- **Silent failures** — Hide error details from regular members while still notifying owners.
+<CardGroup cols={2}>
+  <Card title="Friendly errors" icon="message">
+    Send a custom embed explaining what went wrong instead of a generic card.
+  </Card>
+
+  <Card title="Staff alerts" icon="bell">
+    Mirror errors to a Discord webhook for your moderation or dev channel.
+  </Card>
+
+  <Card title="Silent failures" icon="eye-closed">
+    Hide error details from regular members while still notifying owners.
+  </Card>
+</CardGroup>
+
+<Note>
+  This block is placed automatically by the builder. You cannot add it from the block palette.
+</Note>
 
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
 
-### `disable_error_handler`
+<ParamField path="disable_error_handler" type="boolean">
+  When on, failures skip blocks under this anchor and only show the built-in flow error card.
+</ParamField>
 
-**Type:** `boolean`.
+<ParamField path="errors_visible_owner_cowork_only" type="boolean">
+  Hides flow error messages from everyone except the bot owner and coworkers with builder access.
+</ParamField>
 
-When on, failures skip blocks under this anchor and only show the built-in flow error card.
+<ParamField path="error_webhook_enabled" type="boolean">
+  Post a copy of each error to a Discord webhook URL.
+</ParamField>
 
-### `errors_visible_owner_cowork_only`
+<ParamField path="error_webhook_url" type="string">
+  Webhook URL. Required when webhook delivery is enabled.
+</ParamField>
 
-**Type:** `boolean`.
+<ParamField path="error_webhook_username" type="string">
+  Optional display name for webhook messages.
+</ParamField>
 
-Hides flow error messages from everyone except the bot owner and coworkers with builder access.
+<Tip>
+  Connect a Send a Message block under the Error handler to explain failures in plain language.
+</Tip>
 
-### `error_webhook_enabled`
+## Related blocks
 
-**Type:** `boolean`.
-
-Post a copy of each error to a Discord webhook URL.
-
-### `error_webhook_url`
-
-**Type:** `string`.
-
-Webhook URL. Required when webhook delivery is enabled.
-
-### `error_webhook_username`
-
-**Type:** `string`.
-
-Optional display name for webhook messages.
-
-
-
-
-
-## Tips
-
-- Connect a Send a Message block under the Error handler to explain failures in plain language.
-
-
-
-## See also
-
-- [Command flow](/builder/action-blocks/command-flow) — Browse all blocks in the Command flow category.
+<CardGroup cols={2}>
+  <Card title="Command flow" icon="cube" href="/builder/action-blocks/command-flow">
+    Browse all blocks in the Command flow category.
+  </Card>
+</CardGroup>

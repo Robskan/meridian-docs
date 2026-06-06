@@ -10,50 +10,36 @@ The **Create a Channel** block lives in the **Channels** palette category. Creat
 
 Creates a text channel, voice channel, category, or thread in the current server.
 
-
-
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
 
-### `type`
+<ParamField path="type" type="string" required>
+  undefined
 
-**Type:** `string`. Required.
+  Options: `text`, `voice`, `category`, `thread`.
+</ParamField>
 
- Accepted values: `text`, `voice`, `category`, `thread`.
+<ParamField path="channel_name" type="string" required>
+  Name Discord displays.
+</ParamField>
 
-### `channel_name`
+<ParamField path="parent_id" type="channel">
+  Parent category or channel for organization.
+</ParamField>
 
-**Type:** `string`. Required.
+<ParamField path="topic" type="string">
+  Channel topic (text channels).
+</ParamField>
 
-Name Discord displays.
+<ParamField path="save_channel_id_var" type="string">
+  Flow variable for the new channel id.
+</ParamField>
 
-### `parent_id`
+## Related blocks
 
-**Type:** `channel`.
-
-Parent category or channel for organization.
-
-### `topic`
-
-**Type:** `string`.
-
-Channel topic (text channels).
-
-### `save_channel_id_var`
-
-**Type:** `string`.
-
-Flow variable for the new channel id.
-
-
-
-
-
-
-
-
-
-## See also
-
-- [Channels](/builder/action-blocks/channels) — Browse all blocks in the Channels category.
+<CardGroup cols={2}>
+  <Card title="Channels" icon="cube" href="/builder/action-blocks/channels">
+    Browse all blocks in the Channels category.
+  </Card>
+</CardGroup>

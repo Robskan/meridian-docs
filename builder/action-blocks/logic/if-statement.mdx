@@ -10,28 +10,38 @@ If statement blocks branch your flow based on conditions you define in the sideb
 
 Creates one **Branch** child per condition (If, Else if, Else). Connect different block chains to each branch handle on the canvas.
 
-
-
 ## Configuration
 
 Define conditions in the If statement sidebar. Each condition gets its own **Branch** block on the canvas.
 
-Use **Add else if** for extra cases. The final **Else** branch runs when nothing else matched.
+<AccordionGroup>
+  <Accordion title="Adding conditions">
+    Use **Add else if** for extra cases. The final **Else** branch runs when nothing else matched.
+  </Accordion>
 
-Compare variables, check permissions, or test message content. Use the variable picker in the sidebar for available placeholders.
+  <Accordion title="Condition syntax">
+    Compare variables, check permissions, or test message content. Use the variable picker in the sidebar for available placeholders.
+  </Accordion>
+</AccordionGroup>
 
 ## Example workflow
 
-1. **Add the If block** — Place it where the flow should split.
-2. **Edit conditions** — Set the If expression and optional Else if / Else rows.
-3. **Wire each branch** — Connect blocks to the Branch nodes that appear under the If card.
+<Steps>
+  <Step title="Add the If block">
+    Place it where the flow should split.
+  </Step>
+  <Step title="Edit conditions">
+    Set the If expression and optional Else if / Else rows.
+  </Step>
+  <Step title="Wire each branch">
+    Connect blocks to the Branch nodes that appear under the If card.
+  </Step>
+</Steps>
 
+## Related blocks
 
-
-
-
-
-
-## See also
-
-- [Logic](/builder/action-blocks/logic) — Browse all blocks in the Logic category.
+<CardGroup cols={2}>
+  <Card title="Logic" icon="cube" href="/builder/action-blocks/logic">
+    Browse all blocks in the Logic category.
+  </Card>
+</CardGroup>

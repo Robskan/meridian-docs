@@ -10,44 +10,32 @@ The **Forward or Publish a Message** block lives in the **Messages** palette cat
 
 Forwards a message to another channel or publishes an announcement to follower channels.
 
-
-
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
 
-### `action`
+<ParamField path="action" type="string" required>
+  undefined
 
-**Type:** `string`. Required.
+  Options: `forward`, `publish`.
+</ParamField>
 
- Accepted values: `forward`, `publish`.
+<ParamField path="source_channel_id" type="channel" required>
+  Channel containing the source message.
+</ParamField>
 
-### `source_channel_id`
+<ParamField path="message_id" type="string" required>
+  Snowflake of the message to forward or publish.
+</ParamField>
 
-**Type:** `channel`. Required.
+<ParamField path="target_channel_id" type="channel">
+  Required for forward action.
+</ParamField>
 
-Channel containing the source message.
+## Related blocks
 
-### `message_id`
-
-**Type:** `string`. Required.
-
-Snowflake of the message to forward or publish.
-
-### `target_channel_id`
-
-**Type:** `channel`.
-
-Required for forward action.
-
-
-
-
-
-
-
-
-
-## See also
-
-- [Messages](/builder/action-blocks/messages) — Browse all blocks in the Messages category.
+<CardGroup cols={2}>
+  <Card title="Messages" icon="cube" href="/builder/action-blocks/messages">
+    Browse all blocks in the Messages category.
+  </Card>
+</CardGroup>

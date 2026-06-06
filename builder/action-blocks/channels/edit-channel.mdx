@@ -10,44 +10,30 @@ The **Edit a Channel (incl. Threads)** block lives in the **Channels** palette c
 
 Changes channel name, topic, or NSFW flag for channels and threads.
 
-
-
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
 
-### `channel_id`
+<ParamField path="channel_id" type="channel" required>
+  Target channel, variable, or Create Channel block reference.
+</ParamField>
 
-**Type:** `channel`. Required.
+<ParamField path="new_name" type="string">
+  Updated name.
+</ParamField>
 
-Target channel, variable, or Create Channel block reference.
+<ParamField path="new_topic" type="string">
+  Updated topic.
+</ParamField>
 
-### `new_name`
+<ParamField path="nsfw" type="boolean">
+  Age-restricted flag.
+</ParamField>
 
-**Type:** `string`.
+## Related blocks
 
-Updated name.
-
-### `new_topic`
-
-**Type:** `string`.
-
-Updated topic.
-
-### `nsfw`
-
-**Type:** `boolean`.
-
-Age-restricted flag.
-
-
-
-
-
-
-
-
-
-## See also
-
-- [Channels](/builder/action-blocks/channels) — Browse all blocks in the Channels category.
+<CardGroup cols={2}>
+  <Card title="Channels" icon="cube" href="/builder/action-blocks/channels">
+    Browse all blocks in the Channels category.
+  </Card>
+</CardGroup>

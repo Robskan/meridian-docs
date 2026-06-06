@@ -10,38 +10,28 @@ The **Add or Remove a Reaction** block lives in the **Messages** palette categor
 
 Adds or removes an emoji reaction on a message.
 
-
-
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
 
-### `action`
+<ParamField path="action" type="string" required>
+  undefined
 
-**Type:** `string`. Required.
+  Options: `add`, `remove`.
+</ParamField>
 
- Accepted values: `add`, `remove`.
+<ParamField path="emoji" type="string" required>
+  Unicode emoji or custom emoji syntax.
+</ParamField>
 
-### `emoji`
+<ParamField path="message_id" type="block-reference" required>
+  Target message.
+</ParamField>
 
-**Type:** `string`. Required.
+## Related blocks
 
-Unicode emoji or custom emoji syntax.
-
-### `message_id`
-
-**Type:** `block-reference`. Required.
-
-Target message.
-
-
-
-
-
-
-
-
-
-## See also
-
-- [Messages](/builder/action-blocks/messages) — Browse all blocks in the Messages category.
+<CardGroup cols={2}>
+  <Card title="Messages" icon="cube" href="/builder/action-blocks/messages">
+    Browse all blocks in the Messages category.
+  </Card>
+</CardGroup>

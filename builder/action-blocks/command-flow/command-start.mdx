@@ -6,80 +6,93 @@ icon: "zap"
 
 Every **command flow** begins with a Command block. It defines how users invoke the flow in Discord and what metadata Discord shows in autocomplete.
 
-This block is placed automatically by the builder. You cannot add it from the block palette.
-
 ## What it does
 
 Listens for a slash command, prefix command, or context menu action and starts the connected blocks. The Command block is the root of the canvas: you cannot delete it or add another from the palette.
 
 ## Common uses
 
-- **Slash commands** — Register `/ping` style commands with Discord descriptions and options.
-- **Prefix commands** — Run flows when someone types `!help` or your configured prefix.
-- **Context menus** — Right-click a user or message to run a flow from the apps menu.
+<CardGroup cols={2}>
+  <Card title="Slash commands" icon="slash">
+    Register `/ping` style commands with Discord descriptions and options.
+  </Card>
+
+  <Card title="Prefix commands" icon="hashtag">
+    Run flows when someone types `!help` or your configured prefix.
+  </Card>
+
+  <Card title="Context menus" icon="mouse-pointer">
+    Right-click a user or message to run a flow from the apps menu.
+  </Card>
+</CardGroup>
+
+<Note>
+  This block is placed automatically by the builder. You cannot add it from the block palette.
+</Note>
 
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
 
-### `trigger_type`
+<ParamField path="trigger_type" type="string" required>
+  How users start this flow.
 
-**Type:** `string`. Required.
+  Options: `slash`, `prefix`, `user`, `message`.
+</ParamField>
 
-How users start this flow. Accepted values: `slash`, `prefix`, `user`, `message`.
+<ParamField path="friendly_name" type="string" required>
+  Title on the canvas card and in your command list.
+</ParamField>
 
-### `friendly_name`
+<ParamField path="discord_name" type="string">
+  Slash command name Discord registers. Lowercase, no spaces.
+</ParamField>
 
-**Type:** `string`. Required.
+<ParamField path="discord_description" type="string">
+  Shown in Discord slash command autocomplete.
+</ParamField>
 
-Title on the canvas card and in your command list.
+<ParamField path="prefix_command_name" type="string">
+  Word after your prefix (for example `ping` in `!ping`).
+</ParamField>
 
-### `discord_name`
+<ParamField path="prefix_command_aliases" type="list">
+  Up to five alternate prefix names that run the same flow.
+</ParamField>
 
-**Type:** `string`.
-
-Slash command name Discord registers. Lowercase, no spaces.
-
-### `discord_description`
-
-**Type:** `string`.
-
-Shown in Discord slash command autocomplete.
-
-### `prefix_command_name`
-
-**Type:** `string`.
-
-Word after your prefix (for example `ping` in `!ping`).
-
-### `prefix_command_aliases`
-
-**Type:** `list`.
-
-Up to five alternate prefix names that run the same flow.
-
-### `safe_test_mode`
-
-**Type:** `boolean`.
-
-Skips destructive steps (moderation, API calls, Ask AI, persisted variables) and posts a short notice instead.
+<ParamField path="safe_test_mode" type="boolean">
+  Skips destructive steps (moderation, API calls, Ask AI, persisted variables) and posts a short notice instead.
+</ParamField>
 
 ## Example workflow
 
-1. **Pick a trigger type** — Slash is the default for new commands. Use prefix if your server relies on a text prefix.
-2. **Name the command** — Set a friendly name for your dashboard, then the Discord-facing name and description.
-3. **Add options (slash only)** — Attach Command option blocks under the Command node for typed parameters.
-4. **Connect actions** — Draw a connection from the bottom handle to your first action block.
+<Steps>
+  <Step title="Pick a trigger type">
+    Slash is the default for new commands. Use prefix if your server relies on a text prefix.
+  </Step>
+  <Step title="Name the command">
+    Set a friendly name for your dashboard, then the Discord-facing name and description.
+  </Step>
+  <Step title="Add options (slash only)">
+    Attach Command option blocks under the Command node for typed parameters.
+  </Step>
+  <Step title="Connect actions">
+    Draw a connection from the bottom handle to your first action block.
+  </Step>
+</Steps>
 
+<Tip>
+  Enable **Test mode** while building flows that touch roles, channels, or external APIs so you can run them safely in a live server.
+</Tip>
 
+## Related blocks
 
-## Tips
+<CardGroup cols={2}>
+  <Card title="Command option" icon="cube" href="/builder/action-blocks/command-flow/command-option">
+    Add slash command parameters.
+  </Card>
 
-- Enable **Test mode** while building flows that touch roles, channels, or external APIs so you can run them safely in a live server.
-
-
-
-## See also
-
-- [Command option](/builder/action-blocks/command-flow/command-option) — Add slash command parameters.
-- [Error handler](/builder/action-blocks/command-flow/command-error-handler) — Customize what happens when this command fails.
+  <Card title="Error handler" icon="cube" href="/builder/action-blocks/command-flow/command-error-handler">
+    Customize what happens when this command fails.
+  </Card>
+</CardGroup>

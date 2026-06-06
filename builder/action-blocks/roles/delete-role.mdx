@@ -10,32 +10,22 @@ The **Delete a Role** block lives in the **Roles** palette category. Delete an e
 
 Delete an existing role.
 
-
-
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
 
-### `role_id`
+<ParamField path="role_id" type="role" required>
+  Role to delete permanently.
+</ParamField>
 
-**Type:** `role`. Required.
+<ParamField path="reason" type="string">
+  Optional audit log reason.
+</ParamField>
 
-Role to delete permanently.
+## Related blocks
 
-### `reason`
-
-**Type:** `string`.
-
-Optional audit log reason.
-
-
-
-
-
-
-
-
-
-## See also
-
-- [Roles](/builder/action-blocks/roles) — Browse all blocks in the Roles category.
+<CardGroup cols={2}>
+  <Card title="Roles" icon="cube" href="/builder/action-blocks/roles">
+    Browse all blocks in the Roles category.
+  </Card>
+</CardGroup>

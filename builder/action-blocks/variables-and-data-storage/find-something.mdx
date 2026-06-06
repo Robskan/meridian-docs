@@ -10,44 +10,32 @@ The **Find something** block lives in the **Variables & Data storage** palette c
 
 Searches the server cache for a user, role, or channel by name, id, or mention and stores the result in a variable.
 
-
-
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
 
-### `find_type`
+<ParamField path="find_type" type="string" required>
+  undefined
 
-**Type:** `string`. Required.
+  Options: `user`, `role`, `channel`.
+</ParamField>
 
- Accepted values: `user`, `role`, `channel`.
+<ParamField path="query" type="string" required>
+  Username, snowflake, @mention, or channel name.
+</ParamField>
 
-### `query`
+<ParamField path="fuzzy_search" type="boolean">
+  Looser matching when exact names are unknown.
+</ParamField>
 
-**Type:** `string`. Required.
+<ParamField path="save_var" type="string" required>
+  Variable that receives the found id.
+</ParamField>
 
-Username, snowflake, @mention, or channel name.
+## Related blocks
 
-### `fuzzy_search`
-
-**Type:** `boolean`.
-
-Looser matching when exact names are unknown.
-
-### `save_var`
-
-**Type:** `string`. Required.
-
-Variable that receives the found id.
-
-
-
-
-
-
-
-
-
-## See also
-
-- [Variables & Data storage](/builder/action-blocks/variables-and-data-storage) — Browse all blocks in the Variables & Data storage category.
+<CardGroup cols={2}>
+  <Card title="Variables & Data storage" icon="cube" href="/builder/action-blocks/variables-and-data-storage">
+    Browse all blocks in the Variables & Data storage category.
+  </Card>
+</CardGroup>

@@ -10,50 +10,34 @@ The **Create a Forum Post** block lives in the **Channels** palette category. Cr
 
 Opens a new forum post (thread) in a forum channel with title, body, tags, and slowmode.
 
-
-
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
 
-### `channel_id`
+<ParamField path="channel_id" type="channel" required>
+  Forum channel.
+</ParamField>
 
-**Type:** `channel`. Required.
+<ParamField path="name" type="string" required>
+  Post title.
+</ParamField>
 
-Forum channel.
+<ParamField path="content" type="string" required>
+  First message body.
+</ParamField>
 
-### `name`
+<ParamField path="applied_tags" type="forum-tags">
+  Tags applied to the post.
+</ParamField>
 
-**Type:** `string`. Required.
+<ParamField path="save_channel_id_var" type="string">
+  Stores the thread id.
+</ParamField>
 
-Post title.
+## Related blocks
 
-### `content`
-
-**Type:** `string`. Required.
-
-First message body.
-
-### `applied_tags`
-
-**Type:** `forum-tags`.
-
-Tags applied to the post.
-
-### `save_channel_id_var`
-
-**Type:** `string`.
-
-Stores the thread id.
-
-
-
-
-
-
-
-
-
-## See also
-
-- [Channels](/builder/action-blocks/channels) — Browse all blocks in the Channels category.
+<CardGroup cols={2}>
+  <Card title="Channels" icon="cube" href="/builder/action-blocks/channels">
+    Browse all blocks in the Channels category.
+  </Card>
+</CardGroup>

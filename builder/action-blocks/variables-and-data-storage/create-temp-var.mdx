@@ -10,32 +10,22 @@ The **Create a Temporary Variable** block lives in the **Variables & Data storag
 
 Store data for the current execution only.
 
-
-
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
 
-### `var_name`
+<ParamField path="var_name" type="string" required>
+  Name for this run only. Reference as `{vars.name}`.
+</ParamField>
 
-**Type:** `string`. Required.
+<ParamField path="var_value" type="string" required>
+  Initial value. Variables allowed.
+</ParamField>
 
-Name for this run only. Reference as `{vars.name}`.
+## Related blocks
 
-### `var_value`
-
-**Type:** `string`. Required.
-
-Initial value. Variables allowed.
-
-
-
-
-
-
-
-
-
-## See also
-
-- [Variables & Data storage](/builder/action-blocks/variables-and-data-storage) — Browse all blocks in the Variables & Data storage category.
+<CardGroup cols={2}>
+  <Card title="Variables & Data storage" icon="cube" href="/builder/action-blocks/variables-and-data-storage">
+    Browse all blocks in the Variables & Data storage category.
+  </Card>
+</CardGroup>

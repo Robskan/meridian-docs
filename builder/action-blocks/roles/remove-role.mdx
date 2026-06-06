@@ -10,38 +10,26 @@ The **Remove Role** block lives in the **Roles** palette category. Remove a role
 
 Remove a role from a member.
 
-
-
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
 
-### `user_id`
+<ParamField path="user_id" type="user">
+  Who loses the role.
+</ParamField>
 
-**Type:** `user`.
+<ParamField path="role_id" type="role" required>
+  The role to remove.
+</ParamField>
 
-Who loses the role.
+<ParamField path="reason" type="string">
+  Optional audit log reason.
+</ParamField>
 
-### `role_id`
+## Related blocks
 
-**Type:** `role`. Required.
-
-The role to remove.
-
-### `reason`
-
-**Type:** `string`.
-
-Optional audit log reason.
-
-
-
-
-
-
-
-
-
-## See also
-
-- [Roles](/builder/action-blocks/roles) — Browse all blocks in the Roles category.
+<CardGroup cols={2}>
+  <Card title="Roles" icon="cube" href="/builder/action-blocks/roles">
+    Browse all blocks in the Roles category.
+  </Card>
+</CardGroup>

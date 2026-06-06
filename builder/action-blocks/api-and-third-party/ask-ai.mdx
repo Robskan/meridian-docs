@@ -10,66 +10,50 @@ Ask AI sends a prompt to a supported model using **your own API key** (BYOK). Me
 
 Runs chat or image models from providers you configure. The model reply and model id can be saved to temporary flow variables for follow-up blocks.
 
-
-
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
 
-### `api_key_env`
+<ParamField path="api_key_env" type="string" required>
+  Raw key or Storage variable name (recommended).
+</ParamField>
 
-**Type:** `string`. Required.
+<ParamField path="model" type="string" required>
+  Pick from the list or pass a dynamic id via variable.
+</ParamField>
 
-Raw key or Storage variable name (recommended).
+<ParamField path="system_prompt" type="string">
+  Instructions that shape tone and behavior.
+</ParamField>
 
-### `model`
+<ParamField path="prompt" type="string" required>
+  User message sent to the model. Variables allowed.
+</ParamField>
 
-**Type:** `string`. Required.
+<ParamField path="max_tokens" type="number">
+  Response length cap (1 to 8192).
+</ParamField>
 
-Pick from the list or pass a dynamic id via variable.
+<ParamField path="temperature" type="number">
+  Optional creativity from 0 (focused) to 2 (varied).
+</ParamField>
 
-### `system_prompt`
+<ParamField path="save_response" type="string">
+  Temporary variable for text reply (`{vars.name}`) and model id (`{name.model}`).
+</ParamField>
 
-**Type:** `string`.
+<Tip>
+  Combine with Send a Message to post AI replies in Discord channels.
+</Tip>
 
-Instructions that shape tone and behavior.
+<Warning>
+  Gemini image models return JSON with base64 image data. Parse the JSON in later blocks if you need bytes.
+</Warning>
 
-### `prompt`
+## Related blocks
 
-**Type:** `string`. Required.
-
-User message sent to the model. Variables allowed.
-
-### `max_tokens`
-
-**Type:** `number`.
-
-Response length cap (1 to 8192).
-
-### `temperature`
-
-**Type:** `number`.
-
-Optional creativity from 0 (focused) to 2 (varied).
-
-### `save_response`
-
-**Type:** `string`.
-
-Temporary variable for text reply (`{vars.name}`) and model id (`{name.model}`).
-
-
-
-
-
-## Tips
-
-- Combine with Send a Message to post AI replies in Discord channels.
-
-## Important
-
-- Gemini image models return JSON with base64 image data. Parse the JSON in later blocks if you need bytes.
-
-## See also
-
-- [API & Third Party](/builder/action-blocks/api-and-third-party) — Browse all blocks in the API & Third Party category.
+<CardGroup cols={2}>
+  <Card title="API & Third Party" icon="cube" href="/builder/action-blocks/api-and-third-party">
+    Browse all blocks in the API & Third Party category.
+  </Card>
+</CardGroup>

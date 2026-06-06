@@ -10,32 +10,22 @@ The **Execute a Function** block lives in the **Functions** palette category. Ca
 
 Call a reusable function flow from a command or event.
 
-
-
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
 
-### `function_name`
+<ParamField path="function_name" type="string" required>
+  Name of the function flow to call.
+</ParamField>
 
-**Type:** `string`. Required.
+<ParamField path="arguments" type="string">
+  Optional JSON array of arguments passed into the function flow.
+</ParamField>
 
-Name of the function flow to call.
+## Related blocks
 
-### `arguments`
-
-**Type:** `string`.
-
-Optional JSON array of arguments passed into the function flow.
-
-
-
-
-
-
-
-
-
-## See also
-
-- [Functions](/builder/action-blocks/functions) — Browse all blocks in the Functions category.
+<CardGroup cols={2}>
+  <Card title="Functions" icon="cube" href="/builder/action-blocks/functions">
+    Browse all blocks in the Functions category.
+  </Card>
+</CardGroup>

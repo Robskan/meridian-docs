@@ -10,50 +10,36 @@ The **Change bot profile** block lives in the **Settings** palette category. Upd
 
 Changes bot avatar, banner, username (global), or server nickname (guild scope).
 
-
-
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
 
-### `scope`
+<ParamField path="scope" type="string" required>
+  undefined
 
-**Type:** `string`. Required.
+  Options: `global`, `guild`.
+</ParamField>
 
- Accepted values: `global`, `guild`.
+<ParamField path="avatar_url" type="string">
+  Image URL or variable.
+</ParamField>
 
-### `avatar_url`
+<ParamField path="banner_url" type="string">
+  Profile banner URL.
+</ParamField>
 
-**Type:** `string`.
+<ParamField path="username" type="string">
+  Global username (2 to 32 chars).
+</ParamField>
 
-Image URL or variable.
+<ParamField path="nickname" type="string">
+  Server nickname (guild scope).
+</ParamField>
 
-### `banner_url`
+## Related blocks
 
-**Type:** `string`.
-
-Profile banner URL.
-
-### `username`
-
-**Type:** `string`.
-
-Global username (2 to 32 chars).
-
-### `nickname`
-
-**Type:** `string`.
-
-Server nickname (guild scope).
-
-
-
-
-
-
-
-
-
-## See also
-
-- [Settings](/builder/action-blocks/settings) — Browse all blocks in the Settings category.
+<CardGroup cols={2}>
+  <Card title="Settings" icon="cube" href="/builder/action-blocks/settings">
+    Browse all blocks in the Settings category.
+  </Card>
+</CardGroup>

@@ -10,34 +10,26 @@ The **Delete a Channel (incl. Threads)** block lives in the **Channels** palette
 
 Permanently deletes a channel or thread.
 
-
-
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
 
-### `channel_id`
+<ParamField path="channel_id" type="channel" required>
+  Channel or thread to delete.
+</ParamField>
 
-**Type:** `channel`. Required.
+<ParamField path="reason" type="string">
+  Audit log reason.
+</ParamField>
 
-Channel or thread to delete.
+<Warning>
+  Deletion is irreversible. Confirm the channel id when using variables.
+</Warning>
 
-### `reason`
+## Related blocks
 
-**Type:** `string`.
-
-Audit log reason.
-
-
-
-
-
-
-
-## Important
-
-- Deletion is irreversible. Confirm the channel id when using variables.
-
-## See also
-
-- [Channels](/builder/action-blocks/channels) — Browse all blocks in the Channels category.
+<CardGroup cols={2}>
+  <Card title="Channels" icon="cube" href="/builder/action-blocks/channels">
+    Browse all blocks in the Channels category.
+  </Card>
+</CardGroup>

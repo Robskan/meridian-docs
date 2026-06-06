@@ -10,32 +10,24 @@ The **Set prefix** block lives in the **Settings** palette category. Change the 
 
 Change the bot command prefix globally or per server.
 
-
-
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
 
-### `scope`
+<ParamField path="scope" type="string" required>
+  Apply prefix globally or only in the current server.
 
-**Type:** `string`. Required.
+  Options: `server`, `global`.
+</ParamField>
 
-Apply prefix globally or only in the current server. Accepted values: `server`, `global`.
+<ParamField path="new_prefix" type="string" required>
+  Character(s) users type before prefix commands (for example `!` or `?`).
+</ParamField>
 
-### `new_prefix`
+## Related blocks
 
-**Type:** `string`. Required.
-
-Character(s) users type before prefix commands (for example `!` or `?`).
-
-
-
-
-
-
-
-
-
-## See also
-
-- [Settings](/builder/action-blocks/settings) — Browse all blocks in the Settings category.
+<CardGroup cols={2}>
+  <Card title="Settings" icon="cube" href="/builder/action-blocks/settings">
+    Browse all blocks in the Settings category.
+  </Card>
+</CardGroup>

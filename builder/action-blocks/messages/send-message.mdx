@@ -12,81 +12,93 @@ Composes text, embeds, buttons, and select menus in the visual message editor, t
 
 ## Common uses
 
-- **Replies** — Reply in the current channel or ephemerally to the command user.
-- **Announcements** — Post to a specific channel by id or picker.
-- **Live dashboards** — Send once, save the message id, then Edit Part of a Message to update stats.
+<CardGroup cols={2}>
+  <Card title="Replies" icon="reply">
+    Reply in the current channel or ephemerally to the command user.
+  </Card>
+
+  <Card title="Announcements" icon="megaphone">
+    Post to a specific channel by id or picker.
+  </Card>
+
+  <Card title="Live dashboards" icon="refresh">
+    Send once, save the message id, then Edit Part of a Message to update stats.
+  </Card>
+</CardGroup>
 
 ## Configuration
 
-Use **Edit content** in the sidebar to build the message. Then choose whether to send, DM, or edit an existing message.
+<Tabs>
+  <Tab title="Content">
+    Click **Edit content** to open the message editor.
 
-### `edit_content`
+    <ParamField path="edit_content" type="button" required>
+      Build message text, embeds, buttons, and select menus visually. Button and menu clicks can branch to other blocks on the canvas.
+    </ParamField>
 
-**Type:** `button`. Required.
+    <Tip>
+      Save the message id to a variable when you plan to edit or delete the message later in the same flow.
+    </Tip>
+  </Tab>
+  <Tab title="Send">
+    <ParamField path="action" type="string" required>
+      Choose **Send**, **Direct Message**, or **Edit**.
+    </ParamField>
 
-Opens the visual message editor for text, embeds, buttons, and select menus. Button and menu clicks can branch to other blocks on the canvas.
+    <ParamField path="destination" type="string">
+      For Send: current channel/reply or a specific channel.
+    </ParamField>
 
-### `action`
+    <ParamField path="channel_id" type="channel">
+      Required when destination is a specific channel.
+    </ParamField>
 
-**Type:** `string`. Required.
+    <ParamField path="is_reply" type="boolean">
+      Reply to the triggering message when sending in the current channel.
+    </ParamField>
 
-Choose Send, Direct Message, or Edit. Accepted values: `send`, `dm`, `edit`.
+    <ParamField path="ephemeral" type="boolean">
+      Only visible to the command user. Works when replying to a slash command interaction.
+    </ParamField>
 
-### `destination`
-
-**Type:** `string`.
-
-For Send: current channel/reply or a specific channel.
-
-### `channel_id`
-
-**Type:** `channel`.
-
-Required when destination is a specific channel.
-
-### `is_reply`
-
-**Type:** `boolean`.
-
-Reply to the triggering message when sending in the current channel.
-
-### `ephemeral`
-
-**Type:** `boolean`.
-
-Only visible to the command user. Works when replying to a slash command interaction.
-
-### `save_message_id_var`
-
-**Type:** `string`.
-
-Flow variable name for the sent message snowflake (`{vars.name}`). Save this when you plan to edit or delete the message later.
-
-### `user_id`
-
-**Type:** `user`.
-
-For Direct Message: recipient. Defaults to the command user, or pick from the server / variables.
-
-### `message_id`
-
-**Type:** `block-reference`.
-
-For Edit: pick a Send a Message block from this flow or provide a message id variable.
+    <ParamField path="save_message_id_var" type="string">
+      Flow variable name for the sent message snowflake ({vars.name}).
+    </ParamField>
+  </Tab>
+  <Tab title="Direct message">
+    <ParamField path="user_id" type="user" required>
+      Recipient. Defaults to command user, or pick from server / variables.
+    </ParamField>
+  </Tab>
+  <Tab title="Edit">
+    <ParamField path="message_id" type="block-reference" required>
+      Pick a Send a Message block from this flow or provide a message id variable.
+    </ParamField>
+  </Tab>
+</Tabs>
 
 ## Example workflow
 
-1. **Edit content** — Build the message layout and any interactive components.
-2. **Choose action** — Send publicly, DM the user, or edit an earlier message.
-3. **Save message id** — Optional. Store the id if later blocks delete, pin, or partially edit the message.
+<Steps>
+  <Step title="Edit content">
+    Build the message layout and any interactive components.
+  </Step>
+  <Step title="Choose action">
+    Send publicly, DM the user, or edit an earlier message.
+  </Step>
+  <Step title="Save message id">
+    Optional. Store the id if later blocks delete, pin, or partially edit the message.
+  </Step>
+</Steps>
 
+## Related blocks
 
+<CardGroup cols={2}>
+  <Card title="Edit Part of a Message" icon="cube" href="/builder/action-blocks/messages/edit-message-part">
+    Update one field without rebuilding the whole message.
+  </Card>
 
-
-
-
-
-## See also
-
-- [Edit Part of a Message](/builder/action-blocks/messages/edit-message-part) — Update one field without rebuilding the whole message.
-- [Wait for interaction](/builder/action-blocks/other/wait-for-interaction) — Pause until someone clicks a button on this message.
+  <Card title="Wait for interaction" icon="cube" href="/builder/action-blocks/other/wait-for-interaction">
+    Pause until someone clicks a button on this message.
+  </Card>
+</CardGroup>

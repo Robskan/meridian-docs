@@ -10,38 +10,28 @@ The **Deafen or Undeafen** block lives in the **Voice** palette category. Server
 
 Server deafen or undeafen a member.
 
-
-
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
 
-### `action`
+<ParamField path="action" type="string" required>
+  Server deafen state to apply.
 
-**Type:** `string`. Required.
+  Options: `deafen`, `undeafen`, `toggle`.
+</ParamField>
 
-Server deafen state to apply. Accepted values: `deafen`, `undeafen`, `toggle`.
+<ParamField path="user_id" type="user" required>
+  Target member.
+</ParamField>
 
-### `user_id`
+<ParamField path="reason" type="string">
+  Optional audit log reason.
+</ParamField>
 
-**Type:** `user`. Required.
+## Related blocks
 
-Target member.
-
-### `reason`
-
-**Type:** `string`.
-
-Optional audit log reason.
-
-
-
-
-
-
-
-
-
-## See also
-
-- [Voice](/builder/action-blocks/voice) — Browse all blocks in the Voice category.
+<CardGroup cols={2}>
+  <Card title="Voice" icon="cube" href="/builder/action-blocks/voice">
+    Browse all blocks in the Voice category.
+  </Card>
+</CardGroup>

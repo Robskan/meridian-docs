@@ -10,60 +10,54 @@ Wait for interaction pauses the flow until a user reacts, sends a message, or us
 
 Holds execution open for up to 30 seconds (Free/Hobby) or 60 seconds (Pro/Max), then continues on the next block. Saves user, message, or content to variables.
 
-
-
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
 
-### `interaction_types`
+<ParamField path="interaction_types" type="string" required>
+  What counts as a valid response.
 
-**Type:** `string`. Required.
+  Options: `reaction`, `message`, `button`, `select_menu`, `modal_submit`.
+</ParamField>
 
-What counts as a valid response. Accepted values: `reaction`, `message`, `button`, `select_menu`, `modal_submit`.
+<ParamField path="user_filter" type="string">
+  Restrict who can continue the flow.
+</ParamField>
 
-### `user_filter`
+<ParamField path="timeout_seconds" type="number">
+  Max wait time.
+</ParamField>
 
-**Type:** `string`.
+<ParamField path="save_user_var" type="string">
+  Stores responder user id.
+</ParamField>
 
-Restrict who can continue the flow.
+<ParamField path="save_message_var" type="string">
+  Stores message id.
+</ParamField>
 
-### `timeout_seconds`
-
-**Type:** `number`.
-
-Max wait time.
-
-### `save_user_var`
-
-**Type:** `string`.
-
-Stores responder user id.
-
-### `save_message_var`
-
-**Type:** `string`.
-
-Stores message id.
-
-### `save_content_var`
-
-**Type:** `string`.
-
-Stores message text or emoji.
+<ParamField path="save_content_var" type="string">
+  Stores message text or emoji.
+</ParamField>
 
 ## Example workflow
 
-1. **Send a message with buttons** — Add buttons in Send a Message, then place Wait for interaction below.
-2. **Filter who can click** — Limit to command user or a role for games and confirmations.
-3. **Handle timeout** — Follow with an If block checking whether variables were set.
+<Steps>
+  <Step title="Send a message with buttons">
+    Add buttons in Send a Message, then place Wait for interaction below.
+  </Step>
+  <Step title="Filter who can click">
+    Limit to command user or a role for games and confirmations.
+  </Step>
+  <Step title="Handle timeout">
+    Follow with an If block checking whether variables were set.
+  </Step>
+</Steps>
 
+## Related blocks
 
-
-
-
-
-
-## See also
-
-- [Other](/builder/action-blocks/other) — Browse all blocks in the Other category.
+<CardGroup cols={2}>
+  <Card title="Other" icon="cube" href="/builder/action-blocks/other">
+    Browse all blocks in the Other category.
+  </Card>
+</CardGroup>

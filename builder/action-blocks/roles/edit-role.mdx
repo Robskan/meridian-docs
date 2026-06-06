@@ -10,50 +10,34 @@ The **Edit a Role** block lives in the **Roles** palette category. Modify role n
 
 Modify role name, color, hoist, or mentionable settings.
 
-
-
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
 
-### `role_id`
+<ParamField path="role_id" type="role" required>
+  Role to modify.
+</ParamField>
 
-**Type:** `role`. Required.
+<ParamField path="new_name" type="string">
+  Leave blank to keep the current name.
+</ParamField>
 
-Role to modify.
+<ParamField path="new_color" type="string">
+  Hex color. Leave blank to keep the current color.
+</ParamField>
 
-### `new_name`
+<ParamField path="hoist" type="boolean">
+  Display separately in the member list.
+</ParamField>
 
-**Type:** `string`.
+<ParamField path="mentionable" type="boolean">
+  Allow @mentions for this role.
+</ParamField>
 
-Leave blank to keep the current name.
+## Related blocks
 
-### `new_color`
-
-**Type:** `string`.
-
-Hex color. Leave blank to keep the current color.
-
-### `hoist`
-
-**Type:** `boolean`.
-
-Display separately in the member list.
-
-### `mentionable`
-
-**Type:** `boolean`.
-
-Allow @mentions for this role.
-
-
-
-
-
-
-
-
-
-## See also
-
-- [Roles](/builder/action-blocks/roles) — Browse all blocks in the Roles category.
+<CardGroup cols={2}>
+  <Card title="Roles" icon="cube" href="/builder/action-blocks/roles">
+    Browse all blocks in the Roles category.
+  </Card>
+</CardGroup>

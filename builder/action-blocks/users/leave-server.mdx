@@ -10,26 +10,18 @@ The **Leave server** block lives in the **Users** palette category. Make the bot
 
 Make the bot leave a server.
 
-
-
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
 
-### `guild_id`
+<ParamField path="guild_id" type="guild">
+  Server to leave. Leave blank to leave the server where the flow is running.
+</ParamField>
 
-**Type:** `guild`.
+## Related blocks
 
-Server to leave. Leave blank to leave the server where the flow is running.
-
-
-
-
-
-
-
-
-
-## See also
-
-- [Users](/builder/action-blocks/users) — Browse all blocks in the Users category.
+<CardGroup cols={2}>
+  <Card title="Users" icon="cube" href="/builder/action-blocks/users">
+    Browse all blocks in the Users category.
+  </Card>
+</CardGroup>

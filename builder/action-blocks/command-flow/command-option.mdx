@@ -6,32 +6,36 @@ icon: "list"
 
 Command options are slash command parameters. They appear as child nodes under your Command block on the canvas.
 
-This block is placed automatically by the builder. You cannot add it from the block palette.
-
 ## What it does
 
 Each option becomes a Discord application command parameter (string, number, user, channel, role, etc.). Values are available in later blocks as variables.
 
-
+<Note>
+  This block is placed automatically by the builder. You cannot add it from the block palette.
+</Note>
 
 ## Configuration
 
 Add options from the Command block sidebar or canvas. Each option has a **name**, **description**, **type**, and whether it is **required**.
 
-Supported types map to Discord slash command option types: string, integer, boolean, user, channel, role, mentionable, and attachment.
+<AccordionGroup>
+  <Accordion title="Supported option types">
+    String, integer, boolean, user, channel, role, mentionable, and attachment map to Discord slash command option types.
+  </Accordion>
 
-Reference option values in later blocks with variables such as `{option.name}`, depending on how the flow exposes command context.
+  <Accordion title="Using option values">
+    Reference option values in later blocks with variables such as `{option.name}` depending on how the flow exposes command context.
+  </Accordion>
+</AccordionGroup>
 
+<Tip>
+  Keep option names short and lowercase. Discord shows them in autocomplete.
+</Tip>
 
+## Related blocks
 
-
-
-## Tips
-
-- Keep option names short and lowercase. Discord shows them in autocomplete.
-
-
-
-## See also
-
-- [Command flow](/builder/action-blocks/command-flow) — Browse all blocks in the Command flow category.
+<CardGroup cols={2}>
+  <Card title="Command flow" icon="cube" href="/builder/action-blocks/command-flow">
+    Browse all blocks in the Command flow category.
+  </Card>
+</CardGroup>

@@ -10,32 +10,22 @@ The **Repeat for Each** block lives in the **Loops** palette category. Loop once
 
 Runs the loop body once per item in a collection variable, exposing the current item as a variable.
 
-
-
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
 
-### `collection`
+<ParamField path="collection" type="string" required>
+  List variable to iterate (for example `{vars.users}`).
+</ParamField>
 
-**Type:** `string`. Required.
+<ParamField path="item_var" type="string" required>
+  Name for the current item inside the loop (`{vars.item}`).
+</ParamField>
 
-List variable to iterate (for example `{vars.users}`).
+## Related blocks
 
-### `item_var`
-
-**Type:** `string`. Required.
-
-Name for the current item inside the loop (`{vars.item}`).
-
-
-
-
-
-
-
-
-
-## See also
-
-- [Loops](/builder/action-blocks/loops) — Browse all blocks in the Loops category.
+<CardGroup cols={2}>
+  <Card title="Loops" icon="cube" href="/builder/action-blocks/loops">
+    Browse all blocks in the Loops category.
+  </Card>
+</CardGroup>

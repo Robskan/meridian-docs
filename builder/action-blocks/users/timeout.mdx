@@ -10,38 +10,26 @@ The **Timeout a member** block lives in the **Users** palette category. Apply or
 
 Apply or remove a Discord timeout.
 
-
-
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
 
-### `user_id`
+<ParamField path="user_id" type="user" required>
+  Member to timeout or untimeout.
+</ParamField>
 
-**Type:** `user`. Required.
+<ParamField path="duration" type="number" required>
+  Timeout length in minutes. Set to `0` to remove an existing timeout.
+</ParamField>
 
-Member to timeout or untimeout.
+<ParamField path="reason" type="string">
+  Optional audit log reason.
+</ParamField>
 
-### `duration`
+## Related blocks
 
-**Type:** `number`. Required.
-
-Timeout length in minutes. Set to `0` to remove an existing timeout.
-
-### `reason`
-
-**Type:** `string`.
-
-Optional audit log reason.
-
-
-
-
-
-
-
-
-
-## See also
-
-- [Users](/builder/action-blocks/users) — Browse all blocks in the Users category.
+<CardGroup cols={2}>
+  <Card title="Users" icon="cube" href="/builder/action-blocks/users">
+    Browse all blocks in the Users category.
+  </Card>
+</CardGroup>

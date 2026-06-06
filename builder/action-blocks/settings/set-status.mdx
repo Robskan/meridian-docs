@@ -10,44 +10,32 @@ The **Set status** block lives in the **Settings** palette category. Change the 
 
 Updates bot presence (online/idle/dnd/invisible), activity type, and status text.
 
-
-
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
 
-### `dynamic`
+<ParamField path="dynamic" type="boolean">
+  Use variable-driven presence instead of fixed dropdowns.
+</ParamField>
 
-**Type:** `boolean`.
+<ParamField path="presence" type="string">
+  undefined
 
-Use variable-driven presence instead of fixed dropdowns.
+  Options: `online`, `idle`, `dnd`, `invisible`, `streaming`.
+</ParamField>
 
-### `presence`
+<ParamField path="activity" type="string">
+  Playing, listening, watching, competing, or custom status.
+</ParamField>
 
-**Type:** `string`.
+<ParamField path="text" type="string">
+  Status line shown under the bot name.
+</ParamField>
 
- Accepted values: `online`, `idle`, `dnd`, `invisible`, `streaming`.
+## Related blocks
 
-### `activity`
-
-**Type:** `string`.
-
-Playing, listening, watching, competing, or custom status.
-
-### `text`
-
-**Type:** `string`.
-
-Status line shown under the bot name.
-
-
-
-
-
-
-
-
-
-## See also
-
-- [Settings](/builder/action-blocks/settings) — Browse all blocks in the Settings category.
+<CardGroup cols={2}>
+  <Card title="Settings" icon="cube" href="/builder/action-blocks/settings">
+    Browse all blocks in the Settings category.
+  </Card>
+</CardGroup>

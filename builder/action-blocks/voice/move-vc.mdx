@@ -10,32 +10,22 @@ The **Move a member from VC** block lives in the **Voice** palette category. Mov
 
 Move a user between voice channels.
 
-
-
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
 
-### `user_id`
+<ParamField path="user_id" type="user" required>
+  Member to move.
+</ParamField>
 
-**Type:** `user`. Required.
+<ParamField path="target_channel_id" type="channel" required>
+  Destination voice channel.
+</ParamField>
 
-Member to move.
+## Related blocks
 
-### `target_channel_id`
-
-**Type:** `channel`. Required.
-
-Destination voice channel.
-
-
-
-
-
-
-
-
-
-## See also
-
-- [Voice](/builder/action-blocks/voice) — Browse all blocks in the Voice category.
+<CardGroup cols={2}>
+  <Card title="Voice" icon="cube" href="/builder/action-blocks/voice">
+    Browse all blocks in the Voice category.
+  </Card>
+</CardGroup>

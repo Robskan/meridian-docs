@@ -10,32 +10,24 @@ The **Pin or Unpin a Message** block lives in the **Messages** palette category.
 
 Pins or unpins a message in a channel.
 
-
-
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
 
-### `action`
+<ParamField path="action" type="string" required>
+  undefined
 
-**Type:** `string`. Required.
+  Options: `pin`, `unpin`.
+</ParamField>
 
- Accepted values: `pin`, `unpin`.
+<ParamField path="message_id" type="block-reference" required>
+  Message to pin or unpin.
+</ParamField>
 
-### `message_id`
+## Related blocks
 
-**Type:** `block-reference`. Required.
-
-Message to pin or unpin.
-
-
-
-
-
-
-
-
-
-## See also
-
-- [Messages](/builder/action-blocks/messages) — Browse all blocks in the Messages category.
+<CardGroup cols={2}>
+  <Card title="Messages" icon="cube" href="/builder/action-blocks/messages">
+    Browse all blocks in the Messages category.
+  </Card>
+</CardGroup>
