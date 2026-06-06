@@ -34,18 +34,6 @@
       "help",
       "discord",
       {
-        "group": "Authenticate with Meridian",
-        "pages": [
-          "developer-portal",
-          {
-            "group": "API reference",
-            "openapi": "https://docs-backend.meridian.surf/openapi.json",
-            "icon": "globe"
-          }
-        ],
-        "icon": "lock"
-      },
-      {
         "group": "Builder",
         "icon": "wrench",
         "pages": [
@@ -220,6 +208,18 @@
               "builder/action-blocks/logic/if-statement.mdx",
               "builder/action-blocks/logic/if-branch.mdx"
             ]
+          }
+        ]
+      },
+      {
+        "group": "Authenticate with Meridian",
+        "icon": "lock",
+        "pages": [
+          "developer-portal",
+          {
+            "group": "API reference",
+            "icon": "globe",
+            "openapi": "https://docs-backend.meridian.surf/openapi.json"
           }
         ]
       }
