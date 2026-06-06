@@ -9,6 +9,12 @@ Create a Transcript exports channel history to a hosted HTML page on Meridian.
 
 Collects messages, renders a shareable transcript, and stores URLs (and optional passwords) in flow variables.
 
+
+
+
+
+
+
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
@@ -16,7 +22,7 @@ Open the block in the builder sidebar to configure these fields.
 <ParamField path="channel_source" type="string" required>
   undefined
 
-  Options: `current`, `specific`, `variable`, `block`.
+Options: `current`, `specific`, `variable`, `block`.
 </ParamField>
 
 <ParamField path="transcript_name" type="string">
@@ -30,12 +36,20 @@ Open the block in the builder sidebar to configure these fields.
 <ParamField path="access_mode" type="string">
   undefined
 
-  Options: `public`, `roles`, `password`, `roles_and_password`.
+Options: `public`, `roles`, `password`, `roles_and_password`.
 </ParamField>
+
+
+
+
+
+
 
 <Tip>
   Use role-gated transcripts for ticket logs visible only to staff.
 </Tip>
+
+
 
 ## Related blocks
 

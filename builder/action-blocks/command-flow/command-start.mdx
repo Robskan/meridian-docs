@@ -15,11 +15,9 @@ Listens for a slash command, prefix command, or context menu action and starts t
   <Card title="Slash commands" icon="slash">
     Register `/ping` style commands with Discord descriptions and options.
   </Card>
-
   <Card title="Prefix commands" icon="hashtag">
     Run flows when someone types `!help` or your configured prefix.
   </Card>
-
   <Card title="Context menus" icon="mouse-pointer">
     Right-click a user or message to run a flow from the apps menu.
   </Card>
@@ -29,6 +27,8 @@ Listens for a slash command, prefix command, or context menu action and starts t
   This block is placed automatically by the builder. You cannot add it from the block palette.
 </Note>
 
+
+
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
@@ -36,7 +36,7 @@ Open the block in the builder sidebar to configure these fields.
 <ParamField path="trigger_type" type="string" required>
   How users start this flow.
 
-  Options: `slash`, `prefix`, `user`, `message`.
+Options: `slash`, `prefix`, `user`, `message`.
 </ParamField>
 
 <ParamField path="friendly_name" type="string" required>
@@ -80,9 +80,13 @@ Open the block in the builder sidebar to configure these fields.
   </Step>
 </Steps>
 
+
+
 <Tip>
   Enable **Test mode** while building flows that touch roles, channels, or external APIs so you can run them safely in a live server.
 </Tip>
+
+
 
 ## Related blocks
 
@@ -90,7 +94,6 @@ Open the block in the builder sidebar to configure these fields.
   <Card title="Command option" icon="cube" href="/builder/action-blocks/command-flow/command-option">
     Add slash command parameters.
   </Card>
-
   <Card title="Error handler" icon="cube" href="/builder/action-blocks/command-flow/command-error-handler">
     Customize what happens when this command fails.
   </Card>

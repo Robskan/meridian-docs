@@ -9,6 +9,12 @@ The **Create a Variable** block lives in the **Variables & Data storage** palett
 
 Defines a new Storage variable with type, scope, and default value that persists across flow runs.
 
+
+
+
+
+
+
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
@@ -20,29 +26,37 @@ Open the block in the builder sidebar to configure these fields.
 <ParamField path="var_type" type="string" required>
   undefined
 
-  Options: `text`, `number`, `collection`, `object`.
+Options: `text`, `number`, `collection`, `object`.
 </ParamField>
 
 <ParamField path="var_partition" type="string">
   Global shares one value everywhere; Server keeps separate values per guild.
 
-  Options: `global`, `per_server`.
+Options: `global`, `per_server`.
 </ParamField>
 
 <ParamField path="var_subject" type="string">
   Whether each user, channel, or role gets its own value.
 
-  Options: `none`, `user`, `channel`, `role`.
+Options: `none`, `user`, `channel`, `role`.
 </ParamField>
 
 <ParamField path="var_value" type="string">
   Initial value.
 </ParamField>
 
+
+
+
+
 | Scope | Meaning |
 | --- | --- |
-| Global \+ Shared | One value for the entire bot |
-| Server \+ Per user | Each member has their own counter per guild |
+| Global + Shared | One value for the entire bot |
+| Server + Per user | Each member has their own counter per guild |
+
+
+
+
 
 ## Related blocks
 

@@ -15,11 +15,9 @@ Subscribes to a discord.js client event (such as `messageCreate` or `guildMember
   <Card title="Welcome messages" icon="user-plus">
     Run on `guildMemberAdd` to greet new members.
   </Card>
-
   <Card title="Auto moderation" icon="shield">
     React to `messageCreate` with filters and actions.
   </Card>
-
   <Card title="External triggers" icon="webhook">
     Start flows from outside Discord via webhook POST requests.
   </Card>
@@ -28,6 +26,8 @@ Subscribes to a discord.js client event (such as `messageCreate` or `guildMember
 <Note>
   This block is placed automatically by the builder. You cannot add it from the block palette.
 </Note>
+
+
 
 ## Configuration
 
@@ -56,6 +56,12 @@ Open the block in the builder sidebar to configure these fields.
 <ParamField path="trigger_on_webhooks" type="boolean">
   Allow channel webhook posts to trigger the flow.
 </ParamField>
+
+
+
+
+
+
 
 <Tip>
   For webhook events, configure path suffix and optional `mrdn-key` authentication in the block sidebar.

@@ -99,6 +99,15 @@
             ]
           },
           {
+            "group": "Logic",
+            "icon": "code-branch",
+            "pages": [
+              "builder/action-blocks/logic.mdx",
+              "builder/action-blocks/logic/if-statement.mdx",
+              "builder/action-blocks/logic/if-branch.mdx"
+            ]
+          },
+          {
             "group": "Roles",
             "icon": "user-tag",
             "pages": [
@@ -155,11 +164,19 @@
             "group": "Users",
             "icon": "users",
             "pages": [
-              "builder/action-blocks/users/timeout.mdx",
-              "builder/action-blocks/users/kick-ban.mdx",
               "builder/action-blocks/users.mdx",
-              "builder/action-blocks/users/leave-server.mdx",
-              "builder/action-blocks/users/rename-user.mdx"
+              "builder/action-blocks/users/kick-ban.mdx",
+              "builder/action-blocks/users/timeout.mdx",
+              "builder/action-blocks/users/rename-user.mdx",
+              "builder/action-blocks/users/leave-server.mdx"
+            ]
+          },
+          {
+            "group": "Functions",
+            "icon": "code",
+            "pages": [
+              "builder/action-blocks/functions.mdx",
+              "builder/action-blocks/functions/exec-function.mdx"
             ]
           },
           {
@@ -171,14 +188,6 @@
               "builder/action-blocks/other/wait-for-interaction.mdx",
               "builder/action-blocks/other/text-functions.mdx",
               "builder/action-blocks/other/send-log.mdx"
-            ]
-          },
-          {
-            "group": "Functions",
-            "icon": "code",
-            "pages": [
-              "builder/action-blocks/functions.mdx",
-              "builder/action-blocks/functions/exec-function.mdx"
             ]
           },
           {
@@ -198,15 +207,6 @@
             "pages": [
               "builder/action-blocks/developer.mdx",
               "builder/action-blocks/developer/post-flow-error-card.mdx"
-            ]
-          },
-          {
-            "group": "Logic",
-            "icon": "code-branch",
-            "pages": [
-              "builder/action-blocks/logic.mdx",
-              "builder/action-blocks/logic/if-statement.mdx",
-              "builder/action-blocks/logic/if-branch.mdx"
             ]
           }
         ]

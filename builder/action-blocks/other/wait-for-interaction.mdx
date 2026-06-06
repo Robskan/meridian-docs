@@ -9,6 +9,12 @@ Wait for interaction pauses the flow until a user reacts, sends a message, or us
 
 Holds execution open for up to 30 seconds (Free/Hobby) or 60 seconds (Pro/Max), then continues on the next block. Saves user, message, or content to variables.
 
+
+
+
+
+
+
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
@@ -16,7 +22,7 @@ Open the block in the builder sidebar to configure these fields.
 <ParamField path="interaction_types" type="string" required>
   What counts as a valid response.
 
-  Options: `reaction`, `message`, `button`, `select_menu`, `modal_submit`.
+Options: `reaction`, `message`, `button`, `select_menu`, `modal_submit`.
 </ParamField>
 
 <ParamField path="user_filter" type="string">
@@ -52,6 +58,12 @@ Open the block in the builder sidebar to configure these fields.
     Follow with an If block checking whether variables were set.
   </Step>
 </Steps>
+
+
+
+
+
+
 
 ## Related blocks
 
