@@ -1,0 +1,86 @@
+---
+title: "Action blocks"
+description: "Reference for every block in the Meridian builder, organized by palette category."
+icon: "cubes"
+sidebarTitle: "Overview"
+---
+
+Action blocks are the steps in a Meridian flow. Connect them on the canvas to define what your bot does when a command runs, an event fires, or a function is called.
+
+Each block belongs to a palette category. Pick a category below to browse every block in that group.
+
+<CardGroup cols={2}>
+  <Card title="Command flow" icon="terminal" href="/builder/action-blocks/command-flow">
+    3 blocks
+  </Card>
+
+  <Card title="Event flow" icon="bolt" href="/builder/action-blocks/event-flow">
+    1 block
+  </Card>
+
+  <Card title="Function flow" icon="function" href="/builder/action-blocks/function-flow">
+    1 block
+  </Card>
+
+  <Card title="Messages" icon="message" href="/builder/action-blocks/messages">
+    7 blocks
+  </Card>
+
+  <Card title="API & Third Party" icon="globe" href="/builder/action-blocks/api-and-third-party">
+    2 blocks
+  </Card>
+
+  <Card title="Loops" icon="rotate" href="/builder/action-blocks/loops">
+    4 blocks
+  </Card>
+
+  <Card title="Logic" icon="code-branch" href="/builder/action-blocks/logic">
+    2 blocks
+  </Card>
+
+  <Card title="Roles" icon="user-tag" href="/builder/action-blocks/roles">
+    5 blocks
+  </Card>
+
+  <Card title="Channels" icon="hashtag" href="/builder/action-blocks/channels">
+    6 blocks
+  </Card>
+
+  <Card title="Voice" icon="microphone" href="/builder/action-blocks/voice">
+    7 blocks
+  </Card>
+
+  <Card title="Variables & Data storage" icon="database" href="/builder/action-blocks/variables-and-data-storage">
+    7 blocks
+  </Card>
+
+  <Card title="Users" icon="users" href="/builder/action-blocks/users">
+    4 blocks
+  </Card>
+
+  <Card title="Functions" icon="code" href="/builder/action-blocks/functions">
+    1 block
+  </Card>
+
+  <Card title="Other" icon="ellipsis" href="/builder/action-blocks/other">
+    4 blocks
+  </Card>
+
+  <Card title="Settings" icon="gear" href="/builder/action-blocks/settings">
+    4 blocks
+  </Card>
+
+  <Card title="Developer" icon="wrench" href="/builder/action-blocks/developer">
+    1 block
+  </Card>
+</CardGroup>
+
+## How blocks connect
+
+- **Entry blocks** (Command, Event, Function) start a flow. Every command, event, and function flow has exactly one entry block.
+- **Action blocks** run in order along connections from top to bottom on the canvas.
+- **System blocks** (Error handler, Branch, After loop, Command option) are created by the builder when you need them. They do not appear in the add-block palette.
+
+## Variables
+
+Many blocks accept variables in text fields. Use `{user.name}`, `{channel.id}`, `{vars.myVar}`, and other placeholders. Temporary variables last for one run. Storage variables persist across runs.

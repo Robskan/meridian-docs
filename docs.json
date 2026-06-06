@@ -44,6 +44,184 @@
           }
         ],
         "icon": "lock"
+      },
+      {
+        "group": "Builder",
+        "icon": "cubes",
+        "pages": [
+          "builder/action-blocks/overview.mdx",
+          {
+            "group": "Command flow",
+            "icon": "terminal",
+            "pages": [
+              "builder/action-blocks/command-flow.mdx",
+              "builder/action-blocks/command-flow/command-start.mdx",
+              "builder/action-blocks/command-flow/command-error-handler.mdx",
+              "builder/action-blocks/command-flow/command-option.mdx"
+            ]
+          },
+          {
+            "group": "Event flow",
+            "icon": "bolt",
+            "pages": [
+              "builder/action-blocks/event-flow.mdx",
+              "builder/action-blocks/event-flow/event-start.mdx"
+            ]
+          },
+          {
+            "group": "Function flow",
+            "icon": "function",
+            "pages": [
+              "builder/action-blocks/function-flow.mdx",
+              "builder/action-blocks/function-flow/function-start.mdx"
+            ]
+          },
+          {
+            "group": "Messages",
+            "icon": "message",
+            "pages": [
+              "builder/action-blocks/messages.mdx",
+              "builder/action-blocks/messages/send-message.mdx",
+              "builder/action-blocks/messages/send-form.mdx",
+              "builder/action-blocks/messages/delete-message.mdx",
+              "builder/action-blocks/messages/edit-message-part.mdx",
+              "builder/action-blocks/messages/pin-message.mdx",
+              "builder/action-blocks/messages/reaction-message.mdx",
+              "builder/action-blocks/messages/forward-message.mdx"
+            ]
+          },
+          {
+            "group": "API & Third Party",
+            "icon": "globe",
+            "pages": [
+              "builder/action-blocks/api-and-third-party/api-request.mdx",
+              "builder/action-blocks/api-and-third-party/ask-ai.mdx",
+              "builder/action-blocks/api-and-third-party.mdx"
+            ]
+          },
+          {
+            "group": "Loops",
+            "icon": "rotate",
+            "pages": [
+              "builder/action-blocks/loops.mdx",
+              "builder/action-blocks/loops/run-loop.mdx",
+              "builder/action-blocks/loops/run-loop-each.mdx",
+              "builder/action-blocks/loops/loop-after.mdx",
+              "builder/action-blocks/loops/break-loop.mdx"
+            ]
+          },
+          {
+            "group": "Roles",
+            "icon": "user-tag",
+            "pages": [
+              "builder/action-blocks/roles.mdx",
+              "builder/action-blocks/roles/add-role.mdx",
+              "builder/action-blocks/roles/remove-role.mdx",
+              "builder/action-blocks/roles/create-role.mdx",
+              "builder/action-blocks/roles/delete-role.mdx",
+              "builder/action-blocks/roles/edit-role.mdx"
+            ]
+          },
+          {
+            "group": "Voice",
+            "icon": "microphone",
+            "pages": [
+              "builder/action-blocks/voice.mdx",
+              "builder/action-blocks/voice/leave-vc.mdx",
+              "builder/action-blocks/voice/join-vc.mdx",
+              "builder/action-blocks/voice/mute-member.mdx",
+              "builder/action-blocks/voice/deafen-member.mdx",
+              "builder/action-blocks/voice/set-voice-status.mdx",
+              "builder/action-blocks/voice/move-vc.mdx",
+              "builder/action-blocks/voice/kick-vc.mdx"
+            ]
+          },
+          {
+            "group": "Channels",
+            "icon": "hashtag",
+            "pages": [
+              "builder/action-blocks/channels.mdx",
+              "builder/action-blocks/channels/create-channel.mdx",
+              "builder/action-blocks/channels/create-forum-post.mdx",
+              "builder/action-blocks/channels/edit-forum-post.mdx",
+              "builder/action-blocks/channels/delete-channel.mdx",
+              "builder/action-blocks/channels/edit-channel.mdx",
+              "builder/action-blocks/channels/create-transcript.mdx"
+            ]
+          },
+          {
+            "group": "Functions",
+            "icon": "code",
+            "pages": [
+              "builder/action-blocks/functions.mdx",
+              "builder/action-blocks/functions/exec-function.mdx"
+            ]
+          },
+          {
+            "group": "Other",
+            "icon": "ellipsis",
+            "pages": [
+              "builder/action-blocks/other.mdx",
+              "builder/action-blocks/other/wait.mdx",
+              "builder/action-blocks/other/wait-for-interaction.mdx",
+              "builder/action-blocks/other/text-functions.mdx",
+              "builder/action-blocks/other/send-log.mdx"
+            ]
+          },
+          {
+            "group": "Settings",
+            "icon": "gear",
+            "pages": [
+              "builder/action-blocks/settings.mdx",
+              "builder/action-blocks/settings/set-prefix.mdx",
+              "builder/action-blocks/settings/set-status.mdx",
+              "builder/action-blocks/settings/change-bot-server-profile.mdx",
+              "builder/action-blocks/settings/restart-bot.mdx"
+            ]
+          },
+          {
+            "group": "Developer",
+            "icon": "wrench",
+            "pages": [
+              "builder/action-blocks/developer.mdx",
+              "builder/action-blocks/developer/post-flow-error-card.mdx"
+            ]
+          },
+          {
+            "group": "Logic",
+            "icon": "code-branch",
+            "pages": [
+              "builder/action-blocks/logic.mdx",
+              "builder/action-blocks/logic/if-statement.mdx",
+              "builder/action-blocks/logic/if-branch.mdx"
+            ]
+          },
+          {
+            "group": "Users",
+            "icon": "users",
+            "pages": [
+              "builder/action-blocks/users/timeout.mdx",
+              "builder/action-blocks/users/kick-ban.mdx",
+              "builder/action-blocks/users.mdx",
+              "builder/action-blocks/users/leave-server.mdx",
+              "builder/action-blocks/users/rename-user.mdx"
+            ]
+          },
+          {
+            "group": "Variables & Data storage",
+            "icon": "database",
+            "pages": [
+              "builder/action-blocks/variables-and-data-storage.mdx",
+              "builder/action-blocks/variables-and-data-storage/set-variable.mdx",
+              "builder/action-blocks/variables-and-data-storage/create-var.mdx",
+              "builder/action-blocks/variables-and-data-storage/create-temp-var.mdx",
+              "builder/action-blocks/variables-and-data-storage/delete-temp-var.mdx",
+              "builder/action-blocks/variables-and-data-storage/calculate.mdx",
+              "builder/action-blocks/variables-and-data-storage/delete-var.mdx",
+              "builder/action-blocks/variables-and-data-storage/find-something.mdx"
+            ]
+          }
+        ]
       }
     ]
   },
