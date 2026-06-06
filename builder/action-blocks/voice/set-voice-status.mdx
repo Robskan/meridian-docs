@@ -3,10 +3,28 @@ title: "Set Voice Channel Status"
 description: "Set the status message shown on a voice channel."
 ---
 
-The **Set Voice Channel Status** block is in the **Voice** category in the Meridian builder.
+The **Set Voice Channel Status** block lives in the **Voice** palette category. Set the status message shown on a voice channel.
 
-Set the status message shown on a voice channel..
+## What it does
 
-## Category
+Set the status message shown on a voice channel.
 
-[Voice](/builder/action-blocks/voice)
+## Configuration
+
+Open the block in the builder sidebar to configure these fields.
+
+<ParamField path="channel_id" type="channel" required>
+  Voice channel whose status text updates.
+</ParamField>
+
+<ParamField path="status" type="string">
+  Short status message shown on the channel (for example, "Listening to music…").
+</ParamField>
+
+## Related blocks
+
+<CardGroup cols={2}>
+  <Card title="Voice" icon="cube" href="/builder/action-blocks/voice">
+    Browse all blocks in the Voice category.
+  </Card>
+</CardGroup>

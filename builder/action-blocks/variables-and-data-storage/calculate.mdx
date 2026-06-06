@@ -3,10 +3,38 @@ title: "Calculate"
 description: "Perform math operations and save the result to a variable."
 ---
 
-The **Calculate** block is in the **Variables & Data storage** category in the Meridian builder.
+The **Calculate** block lives in the **Variables & Data storage** palette category. Perform math operations and save the result to a variable.
 
-Perform math operations and save the result to a variable..
+## What it does
 
-## Category
+Perform math operations and save the result to a variable.
 
-[Variables & Data storage](/builder/action-blocks/variables-and-data-storage)
+## Configuration
+
+Open the block in the builder sidebar to configure these fields.
+
+<ParamField path="operation" type="string" required>
+  Math operation to run.
+
+  Options: `add`, `sub`, `mul`, `div`.
+</ParamField>
+
+<ParamField path="value_1" type="string" required>
+  First operand. Numbers or variables.
+</ParamField>
+
+<ParamField path="value_2" type="string" required>
+  Second operand.
+</ParamField>
+
+<ParamField path="save_var" type="string" required>
+  Flow variable that stores the result as `{vars.name}`.
+</ParamField>
+
+## Related blocks
+
+<CardGroup cols={2}>
+  <Card title="Variables & Data storage" icon="cube" href="/builder/action-blocks/variables-and-data-storage">
+    Browse all blocks in the Variables & Data storage category.
+  </Card>
+</CardGroup>

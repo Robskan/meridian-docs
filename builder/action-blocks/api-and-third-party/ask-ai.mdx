@@ -3,36 +3,56 @@ title: "Ask AI"
 description: "Send a prompt to an AI model using your own API key."
 ---
 
-The **Ask AI** block is in the **API & Third Party** category in the Meridian builder.
+Ask AI sends a prompt to a supported model using **your own API key** (BYOK). Meridian does not bill for BYOK usage.
 
-Send a prompt to an AI model using your own API key..
+## What it does
 
-## Settings
+Runs chat or image models from providers you configure. The model reply and model id can be saved to temporary flow variables for follow-up blocks.
 
-### API key
+## Configuration
 
-Your provider key or a Storage variable name.
+Open the block in the builder sidebar to configure these fields.
 
-### Model
+<ParamField path="api_key_env" type="string" required>
+  Raw key or Storage variable name (recommended).
+</ParamField>
 
-Pick from the list or use a variable for a dynamic model id.
+<ParamField path="model" type="string" required>
+  Pick from the list or pass a dynamic id via variable.
+</ParamField>
 
-### System prompt
+<ParamField path="system_prompt" type="string">
+  Instructions that shape tone and behavior.
+</ParamField>
 
-Instructions that shape how the model responds.
+<ParamField path="prompt" type="string" required>
+  User message sent to the model. Variables allowed.
+</ParamField>
 
-### Prompt
+<ParamField path="max_tokens" type="number">
+  Response length cap (1 to 8192).
+</ParamField>
 
-The user message sent to the model.
+<ParamField path="temperature" type="number">
+  Optional creativity from 0 (focused) to 2 (varied).
+</ParamField>
 
-### Max tokens
+<ParamField path="save_response" type="string">
+  Temporary variable for text reply (`{vars.name}`) and model id (`{name.model}`).
+</ParamField>
 
-Limit response length (1 to 8192).
+<Tip>
+  Combine with Send a Message to post AI replies in Discord channels.
+</Tip>
 
-### Save response to variable
+<Warning>
+  Gemini image models return JSON with base64 image data. Parse the JSON in later blocks if you need bytes.
+</Warning>
 
-Temporary variable for the reply and model id.
+## Related blocks
 
-## Category
-
-[API & Third Party](/builder/action-blocks/api-and-third-party)
+<CardGroup cols={2}>
+  <Card title="API & Third Party" icon="cube" href="/builder/action-blocks/api-and-third-party">
+    Browse all blocks in the API & Third Party category.
+  </Card>
+</CardGroup>

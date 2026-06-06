@@ -3,10 +3,32 @@ title: "Join Voice Channel"
 description: "Join a specific voice channel."
 ---
 
-The **Join Voice Channel** block is in the **Voice** category in the Meridian builder.
+The **Join Voice Channel** block lives in the **Voice** palette category. Join a specific voice channel.
 
-Join a specific voice channel..
+## What it does
 
-## Category
+Join a specific voice channel.
 
-[Voice](/builder/action-blocks/voice)
+## Configuration
+
+Open the block in the builder sidebar to configure these fields.
+
+<ParamField path="channel_id" type="channel" required>
+  Voice channel to join.
+</ParamField>
+
+<ParamField path="self_mute" type="boolean">
+  Join muted.
+</ParamField>
+
+<ParamField path="self_deaf" type="boolean">
+  Join deafened.
+</ParamField>
+
+## Related blocks
+
+<CardGroup cols={2}>
+  <Card title="Voice" icon="cube" href="/builder/action-blocks/voice">
+    Browse all blocks in the Voice category.
+  </Card>
+</CardGroup>

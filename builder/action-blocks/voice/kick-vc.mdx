@@ -3,10 +3,28 @@ title: "Kick a member from VC"
 description: "Disconnect a user from voice."
 ---
 
-The **Kick a member from VC** block is in the **Voice** category in the Meridian builder.
+The **Kick a member from VC** block lives in the **Voice** palette category. Disconnect a user from voice.
 
-Disconnect a user from voice..
+## What it does
 
-## Category
+Disconnect a user from voice.
 
-[Voice](/builder/action-blocks/voice)
+## Configuration
+
+Open the block in the builder sidebar to configure these fields.
+
+<ParamField path="user_id" type="user" required>
+  Member to disconnect from voice.
+</ParamField>
+
+<ParamField path="reason" type="string">
+  Optional audit log reason.
+</ParamField>
+
+## Related blocks
+
+<CardGroup cols={2}>
+  <Card title="Voice" icon="cube" href="/builder/action-blocks/voice">
+    Browse all blocks in the Voice category.
+  </Card>
+</CardGroup>

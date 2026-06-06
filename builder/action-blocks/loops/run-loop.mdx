@@ -3,24 +3,48 @@ title: "Repeat"
 description: "Repeat a section of your flow while a condition is true or for a fixed number of times."
 ---
 
-The **Repeat** block is in the **Loops** category in the Meridian builder.
+The **Repeat** block lives in the **Loops** palette category. Repeat a section of your flow while a condition is true or for a fixed number of times.
 
-Repeat a section of your flow while a condition is true or for a fixed number of times..
+## What it does
 
-## Settings
+Repeats connected blocks inside the loop body until a condition fails or a fixed count is reached.
 
-### Type
+## Configuration
 
-While a condition is true, or a fixed number of times.
+Open the block in the builder sidebar to configure these fields.
 
-### Condition
+<ParamField path="repeat_type" type="string" required>
+  undefined
 
-Expression evaluated each iteration for while loops.
+  Options: `while`, `times`.
+</ParamField>
 
-### Number of times
+<ParamField path="condition" type="string">
+  Expression evaluated before each iteration for while loops.
+</ParamField>
 
-How many iterations for fixed loops.
+<ParamField path="times" type="number">
+  Iteration count for fixed loops.
+</ParamField>
 
-## Category
+## Loop anatomy
 
-[Loops](/builder/action-blocks/loops)
+```text
+Repeat
+ ├─ (loop body blocks)
+ └─ After loop → continues here when done
+```
+
+Connect **Break a Loop** inside the body to exit early.
+
+## Related blocks
+
+<CardGroup cols={2}>
+  <Card title="Repeat for Each" icon="cube" href="/builder/action-blocks/loops/run-loop-each">
+    Iterate a list variable instead of a condition.
+  </Card>
+
+  <Card title="Break a Loop" icon="cube" href="/builder/action-blocks/loops/break-loop">
+    Exit the loop immediately.
+  </Card>
+</CardGroup>

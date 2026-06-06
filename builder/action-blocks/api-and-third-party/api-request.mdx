@@ -3,20 +3,46 @@ title: "API"
 description: "Make HTTP or third-party API requests from your flow."
 ---
 
-The **API** block is in the **API & Third Party** category in the Meridian builder.
+The API block sends HTTP requests to external services from your flow.
 
-Make HTTP or third-party API requests from your flow..
+## What it does
 
-## Settings
+Configure method, URL, headers, query params, and body in the request builder. Responses can be stored in variables for use in later blocks.
 
-### Configure Request
+## Configuration
 
-Build method, URL, headers, and body in the request builder.
+Open the block in the builder sidebar to configure these fields.
 
-### Save response to variable
+<ParamField path="edit_request" type="button" required>
+  Open the request builder for method, URL, auth headers, and JSON body.
+</ParamField>
 
-Base name for response variables like {myApi.response.data.id}.
+<ParamField path="save_response" type="string">
+  Base variable name. Access nested fields like `{myApi.response.data.id}` and headers like `{myApi.headers.content-type}`.
+</ParamField>
 
-## Category
+## Example workflow
 
-[API & Third Party](/builder/action-blocks/api-and-third-party)
+<Steps>
+  <Step title="Build the request">
+    Set URL, method, and body. Use variables for dynamic tokens or ids.
+  </Step>
+  <Step title="Save the response">
+    Pick a variable prefix to read status, headers, and JSON body later.
+  </Step>
+  <Step title="Branch on status">
+    Follow with an If statement checking response variables.
+  </Step>
+</Steps>
+
+<Tip>
+  Store API keys in Storage variables instead of pasting secrets directly into the request builder.
+</Tip>
+
+## Related blocks
+
+<CardGroup cols={2}>
+  <Card title="API & Third Party" icon="cube" href="/builder/action-blocks/api-and-third-party">
+    Browse all blocks in the API & Third Party category.
+  </Card>
+</CardGroup>

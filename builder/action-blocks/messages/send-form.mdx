@@ -3,20 +3,50 @@ title: "Send a Form"
 description: "Send a modal form to collect input from a user."
 ---
 
-The **Send a Form** block is in the **Messages** category in the Meridian builder.
+Send a Form opens a Discord modal so users can submit structured input.
 
-Send a modal form to collect input from a user..
+## What it does
 
-## Settings
+Shows a popup form with text inputs, paragraphs, and selects you design in the form editor. After submit, field values are available as flow variables.
 
-### Configure Form
+## Configuration
 
-Build modal fields in the visual form editor.
+Open the block in the builder sidebar to configure these fields.
 
-### Save submitter id as variable
+<ParamField path="edit_form" type="button" required>
+  Open the visual form editor to add fields and validation.
+</ParamField>
 
-Store the user Discord id after they submit.
+<ParamField path="save_user_var" type="string">
+  Stores submitter Discord id as `{vars.name}`. Each field is also `{vars.<field_id}`.
+</ParamField>
 
-## Category
+<ParamField path="save_channel_id_var" type="string">
+  Stores the channel id where the modal opened.
+</ParamField>
 
-[Messages](/builder/action-blocks/messages)
+## Example workflow
+
+<Steps>
+  <Step title="Configure fields">
+    Add short text, paragraph, or select inputs with custom ids.
+  </Step>
+  <Step title="Send the form">
+    Typically placed after a button click or command response.
+  </Step>
+  <Step title="Handle submit">
+    Connect blocks after the form to read `{vars.field_id}` values.
+  </Step>
+</Steps>
+
+<Tip>
+  Field custom ids become variable names. Use lowercase ids without spaces.
+</Tip>
+
+## Related blocks
+
+<CardGroup cols={2}>
+  <Card title="Messages" icon="cube" href="/builder/action-blocks/messages">
+    Browse all blocks in the Messages category.
+  </Card>
+</CardGroup>

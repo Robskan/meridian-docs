@@ -3,10 +3,40 @@ title: "Edit a Role"
 description: "Modify role name, color, hoist, or mentionable settings."
 ---
 
-The **Edit a Role** block is in the **Roles** category in the Meridian builder.
+The **Edit a Role** block lives in the **Roles** palette category. Modify role name, color, hoist, or mentionable settings.
 
-Modify role name, color, hoist, or mentionable settings..
+## What it does
 
-## Category
+Modify role name, color, hoist, or mentionable settings.
 
-[Roles](/builder/action-blocks/roles)
+## Configuration
+
+Open the block in the builder sidebar to configure these fields.
+
+<ParamField path="role_id" type="role" required>
+  Role to modify.
+</ParamField>
+
+<ParamField path="new_name" type="string">
+  Leave blank to keep the current name.
+</ParamField>
+
+<ParamField path="new_color" type="string">
+  Hex color. Leave blank to keep the current color.
+</ParamField>
+
+<ParamField path="hoist" type="boolean">
+  Display separately in the member list.
+</ParamField>
+
+<ParamField path="mentionable" type="boolean">
+  Allow @mentions for this role.
+</ParamField>
+
+## Related blocks
+
+<CardGroup cols={2}>
+  <Card title="Roles" icon="cube" href="/builder/action-blocks/roles">
+    Browse all blocks in the Roles category.
+  </Card>
+</CardGroup>

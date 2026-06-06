@@ -3,10 +3,34 @@ title: "Mute or Unmute"
 description: "Server mute or unmute a member."
 ---
 
-The **Mute or Unmute** block is in the **Voice** category in the Meridian builder.
+The **Mute or Unmute** block lives in the **Voice** palette category. Server mute or unmute a member.
 
-Server mute or unmute a member..
+## What it does
 
-## Category
+Server mute or unmute a member.
 
-[Voice](/builder/action-blocks/voice)
+## Configuration
+
+Open the block in the builder sidebar to configure these fields.
+
+<ParamField path="action" type="string" required>
+  Server mute state to apply.
+
+  Options: `mute`, `unmute`, `toggle`.
+</ParamField>
+
+<ParamField path="user_id" type="user" required>
+  Target member. Can include the bot itself.
+</ParamField>
+
+<ParamField path="reason" type="string">
+  Optional audit log reason.
+</ParamField>
+
+## Related blocks
+
+<CardGroup cols={2}>
+  <Card title="Voice" icon="cube" href="/builder/action-blocks/voice">
+    Browse all blocks in the Voice category.
+  </Card>
+</CardGroup>

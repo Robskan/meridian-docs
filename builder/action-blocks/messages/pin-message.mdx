@@ -3,10 +3,30 @@ title: "Pin or Unpin a Message"
 description: "Pin or unpin a message in a channel."
 ---
 
-The **Pin or Unpin a Message** block is in the **Messages** category in the Meridian builder.
+The **Pin or Unpin a Message** block lives in the **Messages** palette category. Pin or unpin a message in a channel.
 
-Pin or unpin a message in a channel..
+## What it does
 
-## Category
+Pins or unpins a message in a channel.
 
-[Messages](/builder/action-blocks/messages)
+## Configuration
+
+Open the block in the builder sidebar to configure these fields.
+
+<ParamField path="action" type="string" required>
+  undefined
+
+  Options: `pin`, `unpin`.
+</ParamField>
+
+<ParamField path="message_id" type="block-reference" required>
+  Message to pin or unpin.
+</ParamField>
+
+## Related blocks
+
+<CardGroup cols={2}>
+  <Card title="Messages" icon="cube" href="/builder/action-blocks/messages">
+    Browse all blocks in the Messages category.
+  </Card>
+</CardGroup>

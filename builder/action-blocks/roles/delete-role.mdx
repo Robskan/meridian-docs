@@ -3,10 +3,28 @@ title: "Delete a Role"
 description: "Delete an existing role."
 ---
 
-The **Delete a Role** block is in the **Roles** category in the Meridian builder.
+The **Delete a Role** block lives in the **Roles** palette category. Delete an existing role.
 
-Delete an existing role..
+## What it does
 
-## Category
+Delete an existing role.
 
-[Roles](/builder/action-blocks/roles)
+## Configuration
+
+Open the block in the builder sidebar to configure these fields.
+
+<ParamField path="role_id" type="role" required>
+  Role to delete permanently.
+</ParamField>
+
+<ParamField path="reason" type="string">
+  Optional audit log reason.
+</ParamField>
+
+## Related blocks
+
+<CardGroup cols={2}>
+  <Card title="Roles" icon="cube" href="/builder/action-blocks/roles">
+    Browse all blocks in the Roles category.
+  </Card>
+</CardGroup>

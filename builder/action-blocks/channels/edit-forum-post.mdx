@@ -3,10 +3,32 @@ title: "Edit Forum Post"
 description: "Modify settings and tags of an existing forum post."
 ---
 
-The **Edit Forum Post** block is in the **Channels** category in the Meridian builder.
+The **Edit Forum Post** block lives in the **Channels** palette category. Modify settings and tags of an existing forum post.
 
-Modify settings and tags of an existing forum post..
+## What it does
 
-## Category
+Updates forum post title, tags, archive state, lock state, and slowmode.
 
-[Channels](/builder/action-blocks/channels)
+## Configuration
+
+Open the block in the builder sidebar to configure these fields.
+
+<ParamField path="channel_id" type="channel" required>
+  Thread/post to edit.
+</ParamField>
+
+<ParamField path="new_name" type="string">
+  Updated title.
+</ParamField>
+
+<ParamField path="applied_tags" type="forum-tags">
+  Set, add, or remove tags.
+</ParamField>
+
+## Related blocks
+
+<CardGroup cols={2}>
+  <Card title="Channels" icon="cube" href="/builder/action-blocks/channels">
+    Browse all blocks in the Channels category.
+  </Card>
+</CardGroup>

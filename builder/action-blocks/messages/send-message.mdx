@@ -3,28 +3,101 @@ title: "Send a Message"
 description: "Send a text message, embed, or Components v2 layout to a channel or user."
 ---
 
-The **Send a Message** block is in the **Messages** category in the Meridian builder.
+Send a Message is the primary way to post content in Discord from a flow.
 
-Send a text message, embed, or Components v2 layout to a channel or user..
+## What it does
 
-## Settings
+Composes text, embeds, buttons, and select menus in the visual message editor, then sends, DMs, or edits a message. Supports Components v2 layouts with ping rules and private replies.
 
-### Edit content
+## Common uses
 
-Open the message editor to build text, embeds, buttons, and select menus.
+<CardGroup cols={2}>
+  <Card title="Replies" icon="reply">
+    Reply in the current channel or ephemerally to the command user.
+  </Card>
 
-### Action
+  <Card title="Announcements" icon="megaphone">
+    Post to a specific channel by id or picker.
+  </Card>
 
-Send to a channel, direct message a user, or edit an existing message.
+  <Card title="Live dashboards" icon="refresh">
+    Send once, save the message id, then Edit Part of a Message to update stats.
+  </Card>
+</CardGroup>
 
-### Destination
+## Configuration
 
-Current channel/reply or a specific channel.
+<Tabs>
+  <Tab title="Content">
+    Click **Edit content** to open the message editor.
 
-### Save message id as variable
+    <ParamField path="edit_content" type="button" required>
+      Build message text, embeds, buttons, and select menus visually. Button and menu clicks can branch to other blocks on the canvas.
+    </ParamField>
 
-Store the sent message Discord id for later blocks.
+    <Tip>
+      Save the message id to a variable when you plan to edit or delete the message later in the same flow.
+    </Tip>
+  </Tab>
+  <Tab title="Send">
+    <ParamField path="action" type="string" required>
+      Choose **Send**, **Direct Message**, or **Edit**.
+    </ParamField>
 
-## Category
+    <ParamField path="destination" type="string">
+      For Send: current channel/reply or a specific channel.
+    </ParamField>
 
-[Messages](/builder/action-blocks/messages)
+    <ParamField path="channel_id" type="channel">
+      Required when destination is a specific channel.
+    </ParamField>
+
+    <ParamField path="is_reply" type="boolean">
+      Reply to the triggering message when sending in the current channel.
+    </ParamField>
+
+    <ParamField path="ephemeral" type="boolean">
+      Only visible to the command user. Works when replying to a slash command interaction.
+    </ParamField>
+
+    <ParamField path="save_message_id_var" type="string">
+      Flow variable name for the sent message snowflake ({vars.name}).
+    </ParamField>
+  </Tab>
+  <Tab title="Direct message">
+    <ParamField path="user_id" type="user" required>
+      Recipient. Defaults to command user, or pick from server / variables.
+    </ParamField>
+  </Tab>
+  <Tab title="Edit">
+    <ParamField path="message_id" type="block-reference" required>
+      Pick a Send a Message block from this flow or provide a message id variable.
+    </ParamField>
+  </Tab>
+</Tabs>
+
+## Example workflow
+
+<Steps>
+  <Step title="Edit content">
+    Build the message layout and any interactive components.
+  </Step>
+  <Step title="Choose action">
+    Send publicly, DM the user, or edit an earlier message.
+  </Step>
+  <Step title="Save message id">
+    Optional. Store the id if later blocks delete, pin, or partially edit the message.
+  </Step>
+</Steps>
+
+## Related blocks
+
+<CardGroup cols={2}>
+  <Card title="Edit Part of a Message" icon="cube" href="/builder/action-blocks/messages/edit-message-part">
+    Update one field without rebuilding the whole message.
+  </Card>
+
+  <Card title="Wait for interaction" icon="cube" href="/builder/action-blocks/other/wait-for-interaction">
+    Pause until someone clicks a button on this message.
+  </Card>
+</CardGroup>

@@ -3,10 +3,42 @@ title: "Change bot profile"
 description: "Update the bot avatar, banner, username, or server nickname."
 ---
 
-The **Change bot profile** block is in the **Settings** category in the Meridian builder.
+The **Change bot profile** block lives in the **Settings** palette category. Update the bot avatar, banner, username, or server nickname.
 
-Update the bot avatar, banner, username, or server nickname..
+## What it does
 
-## Category
+Changes bot avatar, banner, username (global), or server nickname (guild scope).
 
-[Settings](/builder/action-blocks/settings)
+## Configuration
+
+Open the block in the builder sidebar to configure these fields.
+
+<ParamField path="scope" type="string" required>
+  undefined
+
+  Options: `global`, `guild`.
+</ParamField>
+
+<ParamField path="avatar_url" type="string">
+  Image URL or variable.
+</ParamField>
+
+<ParamField path="banner_url" type="string">
+  Profile banner URL.
+</ParamField>
+
+<ParamField path="username" type="string">
+  Global username (2 to 32 chars).
+</ParamField>
+
+<ParamField path="nickname" type="string">
+  Server nickname (guild scope).
+</ParamField>
+
+## Related blocks
+
+<CardGroup cols={2}>
+  <Card title="Settings" icon="cube" href="/builder/action-blocks/settings">
+    Browse all blocks in the Settings category.
+  </Card>
+</CardGroup>

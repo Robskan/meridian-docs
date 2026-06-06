@@ -3,10 +3,28 @@ title: "Create a Temporary Variable"
 description: "Store data for the current execution only."
 ---
 
-The **Create a Temporary Variable** block is in the **Variables & Data storage** category in the Meridian builder.
+The **Create a Temporary Variable** block lives in the **Variables & Data storage** palette category. Store data for the current execution only.
 
-Store data for the current execution only..
+## What it does
 
-## Category
+Store data for the current execution only.
 
-[Variables & Data storage](/builder/action-blocks/variables-and-data-storage)
+## Configuration
+
+Open the block in the builder sidebar to configure these fields.
+
+<ParamField path="var_name" type="string" required>
+  Name for this run only. Reference as `{vars.name}`.
+</ParamField>
+
+<ParamField path="var_value" type="string" required>
+  Initial value. Variables allowed.
+</ParamField>
+
+## Related blocks
+
+<CardGroup cols={2}>
+  <Card title="Variables & Data storage" icon="cube" href="/builder/action-blocks/variables-and-data-storage">
+    Browse all blocks in the Variables & Data storage category.
+  </Card>
+</CardGroup>

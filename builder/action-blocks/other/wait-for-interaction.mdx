@@ -3,24 +3,60 @@ title: "Wait for interaction"
 description: "Pause until someone reacts, sends a message, or uses a component."
 ---
 
-The **Wait for interaction** block is in the **Other** category in the Meridian builder.
+Wait for interaction pauses the flow until a user reacts, sends a message, or uses a component.
 
-Pause until someone reacts, sends a message, or uses a component..
+## What it does
 
-## Settings
+Holds execution open for up to 30 seconds (Free/Hobby) or 60 seconds (Pro/Max), then continues on the next block. Saves user, message, or content to variables.
 
-### Listen for
+## Configuration
 
-Reaction, message, button press, dropdown selection, or modal submit.
+Open the block in the builder sidebar to configure these fields.
 
-### Who can trigger
+<ParamField path="interaction_types" type="string" required>
+  What counts as a valid response.
 
-Anyone, command user, a specific user, or members with a role.
+  Options: `reaction`, `message`, `button`, `select_menu`, `modal_submit`.
+</ParamField>
 
-### Timeout
+<ParamField path="user_filter" type="string">
+  Restrict who can continue the flow.
+</ParamField>
 
-Up to 30s on Free/Hobby. Up to 60s on Pro and Max.
+<ParamField path="timeout_seconds" type="number">
+  Max wait time.
+</ParamField>
 
-## Category
+<ParamField path="save_user_var" type="string">
+  Stores responder user id.
+</ParamField>
 
-[Other](/builder/action-blocks/other)
+<ParamField path="save_message_var" type="string">
+  Stores message id.
+</ParamField>
+
+<ParamField path="save_content_var" type="string">
+  Stores message text or emoji.
+</ParamField>
+
+## Example workflow
+
+<Steps>
+  <Step title="Send a message with buttons">
+    Add buttons in Send a Message, then place Wait for interaction below.
+  </Step>
+  <Step title="Filter who can click">
+    Limit to command user or a role for games and confirmations.
+  </Step>
+  <Step title="Handle timeout">
+    Follow with an If block checking whether variables were set.
+  </Step>
+</Steps>
+
+## Related blocks
+
+<CardGroup cols={2}>
+  <Card title="Other" icon="cube" href="/builder/action-blocks/other">
+    Browse all blocks in the Other category.
+  </Card>
+</CardGroup>

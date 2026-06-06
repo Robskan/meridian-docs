@@ -3,10 +3,38 @@ title: "Kick or Ban a member"
 description: "Remove a member from the server by kick or ban."
 ---
 
-The **Kick or Ban a member** block is in the **Users** category in the Meridian builder.
+The **Kick or Ban a member** block lives in the **Users** palette category. Remove a member from the server by kick or ban.
 
-Remove a member from the server by kick or ban..
+## What it does
 
-## Category
+Remove a member from the server by kick or ban.
 
-[Users](/builder/action-blocks/users)
+## Configuration
+
+Open the block in the builder sidebar to configure these fields.
+
+<ParamField path="action" type="string" required>
+  Kick removes the member; ban prevents them from rejoining.
+
+  Options: `kick`, `ban`.
+</ParamField>
+
+<ParamField path="user_id" type="user" required>
+  Member to remove.
+</ParamField>
+
+<ParamField path="reason" type="string">
+  Shown in audit logs.
+</ParamField>
+
+<ParamField path="delete_msgs" type="number">
+  For bans only. Delete recent messages from this user (0 to 7 days).
+</ParamField>
+
+## Related blocks
+
+<CardGroup cols={2}>
+  <Card title="Users" icon="cube" href="/builder/action-blocks/users">
+    Browse all blocks in the Users category.
+  </Card>
+</CardGroup>

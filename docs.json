@@ -47,7 +47,7 @@
       },
       {
         "group": "Builder",
-        "icon": "cubes",
+        "icon": "wrench",
         "pages": [
           "builder/action-blocks/overview.mdx",
           {

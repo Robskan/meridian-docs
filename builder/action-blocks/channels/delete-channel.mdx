@@ -3,10 +3,32 @@ title: "Delete a Channel (incl. Threads)"
 description: "Delete a channel or thread."
 ---
 
-The **Delete a Channel (incl. Threads)** block is in the **Channels** category in the Meridian builder.
+The **Delete a Channel (incl. Threads)** block lives in the **Channels** palette category. Delete a channel or thread.
 
-Delete a channel or thread..
+## What it does
 
-## Category
+Permanently deletes a channel or thread.
 
-[Channels](/builder/action-blocks/channels)
+## Configuration
+
+Open the block in the builder sidebar to configure these fields.
+
+<ParamField path="channel_id" type="channel" required>
+  Channel or thread to delete.
+</ParamField>
+
+<ParamField path="reason" type="string">
+  Audit log reason.
+</ParamField>
+
+<Warning>
+  Deletion is irreversible. Confirm the channel id when using variables.
+</Warning>
+
+## Related blocks
+
+<CardGroup cols={2}>
+  <Card title="Channels" icon="cube" href="/builder/action-blocks/channels">
+    Browse all blocks in the Channels category.
+  </Card>
+</CardGroup>

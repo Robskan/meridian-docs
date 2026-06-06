@@ -3,10 +3,32 @@ title: "Timeout a member"
 description: "Apply or remove a Discord timeout."
 ---
 
-The **Timeout a member** block is in the **Users** category in the Meridian builder.
+The **Timeout a member** block lives in the **Users** palette category. Apply or remove a Discord timeout.
 
-Apply or remove a Discord timeout..
+## What it does
 
-## Category
+Apply or remove a Discord timeout.
 
-[Users](/builder/action-blocks/users)
+## Configuration
+
+Open the block in the builder sidebar to configure these fields.
+
+<ParamField path="user_id" type="user" required>
+  Member to timeout or untimeout.
+</ParamField>
+
+<ParamField path="duration" type="number" required>
+  Timeout length in minutes. Set to `0` to remove an existing timeout.
+</ParamField>
+
+<ParamField path="reason" type="string">
+  Optional audit log reason.
+</ParamField>
+
+## Related blocks
+
+<CardGroup cols={2}>
+  <Card title="Users" icon="cube" href="/builder/action-blocks/users">
+    Browse all blocks in the Users category.
+  </Card>
+</CardGroup>

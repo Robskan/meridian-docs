@@ -3,28 +3,64 @@ title: "Error handler"
 description: "Runs when this command throws or fails."
 ---
 
-The **Error handler** block is in the **Command flow** category in the Meridian builder.
+The Error handler sits beside your Command block and runs when any block in the command flow throws or fails at runtime.
 
-Runs when this command throws or fails..
+## What it does
+
+Gives you a dedicated branch for custom failure messages, logging, or recovery steps. If you disable it, Meridian shows the built-in flow error card in Discord instead.
+
+## Common uses
+
+<CardGroup cols={2}>
+  <Card title="Friendly errors" icon="message">
+    Send a custom embed explaining what went wrong instead of a generic card.
+  </Card>
+
+  <Card title="Staff alerts" icon="bell">
+    Mirror errors to a Discord webhook for your moderation or dev channel.
+  </Card>
+
+  <Card title="Silent failures" icon="eye-closed">
+    Hide error details from regular members while still notifying owners.
+  </Card>
+</CardGroup>
 
 <Note>
   This block is placed automatically by the builder. You cannot add it from the block palette.
 </Note>
 
-## Settings
+## Configuration
 
-### Disable error handler
+Open the block in the builder sidebar to configure these fields.
 
-When on, failures skip custom error blocks and only show the built-in flow error card.
+<ParamField path="disable_error_handler" type="boolean">
+  When on, failures skip blocks under this anchor and only show the built-in flow error card.
+</ParamField>
 
-### Only show errors to owner or cowork
+<ParamField path="errors_visible_owner_cowork_only" type="boolean">
+  Hides flow error messages from everyone except the bot owner and coworkers with builder access.
+</ParamField>
 
-Hides flow error messages from everyone else in the channel.
+<ParamField path="error_webhook_enabled" type="boolean">
+  Post a copy of each error to a Discord webhook URL.
+</ParamField>
 
-### Send errors to Discord webhook
+<ParamField path="error_webhook_url" type="string">
+  Webhook URL. Required when webhook delivery is enabled.
+</ParamField>
 
-Posts a copy of each flow error to a webhook URL.
+<ParamField path="error_webhook_username" type="string">
+  Optional display name for webhook messages.
+</ParamField>
 
-## Category
+<Tip>
+  Connect a Send a Message block under the Error handler to explain failures in plain language.
+</Tip>
 
-[Command flow](/builder/action-blocks/command-flow)
+## Related blocks
+
+<CardGroup cols={2}>
+  <Card title="Command flow" icon="cube" href="/builder/action-blocks/command-flow">
+    Browse all blocks in the Command flow category.
+  </Card>
+</CardGroup>

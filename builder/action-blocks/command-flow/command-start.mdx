@@ -3,44 +3,97 @@ title: "Command"
 description: "Starts when someone runs this slash command, prefix command, or context menu action."
 ---
 
-The **Command** block is in the **Command flow** category in the Meridian builder.
+Every **command flow** begins with a Command block. It defines how users invoke the flow in Discord and what metadata Discord shows in autocomplete.
 
-Starts when someone runs this slash command, prefix command, or context menu action..
+## What it does
+
+Listens for a slash command, prefix command, or context menu action and starts the connected blocks. The Command block is the root of the canvas: you cannot delete it or add another from the palette.
+
+## Common uses
+
+<CardGroup cols={2}>
+  <Card title="Slash commands" icon="slash">
+    Register `/ping` style commands with Discord descriptions and options.
+  </Card>
+
+  <Card title="Prefix commands" icon="hashtag">
+    Run flows when someone types `!help` or your configured prefix.
+  </Card>
+
+  <Card title="Context menus" icon="mouse-pointer">
+    Right-click a user or message to run a flow from the apps menu.
+  </Card>
+</CardGroup>
 
 <Note>
   This block is placed automatically by the builder. You cannot add it from the block palette.
 </Note>
 
-## Settings
+## Configuration
 
-### Trigger type
+Open the block in the builder sidebar to configure these fields.
 
-Slash command, prefix command, user context menu, or message context menu.
+<ParamField path="trigger_type" type="string" required>
+  How users start this flow.
 
-### Friendly name
+  Options: `slash`, `prefix`, `user`, `message`.
+</ParamField>
 
-Shown on the canvas card and in your command list.
+<ParamField path="friendly_name" type="string" required>
+  Title on the canvas card and in your command list.
+</ParamField>
 
-### Discord command name
+<ParamField path="discord_name" type="string">
+  Slash command name Discord registers. Lowercase, no spaces.
 
-What users type in Discord. Lowercase, no spaces.
+  Options: .
+</ParamField>
 
-### Discord description
+<ParamField path="discord_description" type="string">
+  Shown in Discord slash command autocomplete.
+</ParamField>
 
-Shown in Discord slash command autocomplete.
+<ParamField path="prefix_command_name" type="string">
+  Word after your prefix (for example `ping` in `!ping`).
+</ParamField>
 
-### Command name
+<ParamField path="prefix_command_aliases" type="list">
+  Up to five alternate prefix names that run the same flow.
+</ParamField>
 
-For prefix commands: the word after your prefix.
+<ParamField path="safe_test_mode" type="boolean">
+  Skips destructive steps (moderation, API calls, Ask AI, persisted variables) and posts a short notice instead.
+</ParamField>
 
-### Aliases
+## Example workflow
 
-Up to 5 alternate prefix names for the same command.
+<Steps>
+  <Step title="Pick a trigger type">
+    Slash is the default for new commands. Use prefix if your server relies on a text prefix.
+  </Step>
+  <Step title="Name the command">
+    Set a friendly name for your dashboard, then the Discord-facing name and description.
+  </Step>
+  <Step title="Add options (slash only)">
+    Attach Command option blocks under the Command node for typed parameters.
+  </Step>
+  <Step title="Connect actions">
+    Draw a connection from the bottom handle to your first action block.
+  </Step>
+</Steps>
 
-### Test mode
+<Tip>
+  Enable **Test mode** while building flows that touch roles, channels, or external APIs so you can run them safely in a live server.
+</Tip>
 
-Skips destructive steps so you can try the flow safely.
+## Related blocks
 
-## Category
+<CardGroup cols={2}>
+  <Card title="Command option" icon="cube" href="/builder/action-blocks/command-flow/command-option">
+    Add slash command parameters.
+  </Card>
 
-[Command flow](/builder/action-blocks/command-flow)
+  <Card title="Error handler" icon="cube" href="/builder/action-blocks/command-flow/command-error-handler">
+    Customize what happens when this command fails.
+  </Card>
+</CardGroup>

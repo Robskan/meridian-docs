@@ -3,10 +3,51 @@ title: "Create a Variable"
 description: "Create persistent Storage data that survives between runs."
 ---
 
-The **Create a Variable** block is in the **Variables & Data storage** category in the Meridian builder.
+The **Create a Variable** block lives in the **Variables & Data storage** palette category. Create persistent Storage data that survives between runs.
 
-Create persistent Storage data that survives between runs..
+## What it does
 
-## Category
+Defines a new Storage variable with type, scope, and default value that persists across flow runs.
 
-[Variables & Data storage](/builder/action-blocks/variables-and-data-storage)
+## Configuration
+
+Open the block in the builder sidebar to configure these fields.
+
+<ParamField path="var_name" type="string" required>
+  Letters, numbers, underscores. No dots.
+</ParamField>
+
+<ParamField path="var_type" type="string" required>
+  undefined
+
+  Options: `text`, `number`, `collection`, `object`.
+</ParamField>
+
+<ParamField path="var_partition" type="string">
+  Global shares one value everywhere; Server keeps separate values per guild.
+
+  Options: `global`, `per_server`.
+</ParamField>
+
+<ParamField path="var_subject" type="string">
+  Whether each user, channel, or role gets its own value.
+
+  Options: `none`, `user`, `channel`, `role`.
+</ParamField>
+
+<ParamField path="var_value" type="string">
+  Initial value.
+</ParamField>
+
+| Scope | Meaning |
+| --- | --- |
+| Global \+ Shared | One value for the entire bot |
+| Server \+ Per user | Each member has their own counter per guild |
+
+## Related blocks
+
+<CardGroup cols={2}>
+  <Card title="Variables & Data storage" icon="cube" href="/builder/action-blocks/variables-and-data-storage">
+    Browse all blocks in the Variables & Data storage category.
+  </Card>
+</CardGroup>

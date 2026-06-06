@@ -3,10 +3,28 @@ title: "Move a member from VC"
 description: "Move a user between voice channels."
 ---
 
-The **Move a member from VC** block is in the **Voice** category in the Meridian builder.
+The **Move a member from VC** block lives in the **Voice** palette category. Move a user between voice channels.
 
-Move a user between voice channels..
+## What it does
 
-## Category
+Move a user between voice channels.
 
-[Voice](/builder/action-blocks/voice)
+## Configuration
+
+Open the block in the builder sidebar to configure these fields.
+
+<ParamField path="user_id" type="user" required>
+  Member to move.
+</ParamField>
+
+<ParamField path="target_channel_id" type="channel" required>
+  Destination voice channel.
+</ParamField>
+
+## Related blocks
+
+<CardGroup cols={2}>
+  <Card title="Voice" icon="cube" href="/builder/action-blocks/voice">
+    Browse all blocks in the Voice category.
+  </Card>
+</CardGroup>

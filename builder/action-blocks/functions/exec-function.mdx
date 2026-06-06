@@ -3,10 +3,28 @@ title: "Execute a Function"
 description: "Call a reusable function flow from a command or event."
 ---
 
-The **Execute a Function** block is in the **Functions** category in the Meridian builder.
+The **Execute a Function** block lives in the **Functions** palette category. Call a reusable function flow from a command or event.
 
-Call a reusable function flow from a command or event..
+## What it does
 
-## Category
+Call a reusable function flow from a command or event.
 
-[Functions](/builder/action-blocks/functions)
+## Configuration
+
+Open the block in the builder sidebar to configure these fields.
+
+<ParamField path="function_name" type="string" required>
+  Name of the function flow to call.
+</ParamField>
+
+<ParamField path="arguments" type="string">
+  Optional JSON array of arguments passed into the function flow.
+</ParamField>
+
+## Related blocks
+
+<CardGroup cols={2}>
+  <Card title="Functions" icon="cube" href="/builder/action-blocks/functions">
+    Browse all blocks in the Functions category.
+  </Card>
+</CardGroup>

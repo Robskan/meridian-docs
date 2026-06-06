@@ -3,10 +3,40 @@ title: "Create a Forum Post"
 description: "Create a new post in a forum channel."
 ---
 
-The **Create a Forum Post** block is in the **Channels** category in the Meridian builder.
+The **Create a Forum Post** block lives in the **Channels** palette category. Create a new post in a forum channel.
 
-Create a new post in a forum channel..
+## What it does
 
-## Category
+Opens a new forum post (thread) in a forum channel with title, body, tags, and slowmode.
 
-[Channels](/builder/action-blocks/channels)
+## Configuration
+
+Open the block in the builder sidebar to configure these fields.
+
+<ParamField path="channel_id" type="channel" required>
+  Forum channel.
+</ParamField>
+
+<ParamField path="name" type="string" required>
+  Post title.
+</ParamField>
+
+<ParamField path="content" type="string" required>
+  First message body.
+</ParamField>
+
+<ParamField path="applied_tags" type="forum-tags">
+  Tags applied to the post.
+</ParamField>
+
+<ParamField path="save_channel_id_var" type="string">
+  Stores the thread id.
+</ParamField>
+
+## Related blocks
+
+<CardGroup cols={2}>
+  <Card title="Channels" icon="cube" href="/builder/action-blocks/channels">
+    Browse all blocks in the Channels category.
+  </Card>
+</CardGroup>

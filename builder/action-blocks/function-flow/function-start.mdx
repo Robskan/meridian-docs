@@ -3,14 +3,36 @@ title: "Function"
 description: "Marks where a reusable function starts when called from an Execute a Function block."
 ---
 
-The **Function** block is in the **Function flow** category in the Meridian builder.
+Function flows are reusable subgraphs you call from commands, events, or other functions.
 
-Marks where a reusable function starts when called from an Execute a Function block..
+## What it does
+
+Marks the entry point of a function flow. Execution jumps here when an **Execute a Function** block calls this function by name.
+
+## Common uses
+
+<CardGroup cols={2}>
+  <Card title="Shared utilities" icon="toolbox">
+    Centralize logging, permission checks, or formatting.
+  </Card>
+
+  <Card title="Cleaner canvases" icon="layout">
+    Move repeated sequences out of large command flows.
+  </Card>
+</CardGroup>
 
 <Note>
   This block is placed automatically by the builder. You cannot add it from the block palette.
 </Note>
 
-## Category
+<Tip>
+  Use the hint field to document expected inputs for collaborators.
+</Tip>
 
-[Function flow](/builder/action-blocks/function-flow)
+## Related blocks
+
+<CardGroup cols={2}>
+  <Card title="Execute a Function" icon="cube" href="/builder/action-blocks/functions/exec-function">
+    Call this function from another flow.
+  </Card>
+</CardGroup>

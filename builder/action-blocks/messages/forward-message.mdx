@@ -3,10 +3,38 @@ title: "Forward or Publish a Message"
 description: "Forward a message to another channel or publish an announcement."
 ---
 
-The **Forward or Publish a Message** block is in the **Messages** category in the Meridian builder.
+The **Forward or Publish a Message** block lives in the **Messages** palette category. Forward a message to another channel or publish an announcement.
 
-Forward a message to another channel or publish an announcement..
+## What it does
 
-## Category
+Forwards a message to another channel or publishes an announcement to follower channels.
 
-[Messages](/builder/action-blocks/messages)
+## Configuration
+
+Open the block in the builder sidebar to configure these fields.
+
+<ParamField path="action" type="string" required>
+  undefined
+
+  Options: `forward`, `publish`.
+</ParamField>
+
+<ParamField path="source_channel_id" type="channel" required>
+  Channel containing the source message.
+</ParamField>
+
+<ParamField path="message_id" type="string" required>
+  Snowflake of the message to forward or publish.
+</ParamField>
+
+<ParamField path="target_channel_id" type="channel">
+  Required for forward action.
+</ParamField>
+
+## Related blocks
+
+<CardGroup cols={2}>
+  <Card title="Messages" icon="cube" href="/builder/action-blocks/messages">
+    Browse all blocks in the Messages category.
+  </Card>
+</CardGroup>

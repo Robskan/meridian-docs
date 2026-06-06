@@ -3,10 +3,34 @@ title: "Deafen or Undeafen"
 description: "Server deafen or undeafen a member."
 ---
 
-The **Deafen or Undeafen** block is in the **Voice** category in the Meridian builder.
+The **Deafen or Undeafen** block lives in the **Voice** palette category. Server deafen or undeafen a member.
 
-Server deafen or undeafen a member..
+## What it does
 
-## Category
+Server deafen or undeafen a member.
 
-[Voice](/builder/action-blocks/voice)
+## Configuration
+
+Open the block in the builder sidebar to configure these fields.
+
+<ParamField path="action" type="string" required>
+  Server deafen state to apply.
+
+  Options: `deafen`, `undeafen`, `toggle`.
+</ParamField>
+
+<ParamField path="user_id" type="user" required>
+  Target member.
+</ParamField>
+
+<ParamField path="reason" type="string">
+  Optional audit log reason.
+</ParamField>
+
+## Related blocks
+
+<CardGroup cols={2}>
+  <Card title="Voice" icon="cube" href="/builder/action-blocks/voice">
+    Browse all blocks in the Voice category.
+  </Card>
+</CardGroup>

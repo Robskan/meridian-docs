@@ -3,10 +3,32 @@ title: "Remove Role"
 description: "Remove a role from a member."
 ---
 
-The **Remove Role** block is in the **Roles** category in the Meridian builder.
+The **Remove Role** block lives in the **Roles** palette category. Remove a role from a member.
 
-Remove a role from a member..
+## What it does
 
-## Category
+Remove a role from a member.
 
-[Roles](/builder/action-blocks/roles)
+## Configuration
+
+Open the block in the builder sidebar to configure these fields.
+
+<ParamField path="user_id" type="user">
+  Who loses the role.
+</ParamField>
+
+<ParamField path="role_id" type="role" required>
+  The role to remove.
+</ParamField>
+
+<ParamField path="reason" type="string">
+  Optional audit log reason.
+</ParamField>
+
+## Related blocks
+
+<CardGroup cols={2}>
+  <Card title="Roles" icon="cube" href="/builder/action-blocks/roles">
+    Browse all blocks in the Roles category.
+  </Card>
+</CardGroup>

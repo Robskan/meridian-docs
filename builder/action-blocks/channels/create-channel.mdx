@@ -3,10 +3,42 @@ title: "Create a Channel"
 description: "Create a text, voice, category, or thread channel."
 ---
 
-The **Create a Channel** block is in the **Channels** category in the Meridian builder.
+The **Create a Channel** block lives in the **Channels** palette category. Create a text, voice, category, or thread channel.
 
-Create a text, voice, category, or thread channel..
+## What it does
 
-## Category
+Creates a text channel, voice channel, category, or thread in the current server.
 
-[Channels](/builder/action-blocks/channels)
+## Configuration
+
+Open the block in the builder sidebar to configure these fields.
+
+<ParamField path="type" type="string" required>
+  undefined
+
+  Options: `text`, `voice`, `category`, `thread`.
+</ParamField>
+
+<ParamField path="channel_name" type="string" required>
+  Name Discord displays.
+</ParamField>
+
+<ParamField path="parent_id" type="channel">
+  Parent category or channel for organization.
+</ParamField>
+
+<ParamField path="topic" type="string">
+  Channel topic (text channels).
+</ParamField>
+
+<ParamField path="save_channel_id_var" type="string">
+  Flow variable for the new channel id.
+</ParamField>
+
+## Related blocks
+
+<CardGroup cols={2}>
+  <Card title="Channels" icon="cube" href="/builder/action-blocks/channels">
+    Browse all blocks in the Channels category.
+  </Card>
+</CardGroup>

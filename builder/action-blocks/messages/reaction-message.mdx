@@ -3,10 +3,34 @@ title: "Add or Remove a Reaction"
 description: "Add or remove an emoji reaction on a message."
 ---
 
-The **Add or Remove a Reaction** block is in the **Messages** category in the Meridian builder.
+The **Add or Remove a Reaction** block lives in the **Messages** palette category. Add or remove an emoji reaction on a message.
 
-Add or remove an emoji reaction on a message..
+## What it does
 
-## Category
+Adds or removes an emoji reaction on a message.
 
-[Messages](/builder/action-blocks/messages)
+## Configuration
+
+Open the block in the builder sidebar to configure these fields.
+
+<ParamField path="action" type="string" required>
+  undefined
+
+  Options: `add`, `remove`.
+</ParamField>
+
+<ParamField path="emoji" type="string" required>
+  Unicode emoji or custom emoji syntax.
+</ParamField>
+
+<ParamField path="message_id" type="block-reference" required>
+  Target message.
+</ParamField>
+
+## Related blocks
+
+<CardGroup cols={2}>
+  <Card title="Messages" icon="cube" href="/builder/action-blocks/messages">
+    Browse all blocks in the Messages category.
+  </Card>
+</CardGroup>

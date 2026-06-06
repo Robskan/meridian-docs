@@ -3,10 +3,32 @@ title: "Add Role"
 description: "Assign a role to a member."
 ---
 
-The **Add Role** block is in the **Roles** category in the Meridian builder.
+The **Add Role** block lives in the **Roles** palette category. Assign a role to a member.
 
-Assign a role to a member..
+## What it does
 
-## Category
+Assign a role to a member.
 
-[Roles](/builder/action-blocks/roles)
+## Configuration
+
+Open the block in the builder sidebar to configure these fields.
+
+<ParamField path="user_id" type="user">
+  Who receives the role. Defaults to the command user, or pick from the server / a variable.
+</ParamField>
+
+<ParamField path="role_id" type="role" required>
+  The role to assign. Pick from your server role list.
+</ParamField>
+
+<ParamField path="reason" type="string">
+  Optional audit log reason shown in Discord server audit logs.
+</ParamField>
+
+## Related blocks
+
+<CardGroup cols={2}>
+  <Card title="Roles" icon="cube" href="/builder/action-blocks/roles">
+    Browse all blocks in the Roles category.
+  </Card>
+</CardGroup>

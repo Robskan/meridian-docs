@@ -3,10 +3,32 @@ title: "Rename user"
 description: "Change a member nickname in the server."
 ---
 
-The **Rename user** block is in the **Users** category in the Meridian builder.
+The **Rename user** block lives in the **Users** palette category. Change a member nickname in the server.
 
-Change a member nickname in the server..
+## What it does
 
-## Category
+Change a member nickname in the server.
 
-[Users](/builder/action-blocks/users)
+## Configuration
+
+Open the block in the builder sidebar to configure these fields.
+
+<ParamField path="user_id" type="user" required>
+  Member whose nickname changes.
+</ParamField>
+
+<ParamField path="nickname" type="string" required>
+  New server nickname (max 32 characters).
+</ParamField>
+
+<ParamField path="reason" type="string">
+  Optional audit log reason.
+</ParamField>
+
+## Related blocks
+
+<CardGroup cols={2}>
+  <Card title="Users" icon="cube" href="/builder/action-blocks/users">
+    Browse all blocks in the Users category.
+  </Card>
+</CardGroup>

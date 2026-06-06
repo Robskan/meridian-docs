@@ -3,10 +3,38 @@ title: "Set status"
 description: "Change the bot presence, activity, and status text."
 ---
 
-The **Set status** block is in the **Settings** category in the Meridian builder.
+The **Set status** block lives in the **Settings** palette category. Change the bot presence, activity, and status text.
 
-Change the bot presence, activity, and status text..
+## What it does
 
-## Category
+Updates bot presence (online/idle/dnd/invisible), activity type, and status text.
 
-[Settings](/builder/action-blocks/settings)
+## Configuration
+
+Open the block in the builder sidebar to configure these fields.
+
+<ParamField path="dynamic" type="boolean">
+  Use variable-driven presence instead of fixed dropdowns.
+</ParamField>
+
+<ParamField path="presence" type="string">
+  undefined
+
+  Options: `online`, `idle`, `dnd`, `invisible`, `streaming`.
+</ParamField>
+
+<ParamField path="activity" type="string">
+  Playing, listening, watching, competing, or custom status.
+</ParamField>
+
+<ParamField path="text" type="string">
+  Status line shown under the bot name.
+</ParamField>
+
+## Related blocks
+
+<CardGroup cols={2}>
+  <Card title="Settings" icon="cube" href="/builder/action-blocks/settings">
+    Browse all blocks in the Settings category.
+  </Card>
+</CardGroup>

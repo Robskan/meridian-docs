@@ -3,10 +3,30 @@ title: "Set prefix"
 description: "Change the bot command prefix globally or per server."
 ---
 
-The **Set prefix** block is in the **Settings** category in the Meridian builder.
+The **Set prefix** block lives in the **Settings** palette category. Change the bot command prefix globally or per server.
 
-Change the bot command prefix globally or per server..
+## What it does
 
-## Category
+Change the bot command prefix globally or per server.
 
-[Settings](/builder/action-blocks/settings)
+## Configuration
+
+Open the block in the builder sidebar to configure these fields.
+
+<ParamField path="scope" type="string" required>
+  Apply prefix globally or only in the current server.
+
+  Options: `server`, `global`.
+</ParamField>
+
+<ParamField path="new_prefix" type="string" required>
+  Character(s) users type before prefix commands (for example `!` or `?`).
+</ParamField>
+
+## Related blocks
+
+<CardGroup cols={2}>
+  <Card title="Settings" icon="cube" href="/builder/action-blocks/settings">
+    Browse all blocks in the Settings category.
+  </Card>
+</CardGroup>
