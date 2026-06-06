@@ -14,24 +14,24 @@ Adds or removes an emoji reaction on a message.
 
 Open the block in the builder sidebar to configure these fields.
 
-<ParamField path="action" type="string" required>
-  undefined
+### `action`
 
-  Options: `add`, `remove`.
-</ParamField>
+**Type:** `string`. Required.
 
-<ParamField path="emoji" type="string" required>
-  Unicode emoji or custom emoji syntax.
-</ParamField>
+Accepted values: `add`, `remove`.
 
-<ParamField path="message_id" type="block-reference" required>
-  Target message.
-</ParamField>
+### `emoji`
 
-## Related blocks
+**Type:** `string`. Required.
 
-<CardGroup cols={2}>
-  <Card title="Messages" icon="cube" href="/builder/action-blocks/messages">
-    Browse all blocks in the Messages category.
-  </Card>
-</CardGroup>
+Unicode emoji or custom emoji syntax.
+
+### `message_id`
+
+**Type:** `block-reference`. Required.
+
+Target message.
+
+## See also
+
+- [Messages](/builder/action-blocks/messages) — Browse all blocks in the Messages category.

@@ -6,70 +6,66 @@ icon: "radio"
 
 Event flows react to Discord activity or inbound webhooks instead of user commands.
 
+This block is placed automatically by the builder. You cannot add it from the block palette.
+
 ## What it does
 
 Subscribes to a discord.js client event (such as `messageCreate` or `guildMemberAdd`) or exposes an HTTP webhook path. When the event fires, blocks connected below run in order.
 
 ## Common uses
 
-<CardGroup cols={2}>
-  <Card title="Welcome messages" icon="user-plus">
-    Run on `guildMemberAdd` to greet new members.
-  </Card>
-
-  <Card title="Auto moderation" icon="shield">
-    React to `messageCreate` with filters and actions.
-  </Card>
-
-  <Card title="External triggers" icon="webhook">
-    Start flows from outside Discord via webhook POST requests.
-  </Card>
-</CardGroup>
-
-<Note>
-  This block is placed automatically by the builder. You cannot add it from the block palette.
-</Note>
+- **Welcome messages** — Run on `guildMemberAdd` to greet new members.
+- **Auto moderation** — React to `messageCreate` with filters and actions.
+- **External triggers** — Start flows from outside Discord via webhook POST requests.
 
 ## Configuration
 
 Open the block in the builder sidebar to configure these fields.
 
-<ParamField path="friendly_name" type="string" required>
-  Dashboard title for this event flow.
-</ParamField>
+### `friendly_name`
 
-<ParamField path="friendly_description" type="string">
-  Optional notes shown on the card and in your event list.
-</ParamField>
+**Type:** `string`. Required.
 
-<ParamField path="client_event" type="string" required>
-  discord.js event name (for example `messageCreate`, `voiceStateUpdate`).
-</ParamField>
+Dashboard title for this event flow.
 
-<ParamField path="trigger_on_users" type="boolean">
-  Allow human accounts to trigger the flow.
-</ParamField>
+### `friendly_description`
 
-<ParamField path="trigger_on_bots" type="boolean">
-  Allow other bot accounts to trigger the flow.
-</ParamField>
+**Type:** `string`.
 
-<ParamField path="trigger_on_webhooks" type="boolean">
-  Allow channel webhook posts to trigger the flow.
-</ParamField>
+Optional notes shown on the card and in your event list.
 
-<Tip>
-  For webhook events, configure path suffix and optional `mrdn-key` authentication in the block sidebar.
-</Tip>
+### `client_event`
 
-<Warning>
-  This bot's own messages never trigger event flows, even when author filters are broad.
-</Warning>
+**Type:** `string`. Required.
 
-## Related blocks
+discord.js event name (for example `messageCreate`, `voiceStateUpdate`).
 
-<CardGroup cols={2}>
-  <Card title="Event flow" icon="cube" href="/builder/action-blocks/event-flow">
-    Browse all blocks in the Event flow category.
-  </Card>
-</CardGroup>
+### `trigger_on_users`
+
+**Type:** `boolean`.
+
+Allow human accounts to trigger the flow.
+
+### `trigger_on_bots`
+
+**Type:** `boolean`.
+
+Allow other bot accounts to trigger the flow.
+
+### `trigger_on_webhooks`
+
+**Type:** `boolean`.
+
+Allow channel webhook posts to trigger the flow.
+
+## Tips
+
+- For webhook events, configure path suffix and optional `mrdn-key` authentication in the block sidebar.
+
+## Important
+
+- This bot's own messages never trigger event flows, even when author filters are broad.
+
+## See also
+
+- [Event flow](/builder/action-blocks/event-flow) — Browse all blocks in the Event flow category.

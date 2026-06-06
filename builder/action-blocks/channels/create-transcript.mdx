@@ -14,34 +14,34 @@ Collects messages, renders a shareable transcript, and stores URLs (and optional
 
 Open the block in the builder sidebar to configure these fields.
 
-<ParamField path="channel_source" type="string" required>
-  undefined
+### `channel_source`
 
-  Options: `current`, `specific`, `variable`, `block`.
-</ParamField>
+**Type:** `string`. Required.
 
-<ParamField path="transcript_name" type="string">
-  Download filename and page title.
-</ParamField>
+Accepted values: `current`, `specific`, `variable`, `block`.
 
-<ParamField path="output_prefix" type="string">
-  Variable prefix (`{vars.ticket_log_url}`, etc.).
-</ParamField>
+### `transcript_name`
 
-<ParamField path="access_mode" type="string">
-  undefined
+**Type:** `string`.
 
-  Options: `public`, `roles`, `password`, `roles_and_password`.
-</ParamField>
+Download filename and page title.
 
-<Tip>
-  Use role-gated transcripts for ticket logs visible only to staff.
-</Tip>
+### `output_prefix`
 
-## Related blocks
+**Type:** `string`.
 
-<CardGroup cols={2}>
-  <Card title="Channels" icon="cube" href="/builder/action-blocks/channels">
-    Browse all blocks in the Channels category.
-  </Card>
-</CardGroup>
+Variable prefix (`{vars.ticket_log_url}`, etc.).
+
+### `access_mode`
+
+**Type:** `string`.
+
+Accepted values: `public`, `roles`, `password`, `roles_and_password`.
+
+## Tips
+
+- Use role-gated transcripts for ticket logs visible only to staff.
+
+## See also
+
+- [Channels](/builder/action-blocks/channels) — Browse all blocks in the Channels category.

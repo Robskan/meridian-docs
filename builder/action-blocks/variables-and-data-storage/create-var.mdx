@@ -14,41 +14,41 @@ Defines a new Storage variable with type, scope, and default value that persists
 
 Open the block in the builder sidebar to configure these fields.
 
-<ParamField path="var_name" type="string" required>
-  Letters, numbers, underscores. No dots.
-</ParamField>
+### `var_name`
 
-<ParamField path="var_type" type="string" required>
-  undefined
+**Type:** `string`. Required.
 
-  Options: `text`, `number`, `collection`, `object`.
-</ParamField>
+Letters, numbers, underscores. No dots.
 
-<ParamField path="var_partition" type="string">
-  Global shares one value everywhere; Server keeps separate values per guild.
+### `var_type`
 
-  Options: `global`, `per_server`.
-</ParamField>
+**Type:** `string`. Required.
 
-<ParamField path="var_subject" type="string">
-  Whether each user, channel, or role gets its own value.
+Accepted values: `text`, `number`, `collection`, `object`.
 
-  Options: `none`, `user`, `channel`, `role`.
-</ParamField>
+### `var_partition`
 
-<ParamField path="var_value" type="string">
-  Initial value.
-</ParamField>
+**Type:** `string`.
+
+Global shares one value everywhere; Server keeps separate values per guild. Accepted values: `global`, `per_server`.
+
+### `var_subject`
+
+**Type:** `string`.
+
+Whether each user, channel, or role gets its own value. Accepted values: `none`, `user`, `channel`, `role`.
+
+### `var_value`
+
+**Type:** `string`.
+
+Initial value.
 
 | Scope | Meaning |
 | --- | --- |
 | Global \+ Shared | One value for the entire bot |
 | Server \+ Per user | Each member has their own counter per guild |
 
-## Related blocks
+## See also
 
-<CardGroup cols={2}>
-  <Card title="Variables & Data storage" icon="cube" href="/builder/action-blocks/variables-and-data-storage">
-    Browse all blocks in the Variables & Data storage category.
-  </Card>
-</CardGroup>
+- [Variables & Data storage](/builder/action-blocks/variables-and-data-storage) — Browse all blocks in the Variables & Data storage category.

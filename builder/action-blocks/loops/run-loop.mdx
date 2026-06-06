@@ -14,19 +14,23 @@ Repeats connected blocks inside the loop body until a condition fails or a fixed
 
 Open the block in the builder sidebar to configure these fields.
 
-<ParamField path="repeat_type" type="string" required>
-  undefined
+### `repeat_type`
 
-  Options: `while`, `times`.
-</ParamField>
+**Type:** `string`. Required.
 
-<ParamField path="condition" type="string">
-  Expression evaluated before each iteration for while loops.
-</ParamField>
+Accepted values: `while`, `times`.
 
-<ParamField path="times" type="number">
-  Iteration count for fixed loops.
-</ParamField>
+### `condition`
+
+**Type:** `string`.
+
+Expression evaluated before each iteration for while loops.
+
+### `times`
+
+**Type:** `number`.
+
+Iteration count for fixed loops.
 
 ## Loop anatomy
 
@@ -38,14 +42,7 @@ Repeat
 
 Connect **Break a Loop** inside the body to exit early.
 
-## Related blocks
+## See also
 
-<CardGroup cols={2}>
-  <Card title="Repeat for Each" icon="cube" href="/builder/action-blocks/loops/run-loop-each">
-    Iterate a list variable instead of a condition.
-  </Card>
-
-  <Card title="Break a Loop" icon="cube" href="/builder/action-blocks/loops/break-loop">
-    Exit the loop immediately.
-  </Card>
-</CardGroup>
+- [Repeat for Each](/builder/action-blocks/loops/run-loop-each) — Iterate a list variable instead of a condition.
+- [Break a Loop](/builder/action-blocks/loops/break-loop) — Exit the loop immediately.

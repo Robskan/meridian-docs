@@ -14,22 +14,24 @@ Change a member nickname in the server.
 
 Open the block in the builder sidebar to configure these fields.
 
-<ParamField path="user_id" type="user" required>
-  Member whose nickname changes.
-</ParamField>
+### `user_id`
 
-<ParamField path="nickname" type="string" required>
-  New server nickname (max 32 characters).
-</ParamField>
+**Type:** `user`. Required.
 
-<ParamField path="reason" type="string">
-  Optional audit log reason.
-</ParamField>
+Member whose nickname changes.
 
-## Related blocks
+### `nickname`
 
-<CardGroup cols={2}>
-  <Card title="Users" icon="cube" href="/builder/action-blocks/users">
-    Browse all blocks in the Users category.
-  </Card>
-</CardGroup>
+**Type:** `string`. Required.
+
+New server nickname (max 32 characters).
+
+### `reason`
+
+**Type:** `string`.
+
+Optional audit log reason.
+
+## See also
+
+- [Users](/builder/action-blocks/users) — Browse all blocks in the Users category.

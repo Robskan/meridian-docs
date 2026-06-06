@@ -14,28 +14,30 @@ Remove a member from the server by kick or ban.
 
 Open the block in the builder sidebar to configure these fields.
 
-<ParamField path="action" type="string" required>
-  Kick removes the member; ban prevents them from rejoining.
+### `action`
 
-  Options: `kick`, `ban`.
-</ParamField>
+**Type:** `string`. Required.
 
-<ParamField path="user_id" type="user" required>
-  Member to remove.
-</ParamField>
+Kick removes the member; ban prevents them from rejoining. Accepted values: `kick`, `ban`.
 
-<ParamField path="reason" type="string">
-  Shown in audit logs.
-</ParamField>
+### `user_id`
 
-<ParamField path="delete_msgs" type="number">
-  For bans only. Delete recent messages from this user (0 to 7 days).
-</ParamField>
+**Type:** `user`. Required.
 
-## Related blocks
+Member to remove.
 
-<CardGroup cols={2}>
-  <Card title="Users" icon="cube" href="/builder/action-blocks/users">
-    Browse all blocks in the Users category.
-  </Card>
-</CardGroup>
+### `reason`
+
+**Type:** `string`.
+
+Shown in audit logs.
+
+### `delete_msgs`
+
+**Type:** `number`.
+
+For bans only. Delete recent messages from this user (0 to 7 days).
+
+## See also
+
+- [Users](/builder/action-blocks/users) — Browse all blocks in the Users category.

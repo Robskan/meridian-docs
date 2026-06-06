@@ -14,32 +14,36 @@ Changes bot avatar, banner, username (global), or server nickname (guild scope).
 
 Open the block in the builder sidebar to configure these fields.
 
-<ParamField path="scope" type="string" required>
-  undefined
+### `scope`
 
-  Options: `global`, `guild`.
-</ParamField>
+**Type:** `string`. Required.
 
-<ParamField path="avatar_url" type="string">
-  Image URL or variable.
-</ParamField>
+Accepted values: `global`, `guild`.
 
-<ParamField path="banner_url" type="string">
-  Profile banner URL.
-</ParamField>
+### `avatar_url`
 
-<ParamField path="username" type="string">
-  Global username (2 to 32 chars).
-</ParamField>
+**Type:** `string`.
 
-<ParamField path="nickname" type="string">
-  Server nickname (guild scope).
-</ParamField>
+Image URL or variable.
 
-## Related blocks
+### `banner_url`
 
-<CardGroup cols={2}>
-  <Card title="Settings" icon="cube" href="/builder/action-blocks/settings">
-    Browse all blocks in the Settings category.
-  </Card>
-</CardGroup>
+**Type:** `string`.
+
+Profile banner URL.
+
+### `username`
+
+**Type:** `string`.
+
+Global username (2 to 32 chars).
+
+### `nickname`
+
+**Type:** `string`.
+
+Server nickname (guild scope).
+
+## See also
+
+- [Settings](/builder/action-blocks/settings) — Browse all blocks in the Settings category.

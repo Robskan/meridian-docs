@@ -14,32 +14,36 @@ Creates a text channel, voice channel, category, or thread in the current server
 
 Open the block in the builder sidebar to configure these fields.
 
-<ParamField path="type" type="string" required>
-  undefined
+### `type`
 
-  Options: `text`, `voice`, `category`, `thread`.
-</ParamField>
+**Type:** `string`. Required.
 
-<ParamField path="channel_name" type="string" required>
-  Name Discord displays.
-</ParamField>
+Accepted values: `text`, `voice`, `category`, `thread`.
 
-<ParamField path="parent_id" type="channel">
-  Parent category or channel for organization.
-</ParamField>
+### `channel_name`
 
-<ParamField path="topic" type="string">
-  Channel topic (text channels).
-</ParamField>
+**Type:** `string`. Required.
 
-<ParamField path="save_channel_id_var" type="string">
-  Flow variable for the new channel id.
-</ParamField>
+Name Discord displays.
 
-## Related blocks
+### `parent_id`
 
-<CardGroup cols={2}>
-  <Card title="Channels" icon="cube" href="/builder/action-blocks/channels">
-    Browse all blocks in the Channels category.
-  </Card>
-</CardGroup>
+**Type:** `channel`.
+
+Parent category or channel for organization.
+
+### `topic`
+
+**Type:** `string`.
+
+Channel topic (text channels).
+
+### `save_channel_id_var`
+
+**Type:** `string`.
+
+Flow variable for the new channel id.
+
+## See also
+
+- [Channels](/builder/action-blocks/channels) — Browse all blocks in the Channels category.

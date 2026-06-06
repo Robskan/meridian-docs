@@ -14,22 +14,22 @@ Permanently deletes a channel or thread.
 
 Open the block in the builder sidebar to configure these fields.
 
-<ParamField path="channel_id" type="channel" required>
-  Channel or thread to delete.
-</ParamField>
+### `channel_id`
 
-<ParamField path="reason" type="string">
-  Audit log reason.
-</ParamField>
+**Type:** `channel`. Required.
 
-<Warning>
-  Deletion is irreversible. Confirm the channel id when using variables.
-</Warning>
+Channel or thread to delete.
 
-## Related blocks
+### `reason`
 
-<CardGroup cols={2}>
-  <Card title="Channels" icon="cube" href="/builder/action-blocks/channels">
-    Browse all blocks in the Channels category.
-  </Card>
-</CardGroup>
+**Type:** `string`.
+
+Audit log reason.
+
+## Important
+
+- Deletion is irreversible. Confirm the channel id when using variables.
+
+## See also
+
+- [Channels](/builder/action-blocks/channels) — Browse all blocks in the Channels category.

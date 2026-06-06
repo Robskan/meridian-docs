@@ -14,20 +14,18 @@ Pins or unpins a message in a channel.
 
 Open the block in the builder sidebar to configure these fields.
 
-<ParamField path="action" type="string" required>
-  undefined
+### `action`
 
-  Options: `pin`, `unpin`.
-</ParamField>
+**Type:** `string`. Required.
 
-<ParamField path="message_id" type="block-reference" required>
-  Message to pin or unpin.
-</ParamField>
+Accepted values: `pin`, `unpin`.
 
-## Related blocks
+### `message_id`
 
-<CardGroup cols={2}>
-  <Card title="Messages" icon="cube" href="/builder/action-blocks/messages">
-    Browse all blocks in the Messages category.
-  </Card>
-</CardGroup>
+**Type:** `block-reference`. Required.
+
+Message to pin or unpin.
+
+## See also
+
+- [Messages](/builder/action-blocks/messages) — Browse all blocks in the Messages category.

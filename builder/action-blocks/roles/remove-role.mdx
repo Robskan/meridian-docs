@@ -14,22 +14,24 @@ Remove a role from a member.
 
 Open the block in the builder sidebar to configure these fields.
 
-<ParamField path="user_id" type="user">
-  Who loses the role.
-</ParamField>
+### `user_id`
 
-<ParamField path="role_id" type="role" required>
-  The role to remove.
-</ParamField>
+**Type:** `user`.
 
-<ParamField path="reason" type="string">
-  Optional audit log reason.
-</ParamField>
+Who loses the role.
 
-## Related blocks
+### `role_id`
 
-<CardGroup cols={2}>
-  <Card title="Roles" icon="cube" href="/builder/action-blocks/roles">
-    Browse all blocks in the Roles category.
-  </Card>
-</CardGroup>
+**Type:** `role`. Required.
+
+The role to remove.
+
+### `reason`
+
+**Type:** `string`.
+
+Optional audit log reason.
+
+## See also
+
+- [Roles](/builder/action-blocks/roles) — Browse all blocks in the Roles category.

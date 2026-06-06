@@ -14,28 +14,30 @@ Updates bot presence (online/idle/dnd/invisible), activity type, and status text
 
 Open the block in the builder sidebar to configure these fields.
 
-<ParamField path="dynamic" type="boolean">
-  Use variable-driven presence instead of fixed dropdowns.
-</ParamField>
+### `dynamic`
 
-<ParamField path="presence" type="string">
-  undefined
+**Type:** `boolean`.
 
-  Options: `online`, `idle`, `dnd`, `invisible`, `streaming`.
-</ParamField>
+Use variable-driven presence instead of fixed dropdowns.
 
-<ParamField path="activity" type="string">
-  Playing, listening, watching, competing, or custom status.
-</ParamField>
+### `presence`
 
-<ParamField path="text" type="string">
-  Status line shown under the bot name.
-</ParamField>
+**Type:** `string`.
 
-## Related blocks
+Accepted values: `online`, `idle`, `dnd`, `invisible`, `streaming`.
 
-<CardGroup cols={2}>
-  <Card title="Settings" icon="cube" href="/builder/action-blocks/settings">
-    Browse all blocks in the Settings category.
-  </Card>
-</CardGroup>
+### `activity`
+
+**Type:** `string`.
+
+Playing, listening, watching, competing, or custom status.
+
+### `text`
+
+**Type:** `string`.
+
+Status line shown under the bot name.
+
+## See also
+
+- [Settings](/builder/action-blocks/settings) — Browse all blocks in the Settings category.
