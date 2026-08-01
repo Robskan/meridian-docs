@@ -29,44 +29,39 @@
   },
   "navigation": {
     "directory": "card",
-    "versions": [
+    "groups": [
       {
-        "version": "Pre-alpha",
-        "default": true,
+        "group": "Information",
+        "icon": "info",
+        "expanded": true,
+        "pages": [
+          "docs",
+          "join"
+        ]
+      },
+      {
+        "group": "Builder",
+        "icon": "code-xml",
+        "expanded": true,
         "pages": [
           {
-            "group": "Information",
-            "icon": "info",
-            "expanded": true,
+            "group": "Messages",
+            "icon": "messages-square",
             "pages": [
-              "docs",
-              "join"
+              "untitled-page"
             ]
           }
         ]
       },
       {
-        "version": "Alpha",
-        "hidden": true,
+        "group": "Dashboard",
+        "icon": "layout-dashboard",
+        "expanded": true,
         "pages": [
-          "welcome",
-          "help",
-          "discord",
-          {
-            "group": "Authenticate with Meridian",
-            "icon": "lock",
-            "pages": [
-              "developer-portal",
-              {
-                "group": "API reference",
-                "icon": "globe",
-                "openapi": {
-                  "source": "https://api.meridian.surf/openapi.json",
-                  "directory": "api-reference"
-                }
-              }
-            ]
-          }
+          "untitled-page-3",
+          "marketplace",
+          "untitled-page-4",
+          "untitled-page-5"
         ]
       }
     ]

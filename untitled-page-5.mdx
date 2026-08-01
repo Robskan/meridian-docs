@@ -1,0 +1,51 @@
+---
+sidebarTitle: "Status"
+icon: "zap"
+title: "Status"
+---
+
+On this page, you can control how your bot appears in Discord.
+
+# Presence
+
+Bot presence is the small status indicator on a profile (Online, Idle, Do not Disturb, Streaming, or Invisible). 
+
+- **Online** shows up as a fully colored green <Icon icon="circle" color="#ffffff" /> circle
+- **Idle** shows up as a yellow <Icon icon="moon" color="#ffffff" /> moon
+- **Do not Disturb** shows up as a <Icon icon="badge-minus" color="#ffffff" /> no entry sign
+- **Streaming** <Badge color="blue" icon="star">Hobby+ required</Badge> will show up as a purple circle with a <Icon icon="play" color="#ffffff" /> Play icon inside it. When selected, you'll be prompted to submit a Twitch stream URL. Make sure it's a valid Twitch URL. If you don't have a Twitch profile or are not currently streaming, feel free to set it to `https://twitch.tv/#` only.
+- **Offline** <Badge color="blue" icon="star">Hobby+ required</Badge> will pretend your bot is offline, but your bot will still reply like normally.
+
+## Platform
+
+This determines what platform your bot is logged in as. By default, all bots show up as Desktop, though if you'd like it to be Mobile, that's an option too. Discord only shows the mobile icon when your bot's Presence is set to **Online.**
+
+<img
+  src="/images/image.png"
+  alt="Image"
+  title="Image"
+  style={{ width:"47%" }}
+/>
+
+<Warning>
+  Changing the platform type will completely restart your bot and your uptime will be reset to 0.
+</Warning>
+
+# Status mode
+
+You can set the bot's Custom status to be a still text 24/7, or rotate the status every once in a while. You can switch out a status every 30s, 1 minute, 2 minutes, 5 minutes, or 10 minutes and can add up to 10 statuses to rotate through.
+
+- **Custom status** shows up like a user's custom status does too
+- **Playing**
+- **Listening to**
+- **Watching**
+- **Competing in**
+
+<Tabs>
+  <Tab title="Still activity">
+    You can add one status consisting of up to 500 characters. 
+  </Tab>
+  <Tab title="Rotating status">
+    With Rotating statuses, you can add up to 10 different statuses with each a different rotation time. At the moment, we support only five different rotation times, though we're 
+  </Tab>
+</Tabs>
