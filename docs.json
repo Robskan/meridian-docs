@@ -9,8 +9,8 @@
     "dark": "#4A55D2"
   },
   "favicon": {
-    "light": "/images/Meridianlogodark.svg",
-    "dark": "/images/Meridianlogowhite.svg"
+    "light": "/images/mrdnlogolight2.svg",
+    "dark": "/images/mrdnlogodark2.svg"
   },
   "icons": {
     "library": "lucide"
@@ -72,8 +72,8 @@
     ]
   },
   "logo": {
-    "light": "/images/Meridianlogodark.svg",
-    "dark": "/images/Meridianlogowhite.svg",
+    "light": "/images/documentationwordmarkwhite.png",
+    "dark": "/images/documentationwordmarkblack.png",
     "href": "https://meridian.surf"
   },
   "navbar": {
