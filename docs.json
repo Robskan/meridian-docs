@@ -57,6 +57,56 @@
             "pages": [
               "untitled-page-6"
             ]
+          },
+          {
+            "group": "Loops",
+            "icon": "repeat",
+            "pages": []
+          },
+          {
+            "group": "Logic",
+            "icon": "move-horizontal",
+            "pages": []
+          },
+          {
+            "group": "Roles",
+            "icon": "shield-user",
+            "pages": []
+          },
+          {
+            "group": "Channels",
+            "icon": "hash",
+            "pages": []
+          },
+          {
+            "group": "Voice",
+            "icon": "audio-lines",
+            "pages": []
+          },
+          {
+            "group": "Variables & Data storage",
+            "icon": "database",
+            "pages": []
+          },
+          {
+            "group": "Users",
+            "icon": "users",
+            "pages": []
+          },
+          {
+            "group": "Functions",
+            "icon": "diamond",
+            "pages": []
+          },
+          {
+            "group": "Settings",
+            "icon": "settings-2",
+            "pages": []
+          },
+          {
+            "group": "Other",
+            "icon": "menu",
+            "pages": []
           }
         ]
       },
