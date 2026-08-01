@@ -1,8 +1,9 @@
-name: Publish to main
+name: Sync branches
 
 on:
   push:
     branches:
+      - main
       - robbie
       - gon
 
@@ -10,11 +11,12 @@ permissions:
   contents: write
 
 concurrency:
-  group: publish-to-main
+  group: sync-branches
   cancel-in-progress: false
 
 jobs:
-  merge-to-main:
+  sync:
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -23,7 +25,7 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Merge branch into main
+      - name: Sync main, robbie, and gon
         env:
           SOURCE_BRANCH: ${{ github.ref_name }}
         run: |
@@ -32,11 +34,34 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git fetch origin main
-          git checkout main
-          git pull --ff-only origin main
+          git fetch origin main robbie gon
 
-          git merge --ff-only "origin/${SOURCE_BRANCH}" || \
-            git merge --no-ff "origin/${SOURCE_BRANCH}" -m "Merge branch '${SOURCE_BRANCH}' into main"
+          merge_into() {
+            local target="$1"
+            local source="$2"
 
-          git push origin main
+            git checkout -B "$target" "origin/${target}"
+
+            if git merge-base --is-ancestor "origin/${source}" "origin/${target}"; then
+              echo "${target} already contains ${source}; skipping"
+              return 0
+            fi
+
+            if git merge --ff-only "origin/${source}"; then
+              echo "Fast-forwarded ${target} to ${source}"
+            else
+              git merge --no-ff "origin/${source}" -m "Merge branch '${source}' into ${target}"
+            fi
+
+            git push origin "$target"
+          }
+
+          if [ "${SOURCE_BRANCH}" = "main" ]; then
+            merge_into robbie main
+            merge_into gon main
+          else
+            merge_into main "${SOURCE_BRANCH}"
+            git fetch origin main
+            merge_into robbie main
+            merge_into gon main
+          fi
