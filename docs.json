@@ -34,7 +34,14 @@
         "version": "Pre-alpha",
         "default": true,
         "pages": [
-          "docs",
+          {
+            "group": "Information",
+            "icon": "info",
+            "expanded": true,
+            "pages": [
+              "docs"
+            ]
+          },
           "join"
         ]
       },
