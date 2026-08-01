@@ -48,7 +48,7 @@
             "group": "Messages",
             "icon": "messages-square",
             "pages": [
-              "untitled-page"
+              "builder/messages/send-a-message"
             ]
           }
         ]
@@ -58,10 +58,10 @@
         "icon": "layout-dashboard",
         "expanded": true,
         "pages": [
-          "untitled-page-3",
-          "marketplace",
-          "untitled-page-4",
-          "untitled-page-5"
+          "dashboard/home",
+          "dashboard/marketplace",
+          "dashboard/storage",
+          "dashboard/status"
         ]
       }
     ]
