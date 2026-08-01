@@ -35,7 +35,7 @@
         "icon": "info",
         "expanded": true,
         "pages": [
-          "docs",
+          "welcome",
           "join"
         ]
       },
@@ -119,6 +119,14 @@
           "dashboard/marketplace",
           "dashboard/storage",
           "dashboard/status"
+        ]
+      },
+      {
+        "group": "Welcome to Meridian",
+        "icon": "hand",
+        "pages": [
+          "untitled-page",
+          "untitled-page-2"
         ]
       }
     ]
@@ -213,9 +221,6 @@
     "404": {
       "redirect": true
     }
-  },
-  "variables": {
-    "phase": "Alpha"
   },
   "api": {
     "examples": {
