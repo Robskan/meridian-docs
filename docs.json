@@ -50,6 +50,13 @@
             "pages": [
               "builder/messages/send-a-message"
             ]
+          },
+          {
+            "group": "API & Third Party",
+            "icon": "radio",
+            "pages": [
+              "untitled-page-6"
+            ]
           }
         ]
       },
