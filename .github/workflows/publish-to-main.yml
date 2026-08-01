@@ -1,0 +1,42 @@
+name: Publish to main
+
+on:
+  push:
+    branches:
+      - robbie
+      - gon
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-to-main
+  cancel-in-progress: false
+
+jobs:
+  merge-to-main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Merge branch into main
+        env:
+          SOURCE_BRANCH: ${{ github.ref_name }}
+        run: |
+          set -euo pipefail
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git fetch origin main
+          git checkout main
+          git pull --ff-only origin main
+
+          git merge --ff-only "origin/${SOURCE_BRANCH}" || \
+            git merge --no-ff "origin/${SOURCE_BRANCH}" -m "Merge branch '${SOURCE_BRANCH}' into main"
+
+          git push origin main
