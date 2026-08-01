@@ -53,7 +53,10 @@
               {
                 "group": "API reference",
                 "icon": "globe",
-                "openapi": "https://docs-backend.meridian.surf/openapi.json"
+                "openapi": {
+                  "source": "https://api.meridian.surf/openapi.json",
+                  "directory": "api-reference"
+                }
               }
             ]
           }
@@ -69,14 +72,14 @@
   "navbar": {
     "links": [
       {
-        "href": "https://meridian.surf/dashboard",
+        "href": "https://dashboard.meridian.surf/home",
         "label": "Dashboard"
       }
     ],
     "primary": {
       "type": "button",
       "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "href": "https://dashboard.meridian.surf/home"
     }
   },
   "footer": {
@@ -94,7 +97,7 @@
           },
           {
             "label": "Dashboard",
-            "href": "https://meridian.surf/dashboard"
+            "href": "https://dashboard.meridian.surf/home"
           }
         ]
       },
@@ -107,7 +110,7 @@
           },
           {
             "label": "Help center",
-            "href": "https://meridian.surf/help"
+            "href": "https://help.meridian.surf"
           },
           {
             "label": "Email us",
