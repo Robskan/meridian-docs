@@ -32,7 +32,6 @@
     "groups": [
       {
         "group": "Information",
-        "icon": "info",
         "expanded": true,
         "pages": [
           "welcome",
@@ -41,15 +40,16 @@
       },
       {
         "group": "Builder",
-        "icon": "code-xml",
         "expanded": true,
         "pages": [
           {
             "group": "Messages",
             "icon": "messages-square",
             "pages": [
-              "builder/messages/send-a-message"
-            ]
+              "builder/messages/send-a-message",
+              "untitled-page-2"
+            ],
+            "expanded": true
           },
           {
             "group": "API & Third Party",
@@ -57,63 +57,73 @@
             "pages": [
               "untitled-page-6",
               "untitled-page-7"
-            ]
+            ],
+            "expanded": true
           },
           {
             "group": "Loops",
             "icon": "repeat",
-            "pages": []
+            "pages": [],
+            "expanded": true
           },
           {
             "group": "Logic",
             "icon": "move-horizontal",
-            "pages": []
+            "pages": [],
+            "expanded": true
           },
           {
             "group": "Roles",
             "icon": "shield-user",
-            "pages": []
+            "pages": [],
+            "expanded": true
           },
           {
             "group": "Channels",
             "icon": "hash",
-            "pages": []
+            "pages": [],
+            "expanded": true
           },
           {
             "group": "Voice",
             "icon": "audio-lines",
-            "pages": []
+            "pages": [],
+            "expanded": true
           },
           {
             "group": "Variables & Data storage",
             "icon": "database",
-            "pages": []
+            "pages": [],
+            "expanded": true
           },
           {
             "group": "Users",
             "icon": "users",
-            "pages": []
+            "pages": [],
+            "expanded": true
           },
           {
             "group": "Functions",
             "icon": "diamond",
-            "pages": []
+            "pages": [],
+            "expanded": true
           },
           {
-            "group": "Settings",
+            "group": "Builder settings",
             "icon": "settings-2",
-            "pages": []
+            "pages": [],
+            "expanded": true
           },
           {
             "group": "Other",
             "icon": "menu",
-            "pages": []
+            "pages": [],
+            "expanded": true
           }
         ]
       },
       {
         "group": "Dashboard",
-        "icon": "layout-dashboard",
         "expanded": true,
         "pages": [
           "dashboard/home",
@@ -124,11 +134,11 @@
       },
       {
         "group": "Welcome to Meridian",
-        "icon": "hand",
         "pages": [
           "welcome/onboarding",
           "welcome/create-a-bot"
-        ]
+        ],
+        "expanded": true
       }
     ]
   },

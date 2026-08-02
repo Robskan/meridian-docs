@@ -1,0 +1,93 @@
+---
+title: "Send a Form"
+icon: "newspaper"
+description: "Send a modal form to collect input"
+---
+
+Using the Send a Form block, you can send out Discord Forms to users after they interact with buttons or dropdowns to collect input in forms of text, selections, and files.
+
+<Columns cols={2}>
+  <Column>
+    <Card title="Forms v2" icon="box">
+      Meridian fully supports the **Forms v2** Discord standard.
+    </Card>
+  </Column>
+  <Column>
+    <Card title="Easily save & reuse responses for later" icon="database">
+      Easily create dynamic content using simple variables produced.
+    </Card>
+  </Column>
+</Columns>
+
+## The Form Editor
+
+<Frame>
+  ![Form Editor Modal](/images/Form-Editor-Modal.png "Form Editor Modal")
+</Frame>
+
+The form editor is where the majority of the configurations for the forms you make happen. It features a components panel on the left (much like the components panel in the [message editor](/builder/messages/send-a-message)), editing space in the middle, and configurations for the form or active component on the right.
+
+### Available Components
+
+Forms made on Meridian are always sent to Discord as Forms v2, v1 is not supported. The components available in Forms v2 include:
+
+<AccordionGroup>
+  <Accordion title="Question" icon="circle-question-mark">
+    <Columns cols={2}>
+      <Column>
+        A simple label and text input combination.<br />It can:
+
+        - Be Short (one line) or a Paragraph
+
+        <Tip>
+          Use **Paragraph** to allow answers up to 4k characters in length!
+        </Tip>
+
+        - Be Required or Non-Required (Optional)
+        - Include a description
+
+        <Tip>
+          A description is a
+        </Tip>
+      </Column>
+      <Column>
+        <Frame>
+          ![All Variations Of The Question Component In Discord](/images/All-Variations-Of-The-Question-Component-In-Discord.png "All Variations Of The Question Component In Discord")
+        </Frame>
+      </Column>
+    </Columns>
+  </Accordion>
+
+  <Accordion title="Text" icon="text-align-start">
+  </Accordion>
+
+  <Accordion title="Text Input" icon="text-cursor-input">
+  </Accordion>
+
+  <Accordion title="Radio Group" icon="circle-check-big">
+  </Accordion>
+
+  <Accordion title="Checkbox Group" icon="copy-check">
+  </Accordion>
+
+  <Accordion title="Checkbox" icon="square-check-big">
+  </Accordion>
+
+  <Accordion title="Dropdown (Text)" icon="scroll-text">
+  </Accordion>
+
+  <Accordion title="Dropdown (Users)" icon="users">
+  </Accordion>
+
+  <Accordion title="Dropdown (Roles)" icon="shield-user">
+  </Accordion>
+
+  <Accordion title="Dropdown (Mentionables)" icon="at-sign">
+  </Accordion>
+
+  <Accordion title="Dropdown (Channels)" icon="hash">
+  </Accordion>
+
+  <Accordion title="File Upload" icon="paperclip">
+  </Accordion>
+</AccordionGroup>
