@@ -4,9 +4,9 @@
   "name": "Meridian",
   "description": "Step-by-step guides, product updates, and more for Meridian.",
   "colors": {
-    "primary": "#5369f5",
-    "light": "#7d8eff",
-    "dark": "#4A55D2"
+    "primary": "#ffffff",
+    "light": "#171717",
+    "dark": "#d5d5d5"
   },
   "favicon": {
     "light": "/images/mrdnlogodark2.svg",
@@ -227,6 +227,12 @@
     "examples": {
       "prefill": true,
       "autogenerate": false
+    }
+  },
+  "background": {
+    "color": {
+      "light": "#e0e0e0",
+      "dark": "#0e0e0e"
     }
   }
 }
