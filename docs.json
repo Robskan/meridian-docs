@@ -38,11 +38,20 @@
         },
         "groups": [
           {
+            "group": "short links",
+            "hidden": true,
+            "pages": [
+              "untitled-page-6",
+              "discord"
+            ]
+          },
+          {
             "group": "Information",
             "expanded": true,
             "pages": [
               "welcome",
-              "faq"
+              "faq",
+              "untitled-page-2"
             ]
           },
           {
@@ -170,8 +179,8 @@
   "navbar": {
     "links": [
       {
-        "href": "https://dashboard.meridian.surf/home",
-        "label": "Dashboard"
+        "href": "https://meridian.surf/determine",
+        "label": "meridian.surf"
       }
     ],
     "primary": {
@@ -204,7 +213,7 @@
         "items": [
           {
             "label": "Discord server",
-            "href": "https://discord.gg/6BEun7GpUt"
+            "href": "/discord"
           },
           {
             "label": "Help center",
