@@ -16,16 +16,19 @@
     "library": "lucide"
   },
   "styling": {
-    "eyebrows": "breadcrumbs"
+    "eyebrows": "breadcrumbs",
+    "latex": true
   },
   "contextual": {
     "options": [
       "copy",
-      "view",
-      "aistudio",
+      "chatgpt",
       "claude",
-      "chatgpt"
-    ]
+      "aistudio",
+      "cursor",
+      "download-spec"
+    ],
+    "display": "toc"
   },
   "navigation": {
     "directory": "card",
@@ -226,10 +229,10 @@
         ]
       },
       {
-        "header": "Legal",
+        "header": "Policies",
         "items": [
           {
-            "label": "Legal center",
+            "label": "All policies",
             "href": "https://meridian.surf/legal"
           },
           {
@@ -244,10 +247,6 @@
       }
     ]
   },
-  "banner": {
-    "content": "Meridian is currently in alpha, so things can and will change, so information provided on this documentation might not be up-to-date.",
-    "dismissible": true
-  },
   "search": {
     "prompt": "Search..."
   },
@@ -256,19 +255,35 @@
   },
   "errors": {
     "404": {
-      "redirect": true
+      "redirect": false,
+      "title": "Whoops, not found..."
     }
   },
   "api": {
     "examples": {
       "prefill": true,
       "autogenerate": false
-    }
+    },
+    "url": "full"
   },
   "background": {
     "color": {
       "light": "#e0e0e0",
       "dark": "#0e0e0e"
     }
+  },
+  "thumbnails": {
+    "fonts": {
+      "family": "Geist"
+    }
+  },
+  "metadata": {
+    "timestamp": true
+  },
+  "interaction": {
+    "drilldown": false
+  },
+  "seo": {
+    "indexing": "all"
   }
 }
