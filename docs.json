@@ -42,7 +42,7 @@
             "expanded": true,
             "pages": [
               "welcome",
-              "untitled-page-9"
+              "faq"
             ]
           },
           {
@@ -55,7 +55,7 @@
                 "expanded": true,
                 "pages": [
                   "builder/messages/send-a-message",
-                  "untitled-page-2"
+                  "builder/messages/send-a-form"
                 ]
               },
               {
@@ -63,8 +63,8 @@
                 "icon": "radio",
                 "expanded": true,
                 "pages": [
-                  "untitled-page-6",
-                  "untitled-page-7"
+                  "builder/api/api",
+                  "builder/api/ask-ai"
                 ]
               },
               {
@@ -137,7 +137,7 @@
               "dashboard/marketplace",
               "dashboard/storage",
               "dashboard/status",
-              "untitled-page-11"
+              "dashboard/logs"
             ]
           },
           {
@@ -158,7 +158,7 @@
         },
         "hidden": true,
         "pages": [
-          "untitled-page-10"
+          "citrum/welcome"
         ]
       }
     ]
