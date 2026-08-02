@@ -1,0 +1,497 @@
+---
+title: "Send a Message"
+icon: "mail-plus"
+description: "Send a text message or embed"
+---
+
+Using the Send a Message block, you can quickly send messages as Direct Messages, Replies, or regular text messages.
+
+<Columns cols={2}>
+  <Column>
+    <Card title="Message Compatibility" icon="drafting-compass">
+      By default, all Send a Message blocks use the full **Messages v2** system.
+    </Card>
+  </Column>
+  <Column>
+    <Card title="Customize Notifications" icon="bell-ring">
+      Choose to notify no one, everyone, or specific roles & people.
+    </Card>
+  </Column>
+</Columns>
+
+## The Message Editor
+
+In the message editor, you can drag and drop blocks from the left side onto the canvas, rearrange them, and customize them to your liking.
+
+<Frame>
+  ![Image 0072 3083](/images/image-0072---3083.png "Image 0072 3083")
+</Frame>
+
+### Switching to legacy (v1) messages
+
+To switch back from Components V2, click on ''Default'' in the upper right corner of the editing space.
+
+<Frame>
+  ![Image 0829 3899](/images/image-0829---3899.png "Image 0829 3899")
+</Frame>
+
+You can switch in between the modes at any time.
+
+<Warning>
+  Please note that switching from Components V2 to Default might delete larger parts of your message due to incompatibility of the components. Switching from Default (Legacy) to Components v2 should cause no issues in most cases.
+</Warning>
+
+### Testing your messages on different devices and themes
+
+To save time while writing long messages, you can test out how your messages look on Mobile and PC as well as Dark mode and Light mode right in the editor, before even saving!
+
+<Frame>
+  ![Image 0102 4942](/images/image-0102---4942.png "Image 0102 4942")
+</Frame>
+
+To change devices, use the toggle with the <Badge stroke icon="laptop">Laptop</Badge> and <Badge stroke icon="smartphone">Phone</Badge> icons, located in the upper left corner of the editing space. Using this switch <u>does not</u> affect your message.
+
+To change themes, use the toggle with the <Badge stroke icon="moon">Moon</Badge> and <Badge stroke icon="sun">Sun</Badge> icons, located in the upper right corner of the editing space. Using this switch <u>does not</u> affect your message.
+
+### The components
+
+<Accordion title="Available components">
+  <Frame>
+    <Columns cols={2}>
+      <Column>
+        Components v1
+
+        <Card title="Text" icon="text-align-start" horizontal>
+          Discord markdown text
+        </Card>
+
+        <Card title="Embed" icon="container" horizontal>
+          Container for text with a color
+        </Card>
+
+        <Card title="Button" icon="mouse-pointer-click" horizontal>
+          Interactable Discord buttons
+        </Card>
+
+        <Card title="Dropdown" icon="list-checks" horizontal>
+          Interactable Discord dropdowns
+        </Card>
+      </Column>
+      <Column>
+        \*\*Components v2  \*\*<Badge color="blue" stroke>Default</Badge>
+
+        <Card title="Container" icon="box" horizontal>
+          Groups layout inside one card
+        </Card>
+
+        <Card title="Text" icon="text-align-start" horizontal>
+          Discord markdown text
+        </Card>
+
+        <Card title="Button" icon="mouse-pointer-click" horizontal>
+          Interactable Discord buttons
+        </Card>
+
+        <Card title="Dropdown" icon="list-checks" horizontal>
+          Interactable Discord dropdowns
+        </Card>
+
+        <Card title="Section" icon="quote" horizontal>
+          Text with a button or image
+        </Card>
+
+        <Card title="Thumbnail" icon="image" horizontal>
+          Used to give the section an image
+        </Card>
+
+        <Card title="Media Gallery" icon="images" horizontal>
+          1-10 Images shown in a grid
+        </Card>
+
+        <Card title="File" icon="paperclip" horizontal>
+          An attachment
+        </Card>
+
+        <Card title="Separator" icon="minus" horizontal>
+          A line to divide content
+        </Card>
+      </Column>
+    </Columns>
+  </Frame>
+</Accordion>
+
+### Component Behavior
+
+Every single component can be customized and disabled. Customization options differ for each component.
+
+Disabled components still show up in your editor and can be changed, but will not be displayed in Discord once you run your flow.
+
+<Frame>
+  ![Image 6289 6139](/images/image-6289---6139.png "Image 6289 6139")
+</Frame>
+
+<Tip>
+  Easily create dynamic content by using variables.
+</Tip>
+
+#### Emoji  <Badge color="orange" stroke icon="traffic-cone">Beta</Badge>
+
+On the text, button and dropdown components, emojis can be added using an emoji selector. We're using the same emojis for Discord for your convenience. In addition, the emoji selector is also capable of displaying your bot emojis and emojis from servers your bot is in.
+
+<Frame>
+  <Columns cols={2}>
+    <Column>
+      <img
+        src="/images/Emoji-Selector-Default.png"
+        alt="Emoji Selector Default"
+        title="Emoji Selector Default"
+        className="mr-auto"
+      />
+    </Column>
+    <Column>
+      <img
+        src="/images/Emoji-Smile.png"
+        alt="Emoji Smile"
+        title="Emoji Smile"
+        className="ml-auto"
+        style={{ width:"89%" }}
+      />
+    </Column>
+  </Columns>
+</Frame>
+
+### Four ways to send your message
+
+You can choose if you want your message to be sent as a regular message, reply, edit, or as a DM (Direct Message). Each way comes with their own configuration options.
+
+<Columns cols={2}>
+  <Column>
+    <Frame>
+      ![Image 3932 2811223423](/images/image-3932---2811223423.png "Image 3932 2811223423")
+    </Frame>
+
+    <Frame>
+      ![Image 1007 20323525263330](/images/image-1007---20323525263330.png "Image 1007 20323525263330")
+    </Frame>
+  </Column>
+  <Column>
+    #### Action: Send
+
+    Select ''Send'' in the Action dropdown to send your message in any channel your bot has access to, to the channel the command was used in (or event was triggered in) or as a reply to other messages.
+
+    After selecting Send in the Action dropdown, another dropdown pops up: **Destination**:
+
+    If you choose **Current channel / Reply**, you will see a Send as reply toggle, which when toggled sends your current message as a reply to the triggering message by default, if not toggled, your message will just be sent normally to the current channel.
+
+    If you choose **Specific channel**, you can choose the source from four available options:
+
+    - <Tooltip tip="The server picker displays a dropdown of all servers your bot is in, you can select any specific server and channel from it." headline="Server picker">Server picker</Tooltip>
+    - <Tooltip tip="When variable is selected, you can input any variable which returns a valid Discord channel ID to send your message there." headline="Variable">Variable</Tooltip>
+    - <Tooltip tip="Using the block reference, you can reference any valid channel block to send a message to the channel it creates or edits." headline="Block reference">Block reference</Tooltip>
+    - <Tooltip tip="The current channel sends the message to the currently used channel, wow." headline="Current channel">Current channel</Tooltip>
+  </Column>
+</Columns>
+
+<Columns cols={2}>
+  <Column>
+    #### Action: Direct Message
+
+    In the same Action dropdown, select ''Direct Message'' to send the message any applicable user's private messages as the bot.<br /><br />After selecting Direct Message in the main Action dropdown, a new Source dropdown appears, allowing you to additionally choose if you want to send the Direct Message to:
+
+    - <Tooltip tip="Yes please" headline="Robbie's tip inquiry" cta="call" href="https://google.com">Command User</Tooltip>
+    - <Tooltip tip="When variable is selected, you can input any variable which returns a valid Discord channel ID to send your message there." headline="Variable">Variable</Tooltip>
+    - <Tooltip tip="Input a valid Discord user ID for any user that is in any server your bot is also in." headline="Specific user id">Specific user id</Tooltip>
+  </Column>
+  <Column>
+    <Frame>
+      ![Image 9051 072323567682](/images/image-9051---072323567682.png "Image 9051 072323567682")
+    </Frame>
+  </Column>
+</Columns>
+
+### Notifications
+
+On Meridian, notifications your messages trigger can be fully customized to your desire.
+
+<Frame>
+  ![Image 2097 34534667 3699](/images/image-2097-34534667--3699.png "Image 2097 34534667 3699")
+</Frame>
+
+#### Mention Delivery
+
+Using this setting, you can customize allowed mentions for your message. By default, this is set to Notify everyone. You can also select Notify no one or Custom rule for full customization.
+
+<Frame>
+  <Columns cols={3}>
+    <Column>
+      <Card title="Notify everyone" icon="bell">
+        Everyone you mention gets notified
+      </Card>
+    </Column>
+    <Column>
+      <Card title="Notify no one" icon="bell-off">
+        No one gets notified by the message
+      </Card>
+    </Column>
+    <Column>
+      <Card title="Custom rules" icon="settings">
+        Customizable notifications
+      </Card>
+    </Column>
+  </Columns>
+</Frame>
+
+#### Custom Mention delivery
+
+<Frame>
+  ![Image](/images/image-13.png "Image")
+</Frame>
+
+<Tip>
+  **TIP:** You can hold Shift \+ Left mouse button and drag your mouse over the options to toggle them together.
+
+  <Accordion title="See GIF" icon="eye">
+    ![Image 4725 2409](/images/image-4725---2409.gif "Image 4725 2409")
+  </Accordion>
+</Tip>
+
+When you select <Badge stroke icon="settings">Custom Rules</Badge> in the Mention delivery setting, the modal expands to fit the additional mention settings, which include:
+
+- <Tooltip tip="Configures notifications for all users." headline="Users">Users</Tooltip>
+- <Tooltip tip="Configures notifications for all roles." headline="Roles">Roles</Tooltip>
+- <Tooltip tip="Configures notifications for @everyone and @here pings should your message contain any." headline="@everyone and @here">@everyone and @here</Tooltip>
+- <Tooltip tip="Configures notifications for the user the message is replying to." headline="Replied user">Replied user</Tooltip>
+- <Tooltip tip="A list of Discord user and role IDs that can be pinged." headline="Allowlist">Allowlist</Tooltip>
+- <Tooltip tip="A list of Discord user and role IDs that can't be pinged." headline="Denylist">Denylist</Tooltip>
+
+The Allowlist and Denylist override all other settings.
+
+<Info>
+  Hover over each setting to read more about what it does.
+</Info>
+
+### Variables produced by the  <Icon icon="mail-plus" /> Send a Message block
+
+The  <Icon icon="mail-plus" /> Send a Message block produces a single `{message}` or `{message_n}` (where `n` is the serial number of the Send a Message block, ex. 2). When called, the variable returns the Discord message ID corresponding to the block's configured message after it's sent.
+
+<Info>
+  By default, the single `{message}` variable is always populated by the Send a Message block connected to the  <Icon icon="circle-alert" color="#ffa33c" /> Error Handler block.
+</Info>
+
+<Info>
+  The `{message}` variable shouldn't be confused with the `{interaction.message.content}` variable which returns the content of the triggering message (if applicable) for events.
+</Info>
+
+The `{message}` variable can be customized to be custom text inside \{curly brackets\}.
+
+### Buttons
+
+Buttons can be created, edited, rearranged and deleted in the Send a Message block's message editor.
+
+<Frame>
+  ![Image](/images/image-14.png "Image")
+</Frame>
+
+By default, dragging in a button component from the components on the left panel will create a <Tooltip tip="A row is a helper component which cannot be added as standalone component. It can hold up to 5 buttons OR 1 dropdown." headline="Rows">Row component</Tooltip>, and automatically place your button inside.
+
+<Frame>
+  ![Image](/images/image-15.png "Image")
+</Frame>
+
+Therefore, when clicking anywhere around a button, you will not edit the button itself but rather the row. A row can be <Badge stroke icon="copy">Duplicated</Badge>, <Badge stroke icon="toggle-left">Disabled</Badge> or <Badge color="red" stroke icon="trash">Deleted</Badge>, directly affecting all components inside of the row.
+
+<Frame>
+  ![Image](/images/image-16.png "Image")
+</Frame>
+
+To actually edit a button, you must click on the button itself. Every button can individually be modified with the following settings: <Badge stroke icon="settings-2">Disabled / Enabled</Badge>, <Badge stroke icon="tags">Label</Badge> and <Badge stroke icon="smile">Emoji</Badge>.<br />In addition, Overrides can be added by using variables. If an override is invalid, the button will automatically fallback to the manual inputs you set.
+
+<Note>
+  Override styles override all manual settings.
+</Note>
+
+Supported button colors include:
+
+<Color variant="compact">
+  <Color.Item name="Blue" value="#5865F2" />
+  <Color.Item name="Gray" value="#232426" />
+  <Color.Item name="Green" value="#008545" />
+  <Color.Item name="Red" value="#D22D39" />
+  <Color.Item name="Link (Gray)" value="#232426" />
+</Color>
+
+If a button has emojis, it will display them to the left side of the text on Discord once the message is sent.
+
+<Frame>
+  In Meridian:
+
+  ![Image 1857 5319](/images/image-1857---5319.png "Image 1857 5319")
+
+  In Discord:
+
+  ![Image 7846 5283649283646X 4639](/images/image-7846--5283649283646X-4639.png "Image 7846 5283649283646X 4639")
+</Frame>
+
+To add more buttons, simply drag them in any valid position.
+
+<Frame>
+  ![Image 7119 ASODU Ga)sudg 9612](/images/image-7119-ASODUGa\)sudg--9612.png "Image 7119 ASODU Ga)sudg 9612")
+</Frame>
+
+What each color means:
+
+| Color | Meaning |
+| :-: | --- |
+| <Badge color="blue" stroke>L</Badge> | This is a possible position. You can try placing a component here. |
+| <Badge color="green" stroke>Green</Badge> | This specific component can also be placed in this position. Release component to place it here. |
+| <Badge color="red" stroke>Red</Badge> | This specific component can't be placed in this position. Move it elsewhere or release it here to cancel it's placement. |
+
+When attempting to place a component in an invalid position, you the blue area will become red and an error message will slide in from the bottom of the message editor to explain why that is an invalid position.
+
+<Frame>
+  ![Image 9495 ERROR 4958](/images/image-9495-ERROR--4958.png "Image 9495 ERROR 4958")
+</Frame>
+
+After adding at least one button in your message, it will appear in the builder after you leave the message editor.
+
+<Frame>
+  <img
+    src="/images/Send-a-Message-Button.png"
+    alt="Send A Message Button"
+    title="Send A Message Button"
+  />
+</Frame>
+
+To wire other blocks to run after a button press, you simply connect them to the button's <Badge stroke icon="circle">Handle</Badge>. Of course, if you'd like, you can still wire actions to happen directly after the Send a Message block's message has been sent, using its own <Badge stroke icon="circle">Handle</Badge>.
+
+### Dropdowns
+
+Much like buttons, dropdowns can also be placed, edited, moved and deleted directly in the message editor.
+
+<Frame>
+  ![Dropdown](/images/dropdown.png "Dropdown")
+</Frame>
+
+By default, dragging in a dropdown component from the components on the left panel will create a <Tooltip tip="A row is a helper component which cannot be added as standalone component. It can hold up to 5 buttons OR 1 dropdown." headline="Rows">Row component</Tooltip>, and automatically place your dropdown inside.
+
+<Frame>
+  ![Dropdown In A Row](/images/Dropdown-in-a-row.png "Dropdown In A Row")
+</Frame>
+
+Therefore, when clicking anywhere around a dropdown, you will not edit the dropdown itself but rather the row. A row can be <Badge stroke icon="copy">Duplicated</Badge>, <Badge stroke icon="toggle-left">Disabled</Badge> or <Badge color="red" stroke icon="trash">Deleted</Badge>, directly affecting the dropdown inside.
+
+<Frame>
+  ![Highlighted Dropdown Component 1](/images/Highlighted-Dropdown-Component-1.png "Highlighted Dropdown Component 1")
+</Frame>
+
+Click on the dropdown itself in order to edit it. Every dropdown can individually be modified with the following settings:
+
+<Tabs>
+  <Tab title="Option source">
+    <Columns cols={2}>
+      <Column>
+        <Frame>
+          <img
+            src="/images/Option-Source-Dropdown-open.png"
+            alt="Option Source Dropdown Open"
+            title="Option Source Dropdown Open"
+            className="mx-auto"
+            style={{ width:"92%" }}
+          />
+        </Frame>
+
+        <Info>
+          Hover over any option source in the list to the right to find out more about it.
+        </Info>
+      </Column>
+      <Column>
+        #### Option Source
+
+        Using the option source dropdown, you can configure the type of options the dropdown displays in Discord. Available options:
+
+        - <Tooltip tip="A list of options that are displayed primarily as text, with optional descriptions and emojis as decoration. You configure them completely." headline="Text options">Text options</Tooltip>
+        - <Tooltip tip="User dropdowns display the users relative to the server the flow was triggered in." headline="Users">Users</Tooltip>
+        - <Tooltip tip="Much like the user option, the roles option shows the roles relative to the server the flow was triggered in." headline="Roles">Roles</Tooltip>
+        - <Tooltip tip="Mentionables dropdowns contain users and roles relative to the server the flow was triggered in." headline="Mentionables">Mentionables</Tooltip>
+        - <Tooltip tip="Contains channels relative to the server the flow was triggered in." headline="Channels">Channels</Tooltip>
+      </Column>
+    </Columns>
+  </Tab>
+  <Tab title="Selection">
+    <Columns cols={2}>
+      <Column>
+        #### Selection
+
+        The selection dropdown lets you choose if the user can choose only one option, or multiple.
+
+        <Badge color="orange" stroke icon="traffic-cone">Soon</Badge> You will be able to configure a min-max range of how many selections can be made.
+
+        <Badge color="orange" stroke icon="traffic-cone">Soon</Badge> You will be able to override the selection dropdown with variables, like the button styling options.
+      </Column>
+      <Column>
+        <Frame>
+          ![Dropdown Component Selection Configuration](/images/Dropdown-Component-Selection-Configuration.png "Dropdown Component Selection Configuration")
+        </Frame>
+
+        <Callout icon="traffic-cone" color="#ff8438">
+          **Beta Feature:** We are working hard on improving this feature, so you might see a lot of <Badge>Soon</Badge> tags. If you have feedback or any suggestions, you are more than welcome to provide them in our [Discord](https://discord.gg/V4kdj8umeR). 
+        </Callout>
+      </Column>
+    </Columns>
+  </Tab>
+  <Tab title="Placeholder">
+    <Columns cols={2}>
+      <Column>
+        <Frame>
+          <img
+            src="/images/Placeholder-Field.png"
+            alt="Placeholder Field"
+            title="Placeholder Field"
+          />
+
+          ![Placeholder Example](/images/Placeholder-Example.png "Placeholder Example")
+        </Frame>
+      </Column>
+      <Column>
+        #### Placeholder
+
+        The placeholder is a customizable string with support for emojis and variables that shows before the user opens the dropdown.
+      </Column>
+    </Columns>
+  </Tab>
+  <Tab title="Options">
+    <Columns cols={2}>
+      <Column>
+        #### Options
+
+        Options are customizable string items that are shown in the dropdown on Discord if you enable Text options in Option Source. For each option, you can customize:
+
+        - The Label
+        - The Value
+        - The Description <Badge>o</Badge>
+        - The Emoji <Badge>Optional</Badge>
+
+        <Badge color="orange" stroke icon="traffic-cone" /> Soon, you'll be able to rearrange options.
+      </Column>
+      <Column>
+        <Frame>
+          ![Image](/images/image-19.png "Image")
+        </Frame>
+
+        <Info>
+          Hover over any entry in the list on the left to read more about the hovered item.
+        </Info>
+
+        <Warning>
+          For every dropdown, you can have up to **25** **options**.
+        </Warning>
+      </Column>
+    </Columns>
+  </Tab>
+</Tabs>
+
+#### Getting user input from dropdowns
+
+<Info>
+  Soon
+</Info>
