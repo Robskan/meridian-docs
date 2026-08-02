@@ -29,116 +29,137 @@
   },
   "navigation": {
     "directory": "card",
-    "groups": [
+    "products": [
       {
-        "group": "Information",
-        "expanded": true,
-        "pages": [
-          "welcome",
-          "join"
-        ]
-      },
-      {
-        "group": "Builder",
-        "expanded": true,
-        "pages": [
+        "product": "Meridian",
+        "color": {
+          "light": "#8f82ec",
+          "dark": "#8f82ec"
+        },
+        "groups": [
           {
-            "group": "Messages",
-            "icon": "messages-square",
+            "group": "Information",
+            "expanded": true,
             "pages": [
-              "builder/messages/send-a-message",
-              "untitled-page-2"
-            ],
-            "expanded": true
+              "welcome",
+              "untitled-page-9"
+            ]
           },
           {
-            "group": "API & Third Party",
-            "icon": "radio",
+            "group": "Builder",
+            "expanded": true,
             "pages": [
-              "untitled-page-6",
-              "untitled-page-7"
-            ],
-            "expanded": true
+              {
+                "group": "Messages",
+                "icon": "messages-square",
+                "expanded": true,
+                "pages": [
+                  "builder/messages/send-a-message",
+                  "untitled-page-2"
+                ]
+              },
+              {
+                "group": "API & Third Party",
+                "icon": "radio",
+                "expanded": true,
+                "pages": [
+                  "untitled-page-6",
+                  "untitled-page-7"
+                ]
+              },
+              {
+                "group": "Loops",
+                "icon": "repeat",
+                "expanded": true,
+                "pages": []
+              },
+              {
+                "group": "Logic",
+                "icon": "move-horizontal",
+                "expanded": true,
+                "pages": []
+              },
+              {
+                "group": "Roles",
+                "icon": "shield-user",
+                "expanded": true,
+                "pages": []
+              },
+              {
+                "group": "Channels",
+                "icon": "hash",
+                "expanded": true,
+                "pages": []
+              },
+              {
+                "group": "Voice",
+                "icon": "audio-lines",
+                "expanded": true,
+                "pages": []
+              },
+              {
+                "group": "Variables & Data storage",
+                "icon": "database",
+                "expanded": true,
+                "pages": []
+              },
+              {
+                "group": "Users",
+                "icon": "users",
+                "expanded": true,
+                "pages": []
+              },
+              {
+                "group": "Functions",
+                "icon": "diamond",
+                "expanded": true,
+                "pages": []
+              },
+              {
+                "group": "Builder settings",
+                "icon": "settings-2",
+                "expanded": true,
+                "pages": []
+              },
+              {
+                "group": "Other",
+                "icon": "menu",
+                "expanded": true,
+                "pages": []
+              }
+            ]
           },
           {
-            "group": "Loops",
-            "icon": "repeat",
-            "pages": [],
-            "expanded": true
+            "group": "Dashboard",
+            "expanded": true,
+            "pages": [
+              "dashboard/home",
+              "dashboard/marketplace",
+              "dashboard/storage",
+              "dashboard/status",
+              "untitled-page-11"
+            ]
           },
           {
-            "group": "Logic",
-            "icon": "move-horizontal",
-            "pages": [],
-            "expanded": true
-          },
-          {
-            "group": "Roles",
-            "icon": "shield-user",
-            "pages": [],
-            "expanded": true
-          },
-          {
-            "group": "Channels",
-            "icon": "hash",
-            "pages": [],
-            "expanded": true
-          },
-          {
-            "group": "Voice",
-            "icon": "audio-lines",
-            "pages": [],
-            "expanded": true
-          },
-          {
-            "group": "Variables & Data storage",
-            "icon": "database",
-            "pages": [],
-            "expanded": true
-          },
-          {
-            "group": "Users",
-            "icon": "users",
-            "pages": [],
-            "expanded": true
-          },
-          {
-            "group": "Functions",
-            "icon": "diamond",
-            "pages": [],
-            "expanded": true
-          },
-          {
-            "group": "Builder settings",
-            "icon": "settings-2",
-            "pages": [],
-            "expanded": true
-          },
-          {
-            "group": "Other",
-            "icon": "menu",
-            "pages": [],
-            "expanded": true
+            "group": "Welcome to Meridian",
+            "expanded": true,
+            "pages": [
+              "welcome/onboarding",
+              "welcome/create-a-bot"
+            ]
           }
         ]
       },
       {
-        "group": "Dashboard",
-        "expanded": true,
+        "product": "Citrum",
+        "color": {
+          "light": "#f2cc4d",
+          "dark": "#f2cc4d"
+        },
+        "hidden": true,
         "pages": [
-          "dashboard/home",
-          "dashboard/marketplace",
-          "dashboard/storage",
-          "dashboard/status"
+          "untitled-page-10"
         ]
-      },
-      {
-        "group": "Welcome to Meridian",
-        "pages": [
-          "welcome/onboarding",
-          "welcome/create-a-bot"
-        ],
-        "expanded": true
       }
     ]
   },
@@ -162,7 +183,7 @@
   },
   "footer": {
     "socials": {
-      "discord": "https://discord.gg/6BEun7GpUt",
+      "discord": "https://l.meridian.surf/discord",
       "website": "https://meridian.surf"
     },
     "links": [
@@ -224,9 +245,6 @@
   },
   "markdown": {
     "schema": true
-  },
-  "fonts": {
-    "family": "Geist"
   },
   "errors": {
     "404": {
