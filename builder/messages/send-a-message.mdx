@@ -2,16 +2,14 @@
 title: "Send a Message"
 icon: "mail-plus"
 description: "Send a text message or embed"
-keywords: ["send message", "sending ", "message"]
-sidebarTitle: "Send a Message"
 ---
 
-Using the Send a Message block, you can quickly send messages by Direct Messages, Replies, or regular text messages.
+Using the Send a Message block, you can quickly send messages as Direct Messages, Replies, or regular text messages.
 
 <Columns cols={2}>
   <Column>
     <Card title="Message Compatibility" icon="drafting-compass">
-      By default, all Send a Message blocks use the full **Messages v2** system.
+      By default, all Send a Message blocks use the full **Messages v2** system.
     </Card>
   </Column>
   <Column>
@@ -80,7 +78,7 @@ To change themes, use the toggle with the <Badge stroke icon="moon">Moon</Badge>
         </Card>
       </Column>
       <Column>
-        \*\*Components v2  \*\*<Badge color="blue" stroke>Default</Badge>
+        \*\*Components v2  \*\*<Badge color="blue" stroke>Default</Badge>
 
         <Card title="Container" icon="box" horizontal>
           Groups layout inside one card
@@ -143,15 +141,20 @@ On the text, button and dropdown components, emojis can be added using an emoji 
 <Frame>
   <Columns cols={2}>
     <Column>
-      ![Emoji Selector](/images/image-4749---6072.png "Image")
+      <img
+        src="/images/Emoji-Selector-Default.png"
+        alt="Emoji Selector Default"
+        title="Emoji Selector Default"
+        className="mr-auto"
+      />
     </Column>
     <Column>
       <img
-        src="/images/image-1.png"
-        alt="Image"
-        title="Image"
+        src="/images/Emoji-Smile.png"
+        alt="Emoji Smile"
+        title="Emoji Smile"
         className="ml-auto"
-        style={{ width:"87%" }}
+        style={{ width:"89%" }}
       />
     </Column>
   </Columns>
@@ -164,9 +167,11 @@ You can choose if you want your message to be sent as a regular message, reply, 
 <Columns cols={2}>
   <Column>
     <Frame>
-      ![Image](/images/image-11.png "Image")
+      ![Image 3932 2811223423](/images/image-3932---2811223423.png "Image 3932 2811223423")
+    </Frame>
 
-      ![Image](/images/image-10.png "Image")
+    <Frame>
+      ![Image 1007 20323525263330](/images/image-1007---20323525263330.png "Image 1007 20323525263330")
     </Frame>
   </Column>
   <Column>
@@ -199,7 +204,7 @@ You can choose if you want your message to be sent as a regular message, reply, 
   </Column>
   <Column>
     <Frame>
-      ![Image](/images/image-9.png "Image")
+      ![Image 9051 072323567682](/images/image-9051---072323567682.png "Image 9051 072323567682")
     </Frame>
   </Column>
 </Columns>
@@ -209,7 +214,7 @@ You can choose if you want your message to be sent as a regular message, reply, 
 On Meridian, notifications your messages trigger can be fully customized to your desire.
 
 <Frame>
-  ![Image](/images/image-12.png "Image")
+  ![Image 2097 34534667 3699](/images/image-2097-34534667--3699.png "Image 2097 34534667 3699")
 </Frame>
 
 #### Mention Delivery
@@ -278,3 +283,207 @@ The  <Icon icon="mail-plus" /> Send a Message block produces a single `{message}
 </Info>
 
 The `{message}` variable can be customized to be custom text inside \{curly brackets\}.
+
+### Buttons
+
+Buttons can be created, edited, rearranged and deleted in the Send a Message block's message editor.
+
+<Frame>
+  ![Image](/images/image-14.png "Image")
+</Frame>
+
+By default, dragging in a button component from the components on the left panel will create a <Tooltip tip="A row is a helper component which cannot be added as standalone component. It can hold up to 5 buttons OR 1 dropdown." headline="Rows">Row component</Tooltip>, and automatically place your button inside.
+
+<Frame>
+  ![Image](/images/image-15.png "Image")
+</Frame>
+
+Therefore, when clicking anywhere around a button, you will not edit the button itself but rather the row. A row can be <Badge stroke icon="copy">Duplicated</Badge>, <Badge stroke icon="toggle-left">Disabled</Badge> or <Badge color="red" stroke icon="trash">Deleted</Badge>, directly affecting all components inside of the row.
+
+<Frame>
+  ![Image](/images/image-16.png "Image")
+</Frame>
+
+To actually edit a button, you must click on the button itself. Every button can individually be modified with the following settings: <Badge stroke icon="settings-2">Disabled / Enabled</Badge>, <Badge stroke icon="tags">Label</Badge> and <Badge stroke icon="smile">Emoji</Badge>.<br />In addition, Overrides can be added by using variables. If an override is invalid, the button will automatically fallback to the manual inputs you set.
+
+<Note>
+  Override styles override all manual settings.
+</Note>
+
+Supported button colors include:
+
+<Color variant="compact">
+  <Color.Item name="Blue" value="#5865F2" />
+  <Color.Item name="Gray" value="#232426" />
+  <Color.Item name="Green" value="#008545" />
+  <Color.Item name="Red" value="#D22D39" />
+  <Color.Item name="Link (Gray)" value="#232426" />
+</Color>
+
+If a button has emojis, it will display them to the left side of the text on Discord once the message is sent.
+
+<Frame>
+  In Meridian:
+
+  ![Image 1857 5319](/images/image-1857---5319.png "Image 1857 5319")
+
+  In Discord:
+
+  ![Image 7846 5283649283646X 4639](/images/image-7846--5283649283646X-4639.png "Image 7846 5283649283646X 4639")
+</Frame>
+
+To add more buttons, simply drag them in any valid position.
+
+<Frame>
+  ![Image 7119 ASODU Ga)sudg 9612](/images/image-7119-ASODUGa\)sudg--9612.png "Image 7119 ASODU Ga)sudg 9612")
+</Frame>
+
+What each color means:
+
+| Color | Meaning |
+| :-: | --- |
+| <Badge color="blue" stroke>L</Badge> | This is a possible position. You can try placing a component here. |
+| <Badge color="green" stroke>Green</Badge> | This specific component can also be placed in this position. Release component to place it here. |
+| <Badge color="red" stroke>Red</Badge> | This specific component can't be placed in this position. Move it elsewhere or release it here to cancel it's placement. |
+
+When attempting to place a component in an invalid position, you the blue area will become red and an error message will slide in from the bottom of the message editor to explain why that is an invalid position.
+
+<Frame>
+  ![Image 9495 ERROR 4958](/images/image-9495-ERROR--4958.png "Image 9495 ERROR 4958")
+</Frame>
+
+After adding at least one button in your message, it will appear in the builder after you leave the message editor.
+
+<Frame>
+  ![Send A Message Button](/images/Send-a-Message-Button.png "Send A Message Button")
+</Frame>
+
+To wire other blocks to run after a button press, you simply connect them to the button's <Badge stroke icon="circle">Handle</Badge>. Of course, if you'd like, you can still wire actions to happen directly after the Send a Message block's message has been sent, using its own <Badge stroke icon="circle">Handle</Badge>.
+
+### Dropdowns
+
+Much like buttons, dropdowns can also be placed, edited, moved and deleted directly in the message editor.
+
+<Frame>
+  ![Dropdown](/images/dropdown.png "Dropdown")
+</Frame>
+
+By default, dragging in a dropdown component from the components on the left panel will create a <Tooltip tip="A row is a helper component which cannot be added as standalone component. It can hold up to 5 buttons OR 1 dropdown." headline="Rows">Row component</Tooltip>, and automatically place your dropdown inside.
+
+<Frame>
+  ![Dropdown In A Row](/images/Dropdown-in-a-row.png "Dropdown In A Row")
+</Frame>
+
+Therefore, when clicking anywhere around a dropdown, you will not edit the dropdown itself but rather the row. A row can be <Badge stroke icon="copy">Duplicated</Badge>, <Badge stroke icon="toggle-left">Disabled</Badge> or <Badge color="red" stroke icon="trash">Deleted</Badge>, directly affecting the dropdown inside.
+
+<Frame>
+  ![Highlighted Dropdown Component 1](/images/Highlighted-Dropdown-Component-1.png "Highlighted Dropdown Component 1")
+</Frame>
+
+Click on the dropdown itself in order to edit it. Every dropdown can individually be modified with the following settings:
+
+<Tabs>
+  <Tab title="Option source">
+    <Columns cols={2}>
+      <Column>
+        <Frame>
+          <img
+            src="/images/Option-Source-Dropdown-open.png"
+            alt="Option Source Dropdown Open"
+            title="Option Source Dropdown Open"
+            className="mx-auto"
+            style={{ width:"92%" }}
+          />
+        </Frame>
+
+        <Info>
+          Hover over any option source in the list to the right to find out more about it.
+        </Info>
+      </Column>
+      <Column>
+        #### Option Source
+
+        Using the option source dropdown, you can configure the type of options the dropdown displays in Discord. Available options:
+
+        - <Tooltip tip="A list of options that are displayed primarily as text, with optional descriptions and emojis as decoration. You configure them completely." headline="Text options">Text options</Tooltip>
+        - <Tooltip tip="User dropdowns display the users relative to the server the flow was triggered in." headline="Users">Users</Tooltip>
+        - <Tooltip tip="Much like the user option, the roles option shows the roles relative to the server the flow was triggered in." headline="Roles">Roles</Tooltip>
+        - <Tooltip tip="Mentionables dropdowns contain users and roles relative to the server the flow was triggered in." headline="Mentionables">Mentionables</Tooltip>
+        - <Tooltip tip="Contains channels relative to the server the flow was triggered in." headline="Channels">Channels</Tooltip>
+      </Column>
+    </Columns>
+  </Tab>
+  <Tab title="Selection">
+    <Columns cols={2}>
+      <Column>
+        #### Selection
+
+        The selection dropdown lets you choose if the user can choose only one option, or multiple.
+
+        <Badge color="orange" stroke icon="traffic-cone">Soon</Badge> You will be able to configure a min-max range of how many selections can be made.
+
+        <Badge color="orange" stroke icon="traffic-cone">Soon</Badge> You will be able to override the selection dropdown with variables, like the button styling options.
+      </Column>
+      <Column>
+        <Frame>
+          ![Dropdown Component Selection Configuration](/images/Dropdown-Component-Selection-Configuration.png "Dropdown Component Selection Configuration")
+        </Frame>
+
+        <Callout icon="traffic-cone" color="#ff8438">
+          **Beta Feature:** We are working hard on improving this feature, so you might see a lot of <Badge>Soon</Badge> tags. If you have feedback or any suggestions, you are more than welcome to provide them in our [Discord](https://discord.gg/V4kdj8umeR).
+        </Callout>
+      </Column>
+    </Columns>
+  </Tab>
+  <Tab title="Placeholder">
+    <Columns cols={2}>
+      <Column>
+        <Frame>
+          ![Placeholder Field](/images/Placeholder-Field.png "Placeholder Field")
+
+          ![Placeholder Example](/images/Placeholder-Example.png "Placeholder Example")
+        </Frame>
+      </Column>
+      <Column>
+        #### Placeholder
+
+        The placeholder is a customizable string with support for emojis and variables that shows before the user opens the dropdown.
+      </Column>
+    </Columns>
+  </Tab>
+  <Tab title="Options">
+    <Columns cols={2}>
+      <Column>
+        #### Options
+
+        Options are customizable string items that are shown in the dropdown on Discord if you enable Text options in Option Source. For each option, you can customize:
+
+        - The Label
+        - The Value
+        - The Description <Badge>o</Badge>
+        - The Emoji <Badge>Optional</Badge>
+
+        <Badge color="orange" stroke icon="traffic-cone" /> Soon, you'll be able to rearrange options.
+      </Column>
+      <Column>
+        <Frame>
+          ![Image](/images/image-19.png "Image")
+        </Frame>
+
+        <Info>
+          Hover over any entry in the list on the left to read more about the hovered item.
+        </Info>
+
+        <Warning>
+          For every dropdown, you can have up to **25** **options**.
+        </Warning>
+      </Column>
+    </Columns>
+  </Tab>
+</Tabs>
+
+#### Getting user input from dropdowns
+
+<Info>
+  Soon
+</Info>
