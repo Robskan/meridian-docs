@@ -168,8 +168,14 @@
           "light": "#f2cc4d",
           "dark": "#f2cc4d"
         },
-        "pages": [
-          "citrum/welcome"
+        "tabs": [
+          {
+            "tab": "Users",
+            "icon": "users",
+            "pages": [
+              "citrum/welcome"
+            ]
+          }
         ]
       }
     ]
