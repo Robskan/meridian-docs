@@ -168,13 +168,16 @@
           "light": "#f2cc4d",
           "dark": "#f2cc4d"
         },
-        "tabs": [
+        "versions": [
           {
-            "tab": "Users",
-            "icon": "users",
+            "version": "Users",
+            "default": true,
             "pages": [
               "citrum/welcome"
             ]
+          },
+          {
+            "version": "Developers"
           }
         ]
       }
