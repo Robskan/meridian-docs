@@ -161,16 +161,9 @@
             ]
           },
           {
-            "group": "Policies",
+            "group": "Explainers",
+            "expanded": true,
             "pages": [
-              "legal/terms",
-              "legal/privacy",
-              "legal/aup",
-              "legal/spa",
-              "legal/dpa",
-              "legal/eula",
-              "legal/dev-terms",
-              "legal/ai",
               "explainer/power-usage"
             ]
           }
