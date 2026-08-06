@@ -44,7 +44,7 @@
             "group": "short links",
             "hidden": true,
             "pages": [
-              "untitled-page-6",
+              "touch-me-daddy",
               "discord"
             ]
           },
@@ -54,7 +54,7 @@
             "pages": [
               "welcome",
               "faq",
-              "untitled-page-2"
+              "acknowledgements"
             ]
           },
           {
@@ -158,6 +158,20 @@
             "pages": [
               "welcome/onboarding",
               "welcome/create-a-bot"
+            ]
+          },
+          {
+            "group": "Policies",
+            "pages": [
+              "legal/terms",
+              "legal/privacy",
+              "legal/aup",
+              "legal/spa",
+              "legal/dpa",
+              "legal/eula",
+              "legal/dev-terms",
+              "legal/ai",
+              "explainer/power-usage"
             ]
           }
         ]

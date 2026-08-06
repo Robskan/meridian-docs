@@ -1,0 +1,36 @@
+---
+title: '"Power" Usage Explainer'
+---
+
+Power fuels your bot. At Meridian, we don't like limiting users when unnecessary. For example, we don't limit the amount of commands or events you can create. Instead, we only bill you for the amount of traffic your bot generates.
+
+<Note>
+  Discord limits apply to the amount of commands your bot can have. For more info, see [this article](https://docs.discord.com/developers/interactions/application-commands#registering-a-command).
+</Note>
+
+Each plan includes a monthly Power allowance. You can view your remaining Power on your [bot's dashboard](https://meridian.surf/my/usage) at all times. On this page, we'll go over all ways we bill your bot. 
+
+# Event runs
+
+All event runs only charge 1 Power. Included types:
+
+- Your bot receives an event from the Discord gateway.
+- Your bot receives a webhook request.
+- Your bot runs a timed event.
+
+<Note>
+  **RCON events** <Badge color="orange">SOON</Badge> cost only **0.5 Power**. Please reach out if you're expecting high traffic and would like to discuss custom pricing.
+</Note>
+
+# Command runs
+
+All command runs charge 2 Power. Included types:
+
+- A user runs a command on your bot.
+- Your bot executes a command from a flow using the **Run Command** <Badge color="orange">SOON</Badge> action.
+
+# API requests
+
+Only API requests sent to third-party services are billed. This means requests to Discord or partnered services, such as Auralink, are free to use. Included billed types:
+
+- Your bot sends an API request to any third-party service.
