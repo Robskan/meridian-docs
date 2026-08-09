@@ -269,16 +269,10 @@
     "href": "https://meridian.surf"
   },
   "navbar": {
-    "links": [
-      {
-        "href": "https://meridian.surf/determine",
-        "label": "meridian.surf"
-      }
-    ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.meridian.surf/home"
+      "label": "meridian.surf",
+      "href": "https://meridian.surf/determine"
     }
   },
   "footer": {
