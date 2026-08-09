@@ -1,0 +1,57 @@
+---
+title: "Bot HTTP webhooks"
+description: "Trigger bot flows with POST webhooks on api.meridian.surf."
+icon: "webhook"
+---
+
+Inbound HTTP webhooks let external services trigger Meridian bot flows. Configure the path (and optional secret) on an **Event** flow that listens for HTTP webhooks in the builder.
+
+## Request
+
+```text
+POST https://api.meridian.surf/{botId}/{path}
+```
+
+| Part | Rules |
+| --- | --- |
+| `{botId}` | Convex bot id from Meridian (not the Discord snowflake) |
+| `{path}` | Path you configured on the flow. Letters, digits, and `-_./~` only. Max 100 characters |
+| Method | `POST` only. Other methods return `405` |
+| Body | Raw body, max 1 MiB (`1048576` bytes) |
+
+```bash
+curl -X POST https://api.meridian.surf/YOUR_BOT_ID/github/push \
+  -H "Content-Type: application/json" \
+  -H "mrdn-key: YOUR_SECRET" \
+  -d '{"action":"opened"}'
+```
+
+## Authentication
+
+If the flow requires a key, send header:
+
+```text
+mrdn-key: <secret>
+```
+
+Missing or wrong key → `401` `{ "error": "Unauthorized." }`.
+
+When the flow does not require a key, omit the header.
+
+## Responses
+
+| Status | Body |
+| --- | --- |
+| `202` | `{ "ok": true }` — accepted for dispatch |
+| `401` | `{ "error": "Unauthorized." }` |
+| `404` | `{ "error": "Not found." }` |
+| `405` | `{ "error": "Method not allowed." }` |
+| `413` | `{ "error": "Payload too large." }` |
+| `500` | `{ "error": "Internal error." }` |
+| `503` | `{ "error": "Webhook gateway unavailable." }` |
+
+Meridian forwards a limited set of headers to the bot runtime (`content-type`, `user-agent`, `x-forwarded-for`, `x-request-id`). There is no caller-facing rate limit beyond body size.
+
+<Tip>
+  Copy the exact webhook URL from the flow's webhook trigger in the builder so `{botId}` and `{path}` match.
+</Tip>

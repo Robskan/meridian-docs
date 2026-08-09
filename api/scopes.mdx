@@ -1,0 +1,33 @@
+---
+title: "Scopes"
+description: "OAuth scopes and what each one grants."
+icon: "shield"
+---
+
+Scopes are space-separated in authorization requests. Request only what your integration needs.
+
+| Scope | Label | What it grants |
+| --- | --- | --- |
+| `user.identify` | Basic profile | Display name, Meridian id, Discord id, bot count |
+| `user.email` | Email address | Primary account email (PIN required) |
+| `user.connections.read` | Linked accounts | Which sign-in providers are linked (PIN required) |
+| `bots.read` | Read your bots | Names, avatars, status, plan for owned or cowork bots |
+| `bots.write` | Manage your bots | Change settings, deploy, restart (PIN required) |
+| `flows.read` | Read automations | Read-only flow summaries |
+| `flows.write` | Edit automations | Create and change flows (PIN required) |
+| `guilds.read` | Read servers | Discord servers your bots are in |
+| `logs.read` | Read bot logs | Recent runtime log entries |
+| `cowork.read` | Read coworkers | Cowork access on owned bots |
+| `offline_access` | Stay signed in | Issues a refresh token |
+
+A typical minimal integration:
+
+```text
+user.identify offline_access
+```
+
+Requesting scopes beyond what a user has already granted shows the consent screen again, unless you use `consent=skip` and the requested scopes are already covered.
+
+<Note>
+  `bots.write`, `flows.write`, and `logs.read` are valid authorization scopes. The current userinfo endpoint returns read-oriented profile data. Write scopes gate future or separate API surfaces.
+</Note>

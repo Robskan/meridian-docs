@@ -187,6 +187,79 @@
             "version": "Developers"
           }
         ]
+      },
+      {
+        "product": "API",
+        "icon": "code",
+        "color": {
+          "light": "#5b8def",
+          "dark": "#5b8def"
+        },
+        "description": "OAuth, bot status, and public HTTP endpoints",
+        "groups": [
+          {
+            "group": "Overview",
+            "icon": "code",
+            "pages": [
+              "api/welcome"
+            ]
+          },
+          {
+            "group": "OAuth API",
+            "icon": "key",
+            "pages": [
+              "api/quickstart",
+              "api/authentication",
+              "api/scopes",
+              "api/endpoints",
+              "api/errors",
+              "api/openapi"
+            ]
+          },
+          {
+            "group": "Bot status API",
+            "icon": "activity",
+            "pages": [
+              "api/bot-status"
+            ]
+          },
+          {
+            "group": "Other API endpoints",
+            "icon": "webhook",
+            "pages": [
+              "api/bot-webhooks",
+              "api/other-endpoints"
+            ]
+          }
+        ],
+        "pages": [
+          "api/welcome",
+          {
+            "group": "OAuth API",
+            "pages": [
+              "api/quickstart",
+              "api/authentication",
+              "api/scopes",
+              "api/endpoints",
+              "api/errors",
+              "api/openapi"
+            ]
+          },
+          {
+            "group": "Bot status API",
+            "pages": [
+              "api/bot-status"
+            ]
+          },
+          {
+            "group": "Other API endpoints",
+            "icon": "webhook",
+            "pages": [
+              "api/bot-webhooks",
+              "api/other-endpoints"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -280,7 +353,8 @@
       "prefill": true,
       "autogenerate": false
     },
-    "url": "full"
+    "url": "full",
+    "openapi": "https://api.meridian.surf/openapi.json"
   },
   "background": {
     "color": {
@@ -301,5 +375,12 @@
   },
   "seo": {
     "indexing": "all"
-  }
+  },
+  "redirects": [
+    {
+      "source": "/developer-portal",
+      "destination": "/api/welcome",
+      "permanent": false
+    }
+  ]
 }

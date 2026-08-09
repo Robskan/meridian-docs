@@ -1,0 +1,33 @@
+---
+title: "Welcome"
+description: "Public Meridian API surfaces for OAuth, bot status, and webhooks."
+icon: "code"
+---
+
+The Meridian API product covers the public HTTP surfaces you can call from your own apps and monitors.
+
+<CardGroup cols={3}>
+  <Card title="OAuth API" icon="key" href="/api/quickstart">
+    Authorization code flow for third-party apps that act on a Meridian user's account.
+  </Card>
+
+  <Card title="Bot status API" icon="signal" href="/api/bot-status">
+    Public JSON status for a bot when the owner enables the public status endpoint.
+  </Card>
+
+  <Card title="Other API endpoints" icon="webhook" href="/api/bot-webhooks">
+    Inbound bot HTTP webhooks on `api.meridian.surf`, plus webhook health.
+  </Card>
+</CardGroup>
+
+## Hosts
+
+| Host | What it serves |
+| --- | --- |
+| [developer.meridian.surf](https://developer.meridian.surf) | OAuth application portal |
+| `meridian.surf` | OAuth consent/token/userinfo, bot status JSON |
+| `api.meridian.surf` | Bot HTTP webhooks, webhook health, OpenAPI spec |
+
+<Note>
+  Meridian OAuth is separate from the [Discord Developer Portal](https://discord.com/developers/applications), which is for Discord bot tokens and Discord application settings.
+</Note>

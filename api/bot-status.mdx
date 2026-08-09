@@ -1,0 +1,75 @@
+---
+title: "Bot status API"
+description: "Public JSON status for a Meridian bot."
+icon: "activity"
+---
+
+The bot status API returns a small public JSON payload for a bot. Owners opt in from the Meridian dashboard. There is no API key.
+
+## Enable it
+
+In the bot's settings, turn on the **public status API**. Until that flag is on, requests return `404`. Prefer the bot's **Discord id** in the URL (17–20 digits). Convex bot ids also work.
+
+## Request
+
+```text
+GET https://meridian.surf/botstatus/{botRef}/api
+```
+
+```bash
+curl https://meridian.surf/botstatus/123456789012345678/api
+```
+
+|  |  |
+| --- | --- |
+| **Auth** | None |
+| **CORS** | `Access-Control-Allow-Origin: *` |
+| **Cache** | `Cache-Control: public, max-age=15, s-maxage=15` |
+| **Rate limit** | 60 requests per minute per client IP |
+
+`OPTIONS` is supported for CORS preflight.
+
+## Success response
+
+`200` with JSON:
+
+```json
+{
+  "online": true,
+  "discordId": "123456789012345678",
+  "name": "My bot",
+  "hostingEnabled": true,
+  "hostingLocation": "cloud",
+  "presence": "online",
+  "uptimeMs": 8040000,
+  "reportedAt": 1710000000000,
+  "guildCount": 1240,
+  "shardCount": 2,
+  "checkedAt": 1710000002000
+}
+```
+
+| Field | Notes |
+| --- | --- |
+| `online` | `true` when hosting is on, the gateway snapshot is fresh (within 90 seconds), and Discord is ready |
+| `discordId` | Discord application/bot snowflake |
+| `name` | Bot display name |
+| `hostingEnabled` | Whether Meridian hosting is powered on |
+| `hostingLocation` | `"local"`, `"cloud"`, or `null` |
+| `presence` | `"online"`, `"idle"`, `"dnd"`, `"invisible"`, or `null` |
+| `uptimeMs` | Client uptime in milliseconds, or `null` if not ready |
+| `reportedAt` | Gateway heartbeat timestamp (ms), or `null` |
+| `guildCount` / `shardCount` | Gateway counts, or `null` |
+| `checkedAt` | Server time when this response was built (ms) |
+
+## Errors
+
+| Status | Body |
+| --- | --- |
+| `404` | `{ "error": "Not found" }` — unknown bot, soft-deleted bot, or public status disabled |
+| `429` | `{ "error": "Rate limit exceeded", "retryAfterSec": <n>, "limit": 60 }` plus `Retry-After` |
+| `500` | `{ "error": "Internal server error" }` |
+
+## HTML companion page
+
+`https://meridian.surf/botstatus/{botRef}` serves a simple status page for browsers. The JSON API always uses the `/api` suffix.

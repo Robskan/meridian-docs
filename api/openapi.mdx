@@ -1,0 +1,23 @@
+---
+title: "OpenAPI"
+description: "Machine-readable OpenAPI spec for the Meridian OAuth API."
+icon: "file-code"
+---
+
+OAuth endpoints are documented in prose under [Endpoints](/api/endpoints) and [Authentication](/api/authentication). For machine-readable schemas, request bodies, and response shapes, use the OpenAPI 3.1 spec:
+
+```text
+https://api.meridian.surf/openapi.json
+```
+
+Import it into Postman, Insomnia, or your codegen tool of choice. The spec covers:
+
+- Authorization (`GET /auth/consent`)
+- Token exchange and refresh (`POST /api/oauth/token`)
+- Userinfo (`GET /api/oauth/userinfo`)
+- Revoke (`POST /api/oauth/revoke`)
+- Scope definitions and response schemas
+
+<Tip>
+  Prefer `https://api.meridian.surf/openapi.json` as the canonical URL. Older docs may still mention `docs-backend.meridian.surf`; that host is retired.
+</Tip>
