@@ -180,14 +180,12 @@
         "groups": [
           {
             "group": "Overview",
-            "icon": "code",
             "pages": [
               "api/welcome"
             ]
           },
           {
             "group": "OAuth API",
-            "icon": "key",
             "pages": [
               "api/quickstart",
               "api/authentication",
@@ -199,14 +197,12 @@
           },
           {
             "group": "Bot status API",
-            "icon": "activity",
             "pages": [
               "api/bot-status"
             ]
           },
           {
             "group": "Other API endpoints",
-            "icon": "webhook",
             "pages": [
               "api/bot-webhooks",
               "api/other-endpoints"
