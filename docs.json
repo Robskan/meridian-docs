@@ -382,5 +382,13 @@
       "destination": "/api/welcome",
       "permanent": false
     }
-  ]
+  ],
+  "fonts": {
+    "heading": {
+      "family": "Inter"
+    },
+    "body": {
+      "family": "Inter"
+    }
+  }
 }
