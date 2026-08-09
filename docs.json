@@ -203,33 +203,6 @@
           },
           {
             "group": "Other API endpoints",
-            "pages": [
-              "api/bot-webhooks",
-              "api/other-endpoints"
-            ]
-          }
-        ],
-        "pages": [
-          "api/welcome",
-          {
-            "group": "OAuth API",
-            "pages": [
-              "api/quickstart",
-              "api/authentication",
-              "api/scopes",
-              "api/endpoints",
-              "api/errors",
-              "api/openapi"
-            ]
-          },
-          {
-            "group": "Bot status API",
-            "pages": [
-              "api/bot-status"
-            ]
-          },
-          {
-            "group": "Other API endpoints",
             "icon": "webhook",
             "pages": [
               "api/bot-webhooks",
