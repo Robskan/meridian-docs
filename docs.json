@@ -167,7 +167,8 @@
               "discord"
             ]
           }
-        ]
+        ],
+        "description": "No-code Discord bot builder and hosting"
       },
       {
         "product": "Meridian API",
@@ -255,7 +256,8 @@
           {
             "version": "Developers"
           }
-        ]
+        ],
+        "description": "Dashboards for your bot's users"
       }
     ]
   },
