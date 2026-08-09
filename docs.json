@@ -177,7 +177,7 @@
           "dark": "#5b8def"
         },
         "description": "OAuth, bot status, and public HTTP endpoints",
-        "groups": [
+        "pages": [
           {
             "group": "Overview",
             "pages": [
@@ -207,9 +207,33 @@
               "api/bot-webhooks",
               "api/other-endpoints"
             ]
-          }
-        ],
-        "pages": [
+          },
+          "api/welcome",
+          {
+            "group": "OAuth API",
+            "pages": [
+              "api/quickstart",
+              "api/authentication",
+              "api/scopes",
+              "api/endpoints",
+              "api/errors",
+              "api/openapi"
+            ]
+          },
+          {
+            "group": "Bot status API",
+            "pages": [
+              "api/bot-status"
+            ]
+          },
+          {
+            "group": "Other API endpoints",
+            "icon": "webhook",
+            "pages": [
+              "api/bot-webhooks",
+              "api/other-endpoints"
+            ]
+          },
           "api/welcome",
           {
             "group": "OAuth API",
@@ -268,8 +292,8 @@
   "navbar": {
     "primary": {
       "type": "button",
-      "label": "meridian.surf",
-      "href": "https://meridian.surf/determine"
+      "label": "meridimeridian.n.suurff",
+      "href": "https://meridian.surf/deterdeterminine"
     }
   },
   "footer": {
