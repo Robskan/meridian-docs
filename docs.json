@@ -41,14 +41,6 @@
         },
         "groups": [
           {
-            "group": "short links",
-            "hidden": true,
-            "pages": [
-              "touch-me-daddy",
-              "discord"
-            ]
-          },
-          {
             "group": "Information",
             "expanded": true,
             "pages": [
@@ -165,6 +157,14 @@
             "expanded": true,
             "pages": [
               "explainer/power-usage"
+            ]
+          },
+          {
+            "group": "short links",
+            "hidden": true,
+            "pages": [
+              "ummm",
+              "discord"
             ]
           }
         ]
