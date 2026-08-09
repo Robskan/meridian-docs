@@ -168,12 +168,10 @@
             ]
           }
         ],
-        "icon": "/images/Meridiannewdark.svg",
         "description": "No-code Discord bot builder and hosting"
       },
       {
         "product": "Meridian API",
-        "icon": "code",
         "color": {
           "light": "#5b8def",
           "dark": "#5b8def"
@@ -258,7 +256,6 @@
             "version": "Developers"
           }
         ],
-        "icon": "layout-dashboard",
         "description": "Dashboards for your bot's users"
       }
     ]
