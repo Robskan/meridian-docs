@@ -189,13 +189,13 @@
         ]
       },
       {
-        "product": "API",
+        "product": "Meridian API",
         "icon": "code",
         "color": {
           "light": "#5b8def",
           "dark": "#5b8def"
         },
-        "description": "OAuth API for Meridian integrations",
+        "description": "OAuth, bot status, and public HTTP endpoints",
         "href": "api/welcome"
       }
     ]

@@ -1,45 +1,33 @@
 ---
 title: "Welcome"
-description: "OAuth API for Meridian integrations."
+description: "Public Meridian API surfaces for OAuth, bot status, and webhooks."
 icon: "code"
 ---
 
-The Meridian API lets third-party apps access a Meridian user's account through **OAuth 2.0** (authorization code flow).
+The Meridian API product covers the public HTTP surfaces you can call from your own apps and monitors.
 
-Register applications, copy credentials, and build consent URLs in the [developer portal](https://developer.meridian.surf).
-
-<Note>
-  This is the Meridian OAuth API. It is not the [Discord Developer Portal](https://discord.com/developers/applications), which is for Discord bot tokens and Discord application settings.
-</Note>
-
-## What you can build
-
-- Sign users in with Meridian and read their profile
-- List bots, flows, guilds, and cowork access the user grants
-- Stay signed in with refresh tokens (`offline_access`)
-
-## Where to start
-
-<CardGroup cols={2}>
-  <Card title="Quickstart" icon="rocket" href="/api/quickstart">
-    Register an app, run the consent flow, and call userinfo.
+<CardGroup cols={3}>
+  <Card title="OAuth API" icon="key" href="/api/quickstart">
+    Authorization code flow for third-party apps that act on a Meridian user's account.
   </Card>
 
-  <Card title="Authentication" icon="key" href="/api/authentication">
-    Authorization code flow, tokens, redirect URIs, and revoke.
+  <Card title="Bot status API" icon="signal" href="/api/bot-status">
+    Public JSON status for a bot when the owner enables the public status endpoint.
   </Card>
 
-  <Card title="Scopes" icon="shield" href="/api/scopes">
-    What each scope returns and which ones need PIN unlock.
-  </Card>
-
-  <Card title="OpenAPI" icon="file-code" href="/api/openapi">
-    Machine-readable schemas at `api.meridian.surf`.
+  <Card title="Other API endpoints" icon="webhook" href="/api/bot-webhooks">
+    Inbound bot HTTP webhooks on `api.meridian.surf`, plus webhook health.
   </Card>
 </CardGroup>
 
-## Live example
+## Hosts
 
-Try a full consent → token → userinfo round trip without writing your own callback:
+| Host | What it serves |
+| --- | --- |
+| [developer.meridian.surf](https://developer.meridian.surf) | OAuth application portal |
+| `meridian.surf` | OAuth consent/token/userinfo, bot status JSON |
+| `api.meridian.surf` | Bot HTTP webhooks, webhook health, OpenAPI spec |
 
-[developer.meridian.surf/example](https://developer.meridian.surf/example)
+<Note>
+  Meridian OAuth is separate from the [Discord Developer Portal](https://discord.com/developers/applications), which is for Discord bot tokens and Discord application settings.
+</Note>

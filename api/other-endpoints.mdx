@@ -1,0 +1,56 @@
+---
+title: "Other endpoints"
+description: "Webhook health, OpenAPI host, and related public endpoints."
+icon: "heart-pulse"
+---
+
+Health and machine-readable surfaces that are not OAuth or bot status.
+
+## Webhook gateway health
+
+```text
+GET https://api.meridian.surf/health
+```
+
+No auth. Use this for uptime monitors that care about inbound webhook delivery.
+
+### Healthy
+
+`200`:
+
+```json
+{
+  "status": "ok",
+  "service": "webhooks",
+  "backend": { "latencyMs": 12 },
+  "timestamp": "2026-08-09T18:00:00.000Z"
+}
+```
+
+### Unavailable
+
+`503`:
+
+```json
+{
+  "status": "unavailable",
+  "service": "webhooks",
+  "reason": "gateway_not_configured"
+}
+```
+
+`reason` may also be `backend_not_ready` or `backend_error`.
+
+## OpenAPI specification
+
+```text
+GET https://api.meridian.surf/openapi.json
+```
+
+OpenAPI 3.1 for the **OAuth** endpoints (consent, token, userinfo, revoke). See [OpenAPI](/api/openapi) for import notes. Bot status and webhooks are documented in prose on this site and are not in that spec yet.
+
+## Related
+
+- [Bot HTTP webhooks](/api/bot-webhooks)
+- [Bot status API](/api/bot-status)
+- [OAuth quickstart](/api/quickstart)
