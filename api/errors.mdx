@@ -1,0 +1,35 @@
+---
+title: "Errors"
+description: "OAuth error codes for token, revoke, and consent redirects."
+icon: "triangle-exclamation"
+---
+
+OAuth token and revoke endpoints return JSON errors with an `error` code and optional `error_description`.
+
+## Token errors
+
+| `error` | Typical cause |
+| --- | --- |
+| `invalid_client` | Unknown client id or wrong client secret |
+| `invalid_grant` | Invalid, expired, or reused code; redirect URI mismatch; invalid refresh token |
+| `invalid_request` | Missing required parameters |
+| `unsupported_grant_type` | Grant type other than `authorization_code` or `refresh_token` |
+| `invalid_token` | Invalid or missing access token on protected endpoints |
+
+## Consent redirect errors
+
+These appear as query parameters on your `redirect_uri`:
+
+| `error` | Meaning |
+| --- | --- |
+| `access_denied` | User denied access |
+| `consent_required` | `consent=skip` was set but new scopes need an interactive consent screen |
+
+## Example error body
+
+```json
+{
+  "error": "invalid_grant",
+  "error_description": "Authorization code is invalid or expired"
+}
+```

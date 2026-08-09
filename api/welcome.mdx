@@ -1,0 +1,45 @@
+---
+title: "Welcome"
+description: "OAuth API for Meridian integrations."
+icon: "code"
+---
+
+The Meridian API lets third-party apps access a Meridian user's account through **OAuth 2.0** (authorization code flow).
+
+Register applications, copy credentials, and build consent URLs in the [developer portal](https://developer.meridian.surf).
+
+<Note>
+  This is the Meridian OAuth API. It is not the [Discord Developer Portal](https://discord.com/developers/applications), which is for Discord bot tokens and Discord application settings.
+</Note>
+
+## What you can build
+
+- Sign users in with Meridian and read their profile
+- List bots, flows, guilds, and cowork access the user grants
+- Stay signed in with refresh tokens (`offline_access`)
+
+## Where to start
+
+<CardGroup cols={2}>
+  <Card title="Quickstart" icon="rocket" href="/api/quickstart">
+    Register an app, run the consent flow, and call userinfo.
+  </Card>
+
+  <Card title="Authentication" icon="key" href="/api/authentication">
+    Authorization code flow, tokens, redirect URIs, and revoke.
+  </Card>
+
+  <Card title="Scopes" icon="shield" href="/api/scopes">
+    What each scope returns and which ones need PIN unlock.
+  </Card>
+
+  <Card title="OpenAPI" icon="file-code" href="/api/openapi">
+    Machine-readable schemas at `api.meridian.surf`.
+  </Card>
+</CardGroup>
+
+## Live example
+
+Try a full consent → token → userinfo round trip without writing your own callback:
+
+[developer.meridian.surf/example](https://developer.meridian.surf/example)

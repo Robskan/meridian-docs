@@ -1,0 +1,176 @@
+---
+title: "Endpoints"
+description: "OAuth and portal endpoint reference."
+icon: "brackets-curly"
+---
+
+## Surfaces
+
+| Surface | URL |
+| --- | --- |
+| Developer portal | `https://developer.meridian.surf` |
+| OAuth consent | `https://meridian.surf/auth/consent` |
+| Token | `https://meridian.surf/api/oauth/token` |
+| Userinfo | `https://meridian.surf/api/oauth/userinfo` |
+| Revoke | `https://meridian.surf/api/oauth/revoke` |
+| OpenAPI spec | `https://api.meridian.surf/openapi.json` |
+| OAuth example | `https://developer.meridian.surf/example` |
+
+## Portal routes
+
+| Path | Purpose |
+| --- | --- |
+| `/` | List your OAuth applications |
+| `/apps/new` | Register a new application |
+| `/apps/{applicationId}` | Credentials, authorization URL generator, and settings |
+
+## Consent
+
+```text
+GET https://meridian.surf/auth/consent
+```
+
+Starts the browser authorization flow. See [Authentication](/api/authentication) for query parameters and redirects.
+
+## Token
+
+```text
+POST https://meridian.surf/api/oauth/token
+```
+
+Exchange an authorization code or refresh an access token. Accepts `application/json` or `application/x-www-form-urlencoded`.
+
+### Authorization code
+
+<ParamField body="grant_type" type="string" required>
+  `authorization_code`
+</ParamField>
+
+<ParamField body="client_id" type="string" required>
+  Application client id.
+</ParamField>
+
+<ParamField body="client_secret" type="string" required>
+  Application client secret.
+</ParamField>
+
+<ParamField body="code" type="string" required>
+  Authorization code from the redirect.
+</ParamField>
+
+<ParamField body="redirect_uri" type="string" required>
+  Must match the URI used in the authorization request.
+</ParamField>
+
+### Refresh token
+
+<ParamField body="grant_type" type="string" required>
+  `refresh_token`
+</ParamField>
+
+<ParamField body="client_id" type="string" required>
+  Application client id.
+</ParamField>
+
+<ParamField body="client_secret" type="string" required>
+  Application client secret.
+</ParamField>
+
+<ParamField body="refresh_token" type="string" required>
+  Refresh token from a prior token response.
+</ParamField>
+
+### Token response
+
+<ResponseField name="access_token" type="string">
+  Bearer access token (`mrdn_at_…`). Valid for **15 minutes**.
+</ResponseField>
+
+<ResponseField name="token_type" type="string">
+  Always `Bearer`.
+</ResponseField>
+
+<ResponseField name="expires_in" type="number">
+  Access token lifetime in seconds (900).
+</ResponseField>
+
+<ResponseField name="scope" type="string">
+  Space-separated granted scopes.
+</ResponseField>
+
+<ResponseField name="refresh_token" type="string">
+  Present only when `offline_access` was granted. Valid for **30 days**.
+</ResponseField>
+
+## Userinfo
+
+```text
+GET https://meridian.surf/api/oauth/userinfo
+Authorization: Bearer {access_token}
+```
+
+Returns JSON. Fields depend on granted scopes.
+
+<ResponseField name="sub" type="string">
+  Meridian user id. Always present.
+</ResponseField>
+
+<ResponseField name="meridianId" type="string">
+  Same as `sub`.
+</ResponseField>
+
+<ResponseField name="name" type="string">
+  Included with `user.identify`.
+</ResponseField>
+
+<ResponseField name="discordId" type="string">
+  Included with `user.identify` when linked.
+</ResponseField>
+
+<ResponseField name="botCount" type="number">
+  Included with `user.identify`.
+</ResponseField>
+
+<ResponseField name="email" type="string">
+  Included with `user.email`.
+</ResponseField>
+
+<ResponseField name="connections" type="object">
+  Included with `user.connections.read`. Whether Discord, GitHub, and passkey are linked.
+</ResponseField>
+
+<ResponseField name="bots" type="array">
+  Included with `bots.read`. Bot id, name, avatar, status, plan, and role (`owner`, `editor`, `viewer`).
+</ResponseField>
+
+<ResponseField name="flows" type="array">
+  Included with `flows.read`. Flow summaries (kind, name, public code).
+</ResponseField>
+
+<ResponseField name="guilds" type="array">
+  Included with `guilds.read`. Discord server ids per bot.
+</ResponseField>
+
+<ResponseField name="logs" type="array">
+  Included with `logs.read`. Recent runtime log entries.
+</ResponseField>
+
+<ResponseField name="coworkers" type="array">
+  Included with `cowork.read`. Cowork members and capabilities on owned bots.
+</ResponseField>
+
+## Revoke
+
+```text
+POST https://meridian.surf/api/oauth/revoke
+```
+
+<ParamField body="token" type="string" required>
+  Access or refresh token to revoke.
+</ParamField>
+
+<ParamField body="token_type_hint" type="string">
+  Optional: `access_token` or `refresh_token`.
+</ParamField>
+
+Returns `200` with an empty body on success.

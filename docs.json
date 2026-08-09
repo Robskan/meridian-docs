@@ -187,6 +187,16 @@
             "version": "Developers"
           }
         ]
+      },
+      {
+        "product": "API",
+        "icon": "code",
+        "color": {
+          "light": "#5b8def",
+          "dark": "#5b8def"
+        },
+        "description": "OAuth API for Meridian integrations",
+        "href": "api/welcome"
       }
     ]
   },
@@ -280,7 +290,8 @@
       "prefill": true,
       "autogenerate": false
     },
-    "url": "full"
+    "url": "full",
+    "openapi": "https://api.meridian.surf/openapi.json"
   },
   "background": {
     "color": {
@@ -301,5 +312,12 @@
   },
   "seo": {
     "indexing": "all"
-  }
+  },
+  "redirects": [
+    {
+      "source": "/developer-portal",
+      "destination": "/api/welcome",
+      "permanent": false
+    }
+  ]
 }

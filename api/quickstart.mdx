@@ -1,0 +1,82 @@
+---
+title: "Quickstart"
+description: "Register an OAuth app and call userinfo in a few steps."
+icon: "rocket"
+---
+
+Get from zero to a working `userinfo` response.
+
+## 1. Register your app
+
+1. Sign in at [developer.meridian.surf](https://developer.meridian.surf).
+2. Click **New application**.
+3. Provide a name, website URL (`https://`), and at least one redirect URI.
+4. Copy the **client id** and **client secret**. The secret is shown once.
+
+<Warning>
+  Store the client secret in your own secret manager. The portal only shows a masked value after creation or rotation.
+</Warning>
+
+## 2. Add redirect URIs
+
+Register every callback URL your app uses. URIs must use `https://` and match **exactly** (path included). Wildcards are not supported.
+
+For the hosted example app, register:
+
+`https://developer.meridian.surf/example/callback`
+
+## 3. Send the user to consent
+
+Minimal scopes for a first integration:
+
+```text
+user.identify offline_access
+```
+
+```text
+https://meridian.surf/auth/consent
+  ?client_id=YOUR_CLIENT_ID
+  &redirect_uri=https%3A%2F%2Fexample.com%2Fcallback
+  &response_type=code
+  &scope=user.identify%20offline_access
+  &state=abc123
+```
+
+Or use the **Authorization** tab URL generator in the portal.
+
+## 4. Handle the callback
+
+On success Meridian redirects to:
+
+```text
+{redirect_uri}?code={authorization_code}&state={state}
+```
+
+Codes expire in **5 minutes** and are single-use. Also handle `error=access_denied` and `error=consent_required`.
+
+## 5. Exchange the code
+
+```bash
+curl -X POST https://meridian.surf/api/oauth/token \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -d "grant_type=authorization_code" \
+  -d "client_id=YOUR_CLIENT_ID" \
+  -d "client_secret=YOUR_CLIENT_SECRET" \
+  -d "code=AUTHORIZATION_CODE" \
+  -d "redirect_uri=https://example.com/callback"
+```
+
+You receive an access token (`mrdn_at_…`, 15 minutes). With `offline_access`, you also get a refresh token (`mrdn_rt_…`, 30 days).
+
+## 6. Call userinfo
+
+```bash
+curl https://meridian.surf/api/oauth/userinfo \
+  -H "Authorization: Bearer ACCESS_TOKEN"
+```
+
+Fields depend on the scopes you requested. See [Scopes](/api/scopes) and [Endpoints](/api/endpoints).
+
+<Tip>
+  Prefer the [live example](https://developer.meridian.surf/example) if you only want to inspect a userinfo payload first.
+</Tip>
