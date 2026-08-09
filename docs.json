@@ -170,25 +170,6 @@
         ]
       },
       {
-        "product": "Citrum",
-        "color": {
-          "light": "#f2cc4d",
-          "dark": "#f2cc4d"
-        },
-        "versions": [
-          {
-            "version": "Users",
-            "default": true,
-            "pages": [
-              "citrum/welcome"
-            ]
-          },
-          {
-            "version": "Developers"
-          }
-        ]
-      },
-      {
         "product": "Meridian API",
         "icon": "code",
         "color": {
@@ -258,6 +239,25 @@
               "api/bot-webhooks",
               "api/other-endpoints"
             ]
+          }
+        ]
+      },
+      {
+        "product": "Citrum",
+        "color": {
+          "light": "#f2cc4d",
+          "dark": "#f2cc4d"
+        },
+        "versions": [
+          {
+            "version": "Users",
+            "default": true,
+            "pages": [
+              "citrum/welcome"
+            ]
+          },
+          {
+            "version": "Developers"
           }
         ]
       }
