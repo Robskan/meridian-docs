@@ -12,15 +12,15 @@ sequenceDiagram
   participant User as Meridian user
   participant Consent as meridian.surf/auth/consent
   participant Token as /api/oauth/token
+  participant Userinfo as /api/oauth/userinfo
 
   App->>User: Redirect to consent URL
-  User->>Consent: Sign in (if needed)
-  Consent->>User: Show consent screen
-  User->>Consent: Approve
-  Consent->>App: Redirect to redirect_uri?code=...
-  App->>Token: POST authorization_code + client_secret
-  Token->>App: access_token (+ refresh_token if offline_access)
-  App->>App: Call /api/oauth/userinfo
+  User->>Consent: Sign in and approve
+  Consent->>App: Redirect with code
+  App->>Token: Exchange code (+ client secret)
+  Token->>App: access_token (+ refresh if offline_access)
+  App->>Userinfo: Fetch profile
+  Userinfo->>App: User info
 ```
 
 ## Credentials
