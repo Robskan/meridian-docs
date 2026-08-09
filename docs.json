@@ -241,8 +241,8 @@
   "navbar": {
     "primary": {
       "type": "button",
-      "label": "meridimeridian.n.suurff",
-      "href": "https://meridian.surf/deterdeterminine"
+      "label": "meridian.surf",
+      "href": "https://meridian.surf/determine"
     }
   },
   "footer": {
