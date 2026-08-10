@@ -6,19 +6,31 @@ icon: "code"
 
 The Meridian API product covers the public HTTP surfaces you can call from your own apps and monitors.
 
-<CardGroup cols={3}>
-  <Card title="OAuth API" icon="key" href="/api/quickstart">
-    Authorization code flow for third-party apps that act on a Meridian user's account.
-  </Card>
+<Columns cols={2}>
+  <Column>
+    <Card title="Trigger webhook events" icon="wifi">
+      Trigger a bot's webhook event by sending a request to it's domain.
+    </Card>
+  </Column>
+  <Column>
+    <Card title="Health" icon="heart">
+      Get the health status of any webhook gateway.
+    </Card>
+  </Column>
+</Columns>
 
-  <Card title="Bot status API" icon="signal" href="/api/bot-status">
-    Public JSON status for a bot when the owner enables the public status endpoint.
-  </Card>
-
-  <Card title="Other API endpoints" icon="webhook" href="/api/bot-webhooks">
-    Inbound bot HTTP webhooks on `api.meridian.surf`, plus webhook health.
-  </Card>
-</CardGroup>
+<Columns cols={2}>
+  <Column>
+    <Card title="OAuth API" icon="key">
+      Authorization code flow for third-party apps that act on a Meridian user's account.
+    </Card>
+  </Column>
+  <Column>
+    <Card title="Bot status API" icon="signal">
+      Public JSON status for a bot when the owner enables the public status endpoint.
+    </Card>
+  </Column>
+</Columns>
 
 ## Hosts
 
