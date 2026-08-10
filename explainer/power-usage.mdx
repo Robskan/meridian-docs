@@ -13,9 +13,9 @@ Each plan includes a monthly Power allowance. You can view your remaining Power 
 
 # Event runs
 
-All event runs only charge 1 Power. Included types:
+All event runs only drain 1 Power. Included types:
 
-- Your bot receives an event from the Discord gateway.
+- Your bot receives an event from the Discord gateway. (for example: Member Join)
 - Your bot receives a webhook request.
 - Your bot runs a timed event.
 
@@ -25,7 +25,7 @@ All event runs only charge 1 Power. Included types:
 
 # Command runs
 
-All command runs charge 2 Power. Included types:
+All command runs drain 2 Power. Included types:
 
 - A user runs a command on your bot.
 - Your bot executes a command from a flow using the **Run Command** <Badge color="orange">SOON</Badge> action.
@@ -35,6 +35,10 @@ All command runs charge 2 Power. Included types:
 Only API requests sent to third-party services are billed. This means requests to Discord or partnered services, such as Auralink, are free to use. Included billed types:
 
 - Your bot sends an API request to any third-party service.
+
+<Tip>
+  Requests sent using the Request Editor (within the [API Block](/builder/api/api)) for the purpose of testing if your requests are set up correctly are **completely free** and you will never be billed of them.
+</Tip>
 
 export const PowerUsageCalculator = () => {
   const EVENT_POWER = 1;
@@ -333,5 +337,9 @@ export const PowerUsageCalculator = () => {
     </div>
   );
 };
+
+# Calculator
+
+Use the Power usage calculator to get an approximate idea of how much Power you'll use.
 
 <PowerUsageCalculator />
