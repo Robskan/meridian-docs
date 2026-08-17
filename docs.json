@@ -87,11 +87,7 @@
                 "group": "Roles",
                 "icon": "shield-user",
                 "expanded": true,
-                "pages": [
-                  "builder/action-blocks/roles",
-                  "builder/action-blocks/roles/add-role",
-                  "builder/action-blocks/roles/remove-role"
-                ]
+                "pages": []
               },
               {
                 "group": "Channels",
