@@ -212,7 +212,7 @@
         ]
       },
       {
-        "product": "Citrum",
+        "product": "Dock",
         "color": {
           "light": "#f2cc4d",
           "dark": "#f2cc4d"
@@ -222,7 +222,7 @@
             "version": "Users",
             "default": true,
             "pages": [
-              "citrum/welcome"
+              "dock/welcome"
             ]
           },
           {
