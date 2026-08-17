@@ -60,7 +60,12 @@
                 "pages": [
                   "builder/messages/send-a-message",
                   "builder/messages/send-a-form",
-                  "builder/action-blocks/messages/reaction-message"
+                  "builder/action-blocks/messages/reaction-message",
+                  "builder/action-blocks/messages/forward-a-message",
+                  "builder/action-blocks/messages/publish-message",
+                  "builder/action-blocks/messages/forward-message",
+                  "builder/action-blocks/messages",
+                  "builder/action-blocks/messages/pin-message"
                 ]
               },
               {

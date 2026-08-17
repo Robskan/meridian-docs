@@ -1,0 +1,31 @@
+---
+title: "Publish a Message"
+description: "Publish an announcement to follower channels."
+icon: "megaphone"
+---
+
+The **Publish a Message** block lives in the **Messages** palette category. Publish an announcement to follower channels.
+
+## What it does
+
+Publishes an announcement message to follower channels.
+
+## Configuration
+
+Open the block in the builder sidebar to configure these fields.
+
+### `channel_id`
+
+**Type:** `channel`.
+
+Announcement channel. Optional when Message ID references a Send a Message block from this flow.
+
+### `message_id`
+
+**Type:** `block-reference`. Required.
+
+Snowflake id, variable, or Send a Message block picked from the canvas.
+
+## See also
+
+- [Messages](/builder/action-blocks/messages) — Browse all blocks in the Messages category.

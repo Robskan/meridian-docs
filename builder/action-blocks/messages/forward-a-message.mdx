@@ -1,0 +1,37 @@
+---
+title: "Forward a Message"
+description: "Forward a message to another channel."
+icon: "forward"
+---
+
+The **Forward a Message** block lives in the **Messages** palette category. Forward a message to another channel.
+
+## What it does
+
+Forwards a message to another channel.
+
+## Configuration
+
+Open the block in the builder sidebar to configure these fields.
+
+### `channel_id`
+
+**Type:** `channel`.
+
+Optional when Message ID references a Send a Message block from this flow. Required for raw snowflake ids unless the flow context supplies a channel.
+
+### `message_id`
+
+**Type:** `block-reference`. Required.
+
+Snowflake id, variable, or Send a Message block picked from the canvas.
+
+### `target_channel_id`
+
+**Type:** `channel`. Required.
+
+Channel to receive the forwarded message.
+
+## See also
+
+- [Messages](/builder/action-blocks/messages) — Browse all blocks in the Messages category.
