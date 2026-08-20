@@ -46,7 +46,8 @@
             "pages": [
               "welcome",
               "faq",
-              "acknowledgements"
+              "acknowledgements",
+              "changelog"
             ]
           },
           {
