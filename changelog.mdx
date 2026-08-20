@@ -10,8 +10,114 @@ description: "Track changes and updates we make to Meridian here."
 
 In this update, we've mostly focused on fixing already existing features and more specifically improving variables.
 
-### Introducing MultiConnect <Badge color="green" size="lg" stroke icon="package-open">n</Badge>
+### Introducing MultiConnect
 
 Using MultiConnect, it is now possible to create multiple block suggestions at once. This can massively save time while working with things like large conditions.
 
 <video src="/videos/multiconnect-showcase.mp4" controls />
+
+On top of that, we also updated the look of the multiselect bar on the bottom of the screen slightly.
+
+### Updated `/soon` page
+
+We've also updated our /soon page. Which is now being served to all users who are not members of our testing team instead of the whitelist.
+
+<Columns cols={2}>
+  <Column>
+    <Frame>
+      ![Old Soon Page](/images/old-soon-page.png "Old Soon Page")
+
+      _Before_
+    </Frame>
+  </Column>
+  <Column>
+    <Frame>
+      ![New Soon](/images/new-soon.png "New Soon")
+
+      _After_
+    </Frame>
+  </Column>
+</Columns>
+
+<Check>
+  We are planning more updates to the `/soon` page later on.
+</Check>
+
+### Updates to how passkeys are created and managed
+
+Passkeys are now displayed as a sub-item of the main Passkey entry. 
+
+<Frame>
+  ![Updated Passkeys View](/images/updated-passkeys-view.png "Updated Passkeys View")
+</Frame>
+
+In addition to that, we've also significantly updated the Add passkey modal.
+
+<video src="/videos/updated-passkey-modal.mp4" controls />
+
+### Variable Suggestion v1
+
+We've implemented the first version of smart variable suggestion. This system is powered by our new engine, which considers the context of your entire flow before suggesting what variables you might need in that specific field and block. Since this is still very beta, we've also implemented a  <Icon icon="thumbs-up" /> Like & <Icon icon="thumbs-down" /> Dislike system, allowing you to directly contribute in improving our engine and making suggestions more accurate for everyone!
+
+<Frame>
+  <img
+    src="/images/smart-vars-v1.png"
+    alt="Smart Vars V1"
+    title="Smart Vars V1"
+    className="mr-auto"
+  />
+
+  _The updated variable selector, with one suggested variable_
+</Frame>
+
+<Frame>
+  ![Smart Vars V1 Feedback Modal](/images/smart-vars-v1-feedback-modal.png "Smart Vars V1 Feedback Modal")
+
+  _The feedback modal, shown when you click on the like or dislike button._
+</Frame>
+
+On top of all of that, we also made categories collapsible, color-coded them, and reordered them, to make sure that finding the right variable is easier for everyone.
+
+<Callout icon="heart" color="#d043ff">
+  Thanks to **@rob**, our Community and Documentation Manager, who suggested this feature.
+</Callout>
+
+### Updated toolbar
+
+We updated the toolbar, by directly displaying the keyboard shortcuts in the tooltips of all actions that have shortcuts.
+
+<Frame>
+  ![Organize Flow Tooltip](/images/organize-flow-tooltip.png "Organize Flow Tooltip")
+</Frame>
+
+### Added a custom context menu
+
+We replaced the stock browser context menu that was triggered on right click before with our new, custom made, context menu. It includes all actions that can be executed in the area you right clicked in, and their keyboard shortcuts.
+
+<Frame>
+  ![New Context Menu](/images/new-context-menu.png "New Context Menu")
+</Frame>
+
+### New keyboard shortcuts
+
+We updated the builder settings modal slightly, allowing us to expand the keyboard settings tab inside of it to both look nicer, and soon, function better.
+
+<Frame>
+  ![New Builder Settings](/images/new-builder-settings.png "New Builder Settings")
+</Frame>
+
+All shortcuts are now shown cleanly, with a pencil icon which when clicked allows you to edit them to any keyboard shortcut you desire.
+
+<Frame>
+  ![Copy Keyboard Shortcut With An Override](/images/copy-keyboard-shortcut-with-an-override.png "Copy Keyboard Shortcut With An Override")
+</Frame>
+
+If you override a shortcut with a custom shortcut, another icon will show up next to the pencil icon, which when clicked allows you to reset the shortcut to it's default value.
+
+<Callout icon="traffic-cone" color="#ff8442">
+  We are soon also adding the ability to crate custom shortcuts for custom actions in the builder.
+</Callout>
+
+### That's it!
+
+Thank you for reading our changelog! We're hoping to update it later with more updates for the public to see.
