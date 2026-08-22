@@ -1,5 +1,5 @@
 ---
-title: 'Power Usage'
+title: "Power Usage"
 icon: "zap"
 ---
 
@@ -40,11 +40,18 @@ Only API requests sent to third-party services are billed. This means requests t
   Requests sent using the Request Editor (within the [API Block](/builder/api/api)) for the purpose of testing if your requests are set up correctly are **completely free** and you will never be billed for them.
 </Tip>
 
+# Find something searches
+
+The [Find something](/builder/action-blocks/variables-and-data-storage/find-something) block can resolve users and servers globally by name, or scan channel message history. These actions cost extra Power on top of your event or command run.
+
+- **Global user or server by name:** 1 Power per run. IDs and mentions are free.
+- **Message search depth:** the first 100 messages in a channel are included in your flow cost. Each additional 100-message fetch costs 1 Power (up to 500 messages total). You are only billed for fetches the bot actually performs.
+
 export const PowerUsageCalculator = () => {
   const EVENT_POWER = 1;
   const COMMAND_POWER = 2;
   const RCON_POWER = 0.5;
-  const API_REQUEST_POWER = 1;
+  const API_REQUEST_POWER = 3;
 
   const PLANS = [
     { id: "free", name: "Free", allowance: 10000 },
@@ -341,5 +348,3 @@ export const PowerUsageCalculator = () => {
 # Calculator
 
 Use the Power usage calculator to get an approximate idea of how much Power you'll use.
-
-<PowerUsageCalculator />
