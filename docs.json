@@ -130,6 +130,7 @@
                 "group": "Builder settings",
                 "icon": "settings-2",
                 "expanded": true,
+                "pages": []
               },
               {
                 "group": "Other",
