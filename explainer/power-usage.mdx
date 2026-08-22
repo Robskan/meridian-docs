@@ -3,49 +3,44 @@ title: "Power Usage"
 icon: "zap"
 ---
 
-Power fuels your bot. At Meridian, we don't like limiting users when unnecessary. For example, we don't limit the amount of commands or events you can create. Instead, we only bill you for the amount of traffic your bot generates.
+Power fuels your bot. We do not limit how many commands or events you can create. You only pay for the traffic your bot actually runs.
 
-<Note>
-  Discord limits apply to the amount of commands your bot can have. For more info, see [this article](https://docs.discord.com/developers/interactions/application-commands#registering-a-command).
-</Note>
+Each plan includes a monthly Power allowance. Check remaining Power anytime on your [bot usage dashboard](https://meridian.surf/my/usage). Allowance resets at the start of every billing cycle.
 
-Each plan includes a monthly Power allowance. You can view your remaining Power on your [bot's dashboard](https://meridian.surf/my/usage) at all times. On this page, we'll go over all ways we bill your bot.
+## At a glance
 
-# Event runs
+<CardGroup cols={2}>
+  <Card title="Event runs" icon="bolt">
+    **1 Power** per run. Discord gateway events, inbound webhooks, and timed events.
+  </Card>
 
-All event runs only use 1 Power. Included types:
+  <Card title="Command runs" icon="terminal">
+    **2 Power** per run. Slash commands, prefix commands, and context menus.
+  </Card>
 
-- Your bot receives an event from the Discord gateway. (for example: Member Join)
-- Your bot receives a webhook request.
-- Your bot runs a timed event.
+  <Card title="Third-party API requests" icon="globe">
+    **3 Power** per request. Discord and partner APIs (such as Auralink) are free.
+  </Card>
 
-<Note>
-  **RCON events** <Badge color="orange">SOON</Badge> cost only **0.5 Power**. Please reach out if you're expecting high traffic and would like to discuss custom pricing or free limit increases. Please mind that both options are given out at our discretion.
-</Note>
+  <Card title="RCON events" icon="server">
+    **0.5 Power** per run <Badge color="orange">Soon</Badge>. For high-volume game server traffic, reach out about custom limits.
+  </Card>
+</CardGroup>
 
-# Command runs
+## Monthly Power allowance
 
-All command runs drain 2 Power. Included types:
+| Plan | Included Power |
+| --- | --- |
+| Free | 2,500 |
+| Hobby | 25,000 |
+| Pro | 500,000 |
+| Max | 3,000,000 |
 
-- A user runs a command on your bot.
-- Your bot executes a command from a flow using the **Run Command** <Badge color="orange">SOON</Badge> action.
+Need a higher cap? See [pricing](https://meridian.surf/pricing) or buy extra Power from the top-up shop in your dashboard.
 
-# API requests
+## Estimate your usage
 
-Only API requests sent to third-party services are billed. This means requests to Discord or partnered services, such as Auralink, are free to use. Included billed types below use 3 Power each run:
-
-- Your bot sends an API request to any third-party service.
-
-<Tip>
-  Requests sent using the Request Editor (within the [API Block](/builder/api/api)) for the purpose of testing if your requests are set up correctly are **completely free** and you will never be billed for them.
-</Tip>
-
-# Find something searches
-
-The [Find something](/builder/action-blocks/variables-and-data-storage/find-something) block can resolve users and servers globally by name, or scan channel message history. These actions cost extra Power on top of your event or command run.
-
-- **Global user or server by name:** 1 Power per run. Lookup by IDs and mentions are free.
-- **Message search depth:** the first 100 messages in a channel are free. Each additional 100-message fetch costs 1 Power (up to 500 messages total). You are only billed for fetches the bot actually performs.
+Use the calculator below to model monthly traffic and compare it to your plan allowance.
 
 export const PowerUsageCalculator = () => {
   const EVENT_POWER = 1;
@@ -54,10 +49,10 @@ export const PowerUsageCalculator = () => {
   const API_REQUEST_POWER = 3;
 
   const PLANS = [
-    { id: "free", name: "Free", allowance: 10000 },
-    { id: "hobby", name: "Hobby", allowance: 50000 },
-    { id: "pro", name: "Pro", allowance: 250000 },
-    { id: "business", name: "Business", allowance: 1000000 },
+    { id: "free", name: "Free", allowance: 2500 },
+    { id: "hobby", name: "Hobby", allowance: 25000 },
+    { id: "pro", name: "Pro", allowance: 500000 },
+    { id: "max", name: "Max", allowance: 3000000 },
   ];
 
   const [events, setEvents] = useState(5000);
@@ -101,7 +96,7 @@ export const PowerUsageCalculator = () => {
     margin: "4px 0 0 0",
   };
   const cardStyle = {
-    marginTop: "24px",
+    marginTop: "8px",
     marginBottom: "24px",
     padding: "20px",
     borderRadius: "16px",
@@ -194,12 +189,6 @@ export const PowerUsageCalculator = () => {
           margin-top: 2px !important;
         }
       `}</style>
-      <h3 className="text-base font-semibold text-zinc-950 dark:text-white" style={{ margin: "0 0 4px 0" }}>
-        Power usage calculator
-      </h3>
-      <p className="text-sm text-zinc-950/70 dark:text-white/70" style={{ margin: "0 0 24px 0" }}>
-        Estimate your monthly Power based on expected bot traffic.
-      </p>
 
       <div style={sectionStyle}>
         <label className="block text-sm text-zinc-950/70 dark:text-white/70">
@@ -251,7 +240,7 @@ export const PowerUsageCalculator = () => {
           />
         </label>
         <p className="text-zinc-950/50 dark:text-white/50" style={hintStyle}>
-          Discord & partner APIs are free · {API_REQUEST_POWER} Power each
+          Discord and partner APIs are free · {API_REQUEST_POWER} Power each
         </p>
       </div>
 
@@ -345,8 +334,78 @@ export const PowerUsageCalculator = () => {
   );
 };
 
-# Calculator
-
-Use the Power usage calculator to get an approximate idea of how much Power you'll use.
-
 <PowerUsageCalculator />
+
+## What uses Power
+
+Expand a category for examples and edge cases.
+
+<AccordionGroup>
+  <Accordion title="Event runs (1 Power)" icon="bolt">
+    Billed once per event execution:
+
+    - Your bot receives an event from the Discord gateway (for example, member join)
+    - Your bot receives a webhook request
+    - Your bot runs a timed event
+
+    <Note>
+      **RCON events** <Badge color="orange">Soon</Badge> cost **0.5 Power** each. If you expect very high RCON volume, contact us about custom pricing or allowance increases. Both are granted at our discretion.
+    </Note>
+  </Accordion>
+
+  <Accordion title="Command runs (2 Power)" icon="terminal">
+    Billed once per command execution:
+
+    - A user runs a command on your bot (slash, prefix, or context menu)
+    - Your bot executes a command from a flow using **Run Command** <Badge color="orange">Soon</Badge>
+  </Accordion>
+
+  <Accordion title="Third-party API requests (3 Power)" icon="globe">
+    Only outbound requests to third-party services are billed. Requests to Discord or partnered services such as Auralink are free.
+
+    - Your bot sends an API request to any third-party service through an API block
+
+    <Tip>
+      Requests sent in the [API block](/builder/api/api) Request Editor to test your setup are **free**. You are never billed for editor test runs.
+    </Tip>
+  </Accordion>
+
+  <Accordion title="Find something lookups" icon="search">
+    The [Find something](/builder/action-blocks/variables-and-data-storage/find-something) block can resolve users and servers globally by name, or scan channel message history. These costs stack on top of the parent event or command run.
+
+    - **Global user or server by name:** 1 Power per run. Lookup by ID or mention is free.
+    - **Message search depth:** the first 100 messages in a channel are free. Each additional 100-message fetch costs 1 Power (up to 500 messages total). You are only billed for fetches the bot actually performs.
+  </Accordion>
+</AccordionGroup>
+
+## What stays free
+
+- Creating unlimited commands and events in the builder
+- Discord API calls and partnered services (such as Auralink)
+- API block Request Editor test runs
+- Find something lookups by ID or mention
+- Ask AI when you bring your own API key (BYOK)
+
+<Note>
+  Discord limits how many global and guild commands a bot can register. See [Discord's command registration docs](https://docs.discord.com/developers/interactions/application-commands#registering-a-command).
+</Note>
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Usage dashboard" icon="gauge" href="https://meridian.surf/my/usage">
+    View remaining Power and usage history for your bots.
+  </Card>
+
+  <Card title="Pricing" icon="credit-card" href="https://meridian.surf/pricing">
+    Compare plans, allowances, and upgrade options.
+  </Card>
+
+  <Card title="API block" icon="code" href="/builder/api/api">
+    Build third-party HTTP requests and test them in the Request Editor.
+  </Card>
+
+  <Card title="Find something block" icon="search" href="/builder/action-blocks/variables-and-data-storage/find-something">
+    Resolve users, roles, channels, and message history in flows.
+  </Card>
+</CardGroup>
