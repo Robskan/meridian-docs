@@ -130,6 +130,9 @@
                 "group": "Builder settings",
                 "icon": "settings-2",
                 "expanded": true,
+                "pages": [
+                  "builder/action-blocks/settings/change-bot-server-profile"
+                ]
               },
               {
                 "group": "Other",
