@@ -1,14 +1,14 @@
 ---
 title: "Add or Remove a Reaction"
-description: "Add or remove an emoji reaction on a message."
+description: "Add, remove, or clear emoji reactions on a message."
 icon: "smile-plus"
 ---
 
-The **Add or Remove a Reaction** block lives in the **Messages** palette category. Add or remove an emoji reaction on a message.
+The **Add or Remove a Reaction** block lives in the **Messages** palette category. Add, remove, or clear emoji reactions on a message.
 
 ## What it does
 
-Adds or removes an emoji reaction on a message.
+Adds, removes, or clears emoji reactions on a message. Use **Clear all reactions** to strip every reaction from the target message, or **Clear emoji reactions** to remove all users' reactions for one emoji.
 
 ## Configuration
 
@@ -18,11 +18,16 @@ Open the block in the builder sidebar to configure these fields.
 
 **Type:** `string`. Required.
 
-Accepted values: `add`, `remove`.
+Accepted values: `add`, `remove`, `clear_all`, `clear_emoji`.
+
+- `add` — Add the bot's reaction.
+- `remove` — Remove all users' reactions for the chosen emoji.
+- `clear_all` — Remove every reaction on the message.
+- `clear_emoji` — Remove all users' reactions for the chosen emoji.
 
 ### `emoji`
 
-**Type:** `string`. Required.
+**Type:** `string`. Required except when `action` is `clear_all`.
 
 Unicode emoji or custom emoji syntax.
 
@@ -31,6 +36,10 @@ Unicode emoji or custom emoji syntax.
 **Type:** `block-reference`. Required.
 
 Target message.
+
+## Important
+
+- Clearing reactions requires **Manage Messages** in the channel.
 
 ## See also
 
