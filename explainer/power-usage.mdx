@@ -44,8 +44,8 @@ Only API requests sent to third-party services are billed. This means requests t
 
 The [Find something](/builder/action-blocks/variables-and-data-storage/find-something) block can resolve users and servers globally by name, or scan channel message history. These actions cost extra Power on top of your event or command run.
 
-- **Global user or server by name:** 1 Power per run. IDs and mentions are free.
-- **Message search depth:** the first 100 messages in a channel are included in your flow cost. Each additional 100-message fetch costs 1 Power (up to 500 messages total). You are only billed for fetches the bot actually performs.
+- **Global user or server by name:** 1 Power per run. Lookup by IDs and mentions are free.
+- **Message search depth:** the first 100 messages in a channel are free. Each additional 100-message fetch costs 1 Power (up to 500 messages total). You are only billed for fetches the bot actually performs.
 
 export const PowerUsageCalculator = () => {
   const EVENT_POWER = 1;
