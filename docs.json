@@ -241,8 +241,8 @@
     ]
   },
   "logo": {
-    "light": "/images/documentationwordmarkwhite.png",
-    "dark": "/images/documentationwordmarkblack.png",
+    "light": "/images/documentationwordmarkblack.png",
+    "dark": "/images/documentationwordmarkwhite.png",
     "href": "https://meridian.surf/determine"
   },
   "navbar": {
