@@ -241,9 +241,9 @@
     ]
   },
   "logo": {
-    "light": "/images/mrdnlogolight2.png",
-    "dark": "/images/mrdnlogodark2.svg",
-    "href": "https://meridian.surf"
+    "light": "/images/documentationwordmarkwhite.png",
+    "dark": "/images/documentationwordmarkblack.png",
+    "href": "https://meridian.surf/determine"
   },
   "navbar": {
     "primary": {
