@@ -3,9 +3,13 @@ title: "Power Usage"
 icon: "zap"
 ---
 
-Power fuels your bot. We do not limit how many commands or events you can create. You only pay for the traffic your bot actually runs.
+Power fuels your bot. We do not limit how many commands or events you can create. Usage is metered by the traffic your bot actually runs—the rates below apply today; paid plans and checkout are not live yet.
 
-Each plan includes a monthly Power allowance. Check remaining Power anytime on your [bot usage dashboard](https://meridian.surf/my/usage). Allowance resets at the start of every billing cycle.
+<Warning>
+  **Billing, paid plans, and top-ups — Coming soon.** Public Stripe billing is off. The plan allowances and economics on this page describe **planned** metering for when billing launches, not a live purchase or upgrade path. You cannot buy extra Power from a top-up shop or upgrade through checkout while billing is in preview.
+</Warning>
+
+When billing is live, each plan tier will include a monthly Power allowance. Check remaining Power anytime on your [bot usage dashboard](https://meridian.surf/my/usage). Allowances will reset at the start of each billing cycle once paid plans are available.
 
 ## At a glance
 
@@ -27,20 +31,22 @@ Each plan includes a monthly Power allowance. Check remaining Power anytime on y
   </Card>
 </CardGroup>
 
-## Monthly Power allowance
+## Monthly Power allowance <Badge color="orange">Soon</Badge>
 
-| Plan | Included Power |
+Planned included Power per tier when billing launches:
+
+| Plan | Included Power (planned) |
 | --- | --- |
 | Free | 2,500 |
 | Hobby | 25,000 |
 | Pro | 500,000 |
 | Max | 3,000,000 |
 
-Need a higher cap? See [pricing](https://meridian.surf/pricing) or buy extra Power from the top-up shop in your dashboard.
+Need a higher cap before billing is live? See planned tiers on [pricing](https://meridian.surf/pricing) (Coming soon—no checkout yet). Top-ups and paid upgrades will be available from the dashboard once billing launches.
 
 ## Estimate your usage
 
-Use the calculator below to model monthly traffic and compare it to your plan allowance.
+Use the calculator below to model monthly traffic and compare it to **planned** plan allowances.
 
 export const PowerUsageCalculator = () => {
   const EVENT_POWER = 1;
@@ -264,7 +270,7 @@ export const PowerUsageCalculator = () => {
 
       <div style={{ ...sectionStyle, marginBottom: "28px" }}>
         <p className="text-sm text-zinc-950/70 dark:text-white/70" style={{ margin: "0 0 10px 0" }}>
-          Compare to plan
+          Compare to planned plan tier
         </p>
         <div className="power-plan-grid">
           {PLANS.map((p) => {
@@ -278,7 +284,7 @@ export const PowerUsageCalculator = () => {
               >
                 <span className="power-plan-btn-name">{p.name}</span>
                 <span className="power-plan-btn-detail">
-                  {format(p.allowance)} Power / month included
+                  {format(p.allowance)} Power / month (planned)
                 </span>
               </button>
             );
@@ -302,7 +308,7 @@ export const PowerUsageCalculator = () => {
 
         <div style={{ borderTop: "1px solid rgba(128,128,128,0.2)", paddingTop: "16px" }}>
           <div style={{ display: "flex", justifyContent: "space-between", fontSize: "14px", marginBottom: "8px" }}>
-            <span className="text-zinc-950/70 dark:text-white/70">{plan.name} allowance</span>
+            <span className="text-zinc-950/70 dark:text-white/70">{plan.name} planned allowance</span>
             <span className="font-mono text-zinc-950/70 dark:text-white/70">{format(plan.allowance)} Power</span>
           </div>
 
@@ -325,8 +331,8 @@ export const PowerUsageCalculator = () => {
             }}
           >
             {overAllowance
-              ? `${format(Math.abs(remaining))} Power over your plan allowance`
-              : `${format(remaining)} Power remaining on your plan`}
+              ? `${format(Math.abs(remaining))} Power over this planned allowance`
+              : `${format(remaining)} Power remaining vs this planned allowance`}
           </p>
         </div>
       </div>
@@ -397,8 +403,8 @@ Expand a category for examples and edge cases.
     View remaining Power and usage history for your bots.
   </Card>
 
-  <Card title="Pricing" icon="credit-card" href="https://meridian.surf/pricing">
-    Compare plans, allowances, and upgrade options.
+  <Card title="Pricing (Coming soon)" icon="credit-card" href="https://meridian.surf/pricing">
+    See planned tiers and allowances. Public checkout and upgrades are not live yet.
   </Card>
 
   <Card title="API block" icon="code" href="/builder/api/api">
