@@ -146,14 +146,6 @@
             ]
           },
           {
-            "group": "Welcome to Meridian",
-            "expanded": true,
-            "pages": [
-              "welcome/onboarding",
-              "welcome/create-a-bot"
-            ]
-          },
-          {
             "group": "Explainers",
             "expanded": true,
             "pages": [
