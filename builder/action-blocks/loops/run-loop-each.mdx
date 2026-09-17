@@ -6,6 +6,10 @@ icon: "list-ordered"
 
 The **Repeat for Each** block lives in the **Loops** palette category. Loop once for each item in a collection variable.
 
+<Warning>
+  Loops cannot be placed inside another loop. Do not put **Repeat**, **Repeat for Each**, or another loop block in this loop’s body.
+</Warning>
+
 ## What it does
 
 Runs the loop body once per item in a collection variable, exposing the current item as a variable.
@@ -25,6 +29,16 @@ List variable to iterate (for example `{vars.users}`).
 **Type:** `string`. Required.
 
 Name for the current item inside the loop (`{vars.item}`).
+
+## Loop anatomy
+
+```text
+Repeat for Each
+ ├─ (loop body: non-loop blocks only)
+ └─ After loop → continues here when done
+```
+
+Connect non-loop blocks in the body. Loops cannot be placed inside another loop. Connect **Break a Loop** inside the body to exit early when needed.
 
 ## See also
 

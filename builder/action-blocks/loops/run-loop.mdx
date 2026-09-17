@@ -6,6 +6,10 @@ icon: "repeat"
 
 The **Repeat** block lives in the **Loops** palette category. Repeat a section of your flow while a condition is true or for a fixed number of times.
 
+<Warning>
+  Loops cannot be placed inside another loop. Do not put **Repeat**, **Repeat for Each**, or another loop block in this loop’s body.
+</Warning>
+
 ## What it does
 
 Repeats connected blocks inside the loop body until a condition fails or a fixed count is reached.
@@ -36,11 +40,11 @@ Iteration count for fixed loops.
 
 ```text
 Repeat
- ├─ (loop body blocks)
+ ├─ (loop body: non-loop blocks only)
  └─ After loop → continues here when done
 ```
 
-Connect **Break a Loop** inside the body to exit early.
+Connect non-loop blocks in the body (messages, variables, API calls, **Break a Loop**, and so on). Loops cannot be placed inside another loop. Connect **Break a Loop** inside the body to exit early.
 
 ## See also
 
