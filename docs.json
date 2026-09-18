@@ -131,6 +131,26 @@
                 "icon": "menu",
                 "expanded": true,
                 "pages": []
+              },
+              {
+                "group": "Commands",
+                "icon": "slash",
+                "pages": [
+                  "slash-commands",
+                  "user-commands",
+                  "message-commands",
+                  "prefix-commands"
+                ]
+              },
+              {
+                "group": "Events",
+                "icon": "radio",
+                "pages": [
+                  "discord-events",
+                  "webhook-events",
+                  "timed-events",
+                  "rcon-events"
+                ]
               }
             ]
           },
