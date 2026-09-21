@@ -229,6 +229,12 @@
               "api/bot-webhooks",
               "api/other-endpoints"
             ]
+          },
+          {
+            "group": "Bots",
+            "pages": [
+              "untitled-page-2"
+            ]
           }
         ]
       },

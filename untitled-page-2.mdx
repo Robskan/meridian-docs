@@ -1,0 +1,470 @@
+---
+title: "Endpoints"
+mode: "wide"
+icon:
+  name: "layout-list"
+  style: "regular"
+  library: "lucide"
+---
+
+---
+
+# All Endpoints
+
+You can find all the currently available endpoints categorized by their targets in the table below.
+
+## Bots
+
+<table>
+  <colgroup>
+    <col width="105" />
+    <col width="234" />
+    <col width="239" />
+    <col width="232" />
+    <col width="154" />
+    <col width="325" />
+    <col width="157" />
+    <col width="116" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th><Icon icon="hash" /> Number</th>
+      <th><Icon icon="text-cursor-input" /> Name</th>
+      <th><Icon icon="wifi" /> Method</th>
+      <th><Icon icon="globe" /> Endpoint</th>
+      <th><Icon icon="shield" /> Authentication</th>
+      <th><Icon icon="message-square-text" /> Comment</th>
+      <th><Icon icon="check-check" /> Permission Set</th>
+      <th><Icon icon="telescope" /> Scopes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Get Bot Information</td>
+      <td><Badge color="green" stroke>GET</Badge></td>
+      <td>`/bot/{id}`</td>
+      <td><Icon icon="key-round" /> <Badge stroke>OPTIONAL</Badge></td>
+      <td>Get basic bot info without the key, and more sensitive info with the key.</td>
+      <td>Read basic information</td>
+      <td><Icon icon="x" color="#F43F5E" /></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Start Bot</td>
+      <td><Badge color="blue" stroke>POST</Badge></td>
+      <td>`/bot/{id}/start`</td>
+      <td><Icon icon="key-round" /></td>
+      <td>Starts the bot</td>
+      <td>Start/Stop/Restart</td>
+      <td><Icon icon="x" color="#F43F5E" /></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Stop Bot</td>
+      <td><Badge color="blue" stroke>POST</Badge></td>
+      <td>`/bot/{id}/stop`</td>
+      <td><Icon icon="key-round" /></td>
+      <td>Stops the bot</td>
+      <td>Start/Stop/Restart</td>
+      <td><Icon icon="x" color="#F43F5E" /></td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Restart Bot</td>
+      <td><Badge color="blue" stroke>POST</Badge></td>
+      <td>`/bot/{id}/restart`</td>
+      <td><Icon icon="key-round" /></td>
+      <td>Restarts the bot</td>
+      <td>Start/Stop/Restart</td>
+      <td><Icon icon="x" color="#F43F5E" /></td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Change Status</td>
+      <td><Badge color="yellow" stroke>PUT</Badge> <Badge color="orange" stroke>PATCH</Badge> <Badge color="red" stroke>DEL</Badge></td>
+      <td>`/bot/{id}/status`</td>
+      <td><Icon icon="key-round" /></td>
+      <td>Changes, overrides, or deletes the bots status</td>
+      <td>Write status, Clear status</td>
+      <td><Icon icon="check" color="#10B981" /></td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Get Flows</td>
+      <td><Badge color="green" stroke>GET</Badge></td>
+      <td>`/bot/{id}/flows`</td>
+      <td><Icon icon="key-round" /></td>
+      <td>Gets the bot's flows (just names and status)</td>
+      <td>Search flows</td>
+      <td><Icon icon="check" color="#10B981" /></td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Search Flows by Name</td>
+      <td><Badge color="blue" stroke>POST</Badge></td>
+      <td>`/bot/{id}/flows`</td>
+      <td><Icon icon="key-round" /></td>
+      <td>Searches the bot's flows by string name</td>
+      <td>Search flows</td>
+      <td><Icon icon="check" color="#10B981" /></td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Update Flow</td>
+      <td><Badge color="orange" stroke>PATCH</Badge></td>
+      <td>`/bot/{id}/flows/{flow_id}`</td>
+      <td><Icon icon="key-round" /></td>
+      <td>Enables or Disables a flow on the bot</td>
+      <td>Enable/Disable flows</td>
+      <td><Icon icon="check" color="#10B981" /></td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Delete Flow</td>
+      <td><Badge color="red" stroke>DEL</Badge></td>
+      <td>`/bot/{id}/flows/{flow_id}`</td>
+      <td><Icon icon="key-round" /></td>
+      <td>Permanently deletes a single flow</td>
+      <td>Delete flows (danger)</td>
+      <td><Icon icon="check" color="#10B981" /></td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Read / Write Variable's value</td>
+      <td><Badge color="green" stroke>GET</Badge> <Badge color="orange" stroke>PATCH</Badge> <Badge color="blue" stroke>POST</Badge> <Badge color="red" stroke>DEL</Badge></td>
+      <td>`/bot/{id}/variables`</td>
+      <td><Icon icon="key-round" /></td>
+      <td>Reads, Modifies or Deletes a variable's value, <u>not the variable itself</u></td>
+      <td>Read Variable values, Write Variable values, Clear variable values</td>
+      <td><Icon icon="check" color="#10B981" /></td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>Create a Variable</td>
+      <td><Badge color="blue" stroke>POST</Badge></td>
+      <td>`/bot/{id}/variable`</td>
+      <td><Icon icon="key-round" /></td>
+      <td>Creates a variable</td>
+      <td>Manage Variables</td>
+      <td><Icon icon="x" color="#F43F5E" /></td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>Delete a Variable</td>
+      <td><Badge color="red" stroke>DEL</Badge></td>
+      <td>`/bot/{id}/variable/{var_id}`</td>
+      <td><Icon icon="key-round" /></td>
+      <td>Deletes a variable</td>
+      <td>Manage Variables</td>
+      <td><Icon icon="x" color="#F43F5E" /></td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>Rename a Variable</td>
+      <td><Badge color="orange" stroke>PATCH</Badge></td>
+      <td>`/bot/{id}/variable/{var_id}`</td>
+      <td><Icon icon="key-round" /></td>
+      <td>Renames a variable</td>
+      <td>Manage Variables</td>
+      <td><Icon icon="x" color="#F43F5E" /></td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>Get Logs</td>
+      <td><Badge color="green" stroke>GET</Badge> <Badge color="purple" stroke>WS</Badge></td>
+      <td>`/bot/{id}/logs`</td>
+      <td><Icon icon="key-round" /></td>
+      <td>Get the bot's log(s)<br /><br />TBD: _Establishes a web-socket connection with the bot's logs for live streaming of logs._</td>
+      <td>Read Logs</td>
+      <td><Icon icon="x" color="#F43F5E" /></td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>Update Bot</td>
+      <td><Badge color="orange">PATCH</Badge></td>
+      <td>`/bot/{id}`</td>
+      <td><Icon icon="key-round" /></td>
+      <td>Update miscellaneous bot settings</td>
+      <td>Misc. Bot</td>
+      <td><Icon icon="x" color="#F43F5E" /></td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>Get Status</td>
+      <td><Badge color="green" stroke>GET</Badge></td>
+      <td>`/bots/status/{id}`</td>
+      <td><Icon icon="lock-keyhole-open" /><sup>1</sup></td>
+      <td>Get the bot's current status (Offline or Online and additional info if Online)</td>
+      <td>Read basic information</td>
+      <td><Icon icon="x" color="#F43F5E" /></td>
+    </tr>
+  </tbody>
+</table>
+
+## Users
+
+<table>
+  <colgroup>
+    <col width="105" />
+    <col width="234" />
+    <col width="239" />
+    <col width="232" />
+    <col width="154" />
+    <col width="325" />
+    <col width="157" />
+    <col width="116" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th><Icon icon="hash" /> Number</th>
+      <th><Icon icon="text-cursor-input" /> Name</th>
+      <th><Icon icon="wifi" /> Method</th>
+      <th><Icon icon="globe" /> Endpoint</th>
+      <th><Icon icon="shield" /> Authentication</th>
+      <th><Icon icon="message-square-text" /> Comment</th>
+      <th><Icon icon="check-check" /> Permission Set</th>
+      <th><Icon icon="telescope" /> Scopes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>17</td>
+      <td>Get User Information</td>
+      <td><Badge color="green" stroke>GET</Badge></td>
+      <td>`/users/{user_id}`</td>
+      <td><Icon icon="lock-keyhole-open" /></td>
+      <td>Get basic information about any user on the platform</td>
+      <td></td>
+      <td><Icon icon="x" color="#F43F5E" /></td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>Get Current User</td>
+      <td><Badge color="green" stroke>GET</Badge></td>
+      <td>`/users/me`</td>
+      <td><Icon icon="user-lock" /></td>
+      <td>Get more sensitive information about the currently logged in user</td>
+      <td></td>
+      <td><Icon icon="x" color="#F43F5E" /></td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>Get Current User Settings</td>
+      <td><Badge color="green" stroke>GET</Badge></td>
+      <td>`/users/me/settings`</td>
+      <td><Icon icon="user-lock" /></td>
+      <td>Get some basic settings of the current user</td>
+      <td></td>
+      <td><Icon icon="x" color="#F43F5E" /></td>
+    </tr>
+  </tbody>
+</table>
+
+## Marketplace
+
+<table>
+  <colgroup>
+    <col width="105" />
+    <col width="250" />
+    <col width="207" />
+    <col width="232" />
+    <col width="154" />
+    <col width="325" />
+    <col width="157" />
+    <col width="116" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th><Icon icon="hash" /> Number</th>
+      <th><Icon icon="text-cursor-input" /> Name</th>
+      <th><Icon icon="wifi" /> Method</th>
+      <th><Icon icon="globe" /> Endpoint</th>
+      <th><Icon icon="shield" /> Authentication</th>
+      <th><Icon icon="message-square-text" /> Comment</th>
+      <th><Icon icon="check-check" /> Permission Set</th>
+      <th><Icon icon="telescope" /> Scopes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>20</td>
+      <td>Search the Marketplace</td>
+      <td><Badge color="blue" stroke>POST</Badge></td>
+      <td>`/marketplace/find`</td>
+      <td><Icon icon="lock-keyhole-open" /></td>
+      <td>Get basic information about any user on the platform</td>
+      <td></td>
+      <td><Icon icon="x" color="#F43F5E" /></td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>Get Marketplace Item</td>
+      <td><Badge color="green" stroke>GET</Badge></td>
+      <td>`/marketplace/{item_id}`</td>
+      <td><Icon icon="user-lock" /> <Badge stroke>OPTIONAL</Badge></td>
+      <td>Get basic information about a specific marketplace item, or use a `OAuth Token` to get more sensitive information or if the item is private.</td>
+      <td></td>
+      <td><Icon icon="x" color="#F43F5E" /></td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td>Manage Marketplace Item</td>
+      <td><Badge color="yellow" stroke>PUT</Badge> <Badge color="orange" stroke>PATCH</Badge> <Badge color="blue" stroke>POST</Badge></td>
+      <td>`/marketplace/{item_id}`</td>
+      <td><Icon icon="user-lock" /></td>
+      <td>Manage an item that was already created on the marketplace</td>
+      <td></td>
+      <td><Icon icon="x" color="#F43F5E" /></td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td>Delete Marketplace Item</td>
+      <td><Badge color="red" stroke>DEL</Badge></td>
+      <td>`/marketplace/{item_id}`</td>
+      <td><Icon icon="user-lock" /></td>
+      <td>Delete an item that was already created on the marketplace</td>
+      <td></td>
+      <td><Icon icon="x" color="#F43F5E" /></td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td>Get User's Marketplace Items</td>
+      <td><Badge color="green" stroke>GET</Badge></td>
+      <td>`/marketplace/user/`</td>
+      <td><Icon icon="user-lock" /></td>
+      <td>Get all of the user's marketplace items (public and private)</td>
+      <td></td>
+      <td><Icon icon="x" color="#F43F5E" /></td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td>Apply Marketplace Item to Bot</td>
+      <td><Badge color="blue" stroke>A</Badge></td>
+      <td>`/marketplace/apply/`</td>
+      <td><Icon icon="key-round" /> and <Icon icon="user-lock" /><sup>2</sup></td>
+      <td>Apply a marketplace item to a bot, requires both the `Bot API Key` belonging to the target bot, and the `OAuth Token` belonging to the user who owns the bot.</td>
+      <td>Apply Marketplace items</td>
+      <td><Icon icon="check" color="#10B981" /></td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+## Notes
+
+<Callout color="#5E5E5E">
+  <Icon icon="key-round" />  Indicates that a `Bot API Key` is required, unless <Badge stroke>OPTIONAL</Badge> is provided after the icon.
+
+  <Icon icon="user-lock" />  Indicates that a `OAuth Token` is required, unless <Badge stroke>OPTIONAL</Badge> is provided after the icon.
+
+  <Icon icon="lock-keyhole-open" />  Indicates that no authentication is required whatsoever.
+</Callout>
+
+<Callout color="#5E5E5E">
+  <sup>1</sup>The Get Status (16.) endpoint requires a `Bot API Key` if the user makes their bot's status private. If a call is made to a bot with a private status without the key, the endpoint will return <Badge color="red" stroke>401 Unauthorized</Badge>.
+
+  <sup>2</sup>The Apply Marketplace Item to Bot (26.) endpoint requires both the `Bot API Key` and `OAuth Token` for security. The user to who the `OAuth Token` provided belongs to needs to have approved the appropriate permissions for this action.
+</Callout>
+
+# <Icon icon="telescope" /> Scopes
+
+<Note>
+  All scopes are configured per API key upon the key's creation.
+</Note>
+
+<Callout color="#5E5E5E">
+  <table>
+    <colgroup>
+      <col width="86" />
+      <col width="537" />
+    </colgroup>
+    <thead>
+      <tr>
+        <th><Icon icon="hash" /> Num.</th>
+        <th><Icon icon="scroll-text" /> Scope Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>5.</td>
+        <td>The Change Status (5.) endpoint can be scoped per action. (Eg. Only Change, Override or Delete)</td>
+      </tr>
+      <tr>
+        <td>6.</td>
+        <td>The Get Flows (6.) endpoint can be scoped per group. (Eg. Only look for flows in a specific group)</td>
+      </tr>
+      <tr>
+        <td>7.</td>
+        <td>The Search Flows by Name (7.) endpoint can be scoped per group. (Eg. Only search for flows in a specific group)</td>
+      </tr>
+      <tr>
+        <td>8.</td>
+        <td>The Update Flow (8.) endpoint can be scoped per flows in a specific group (Eg. Only modify flows in set group)</td>
+      </tr>
+      <tr>
+        <td>9.</td>
+        <td>The Delete Flow (9.) endpoint can be scoped per flows in a specific group (Eg. Only delete flows in a set group)</td>
+      </tr>
+      <tr>
+        <td>10.</td>
+        <td>The Read / Write Variable's value (10.) endpoint can be scoped per action (Eg. Only Read, never write)</td>
+      </tr>
+      <tr>
+        <td>25</td>
+        <td>The Apply Marketplace Item to Bot (25.) endpoint can be scoped per bbot (Eg. Only apply Items to a specific bot)</td>
+      </tr>
+    </tbody>
+  </table>
+</Callout>
+
+# <Icon icon="hourglass" /> Rate Limits
+
+Due to protecting our systems from spam and saving resources, we strictly enforce the following rate limits.
+
+<Callout color="#5e5e5e">
+  <table>
+    <colgroup>
+      <col width="296" />
+      <col width="282" />
+      <col width="345" />
+    </colgroup>
+    <thead>
+      <tr>
+        <th><Icon icon="globe" /> Call Type</th>
+        <th><Icon icon="clock-2" /> Rate Limit (requests per minute)</th>
+        <th><Icon icon="message-square-text" /> Comment</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><Icon icon="user-lock" /> Calls that require the `OAuth Token`</td>
+        <td>25/min</td>
+        <td>Some endpoints have special rate limits.</td>
+      </tr>
+      <tr>
+        <td><Icon icon="key-round" /> Calls that require the `Bot API Key`</td>
+        <td>25/min</td>
+        <td>Some endpoints have special rate limits.</td>
+      </tr>
+      <tr>
+        <td><Icon icon="lock-keyhole-open" /> Calls that don't require auth</td>
+        <td>5/min</td>
+        <td>You can use attach a `Bot API Key` to these requests if you have one to increase your limit to the standard 25/min.</td>
+      </tr>
+    </tbody>
+  </table>
+</Callout>
+
+<Callout color="#3BFF64">
+  If you need increased rate limits, reach out to us via our [Discord](https://discord.gg/meridiansurf) or email us at hello@meridian.surf.
+</Callout>
