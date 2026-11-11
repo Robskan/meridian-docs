@@ -187,6 +187,13 @@
               "ummm",
               "discord"
             ]
+          },
+          {
+            "group": "Updates",
+            "icon": "book-open-check",
+            "pages": [
+              "launch-date-confirmed"
+            ]
           }
         ],
         "description": "No-code Discord bot builder and hosting"
