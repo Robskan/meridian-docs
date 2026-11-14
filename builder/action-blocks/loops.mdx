@@ -6,6 +6,14 @@ icon: "rotate"
 
 Repeat sections of a flow by condition, count, or collection items. After loop and Break nodes control flow shape.
 
+<Warning>
+  Loops cannot be placed inside another loop. The builder does not allow a **Repeat** or **Repeat for Each** block inside an existing loop body—use non-loop blocks only there, then continue after **After loop** if you need another loop later in the flow.
+</Warning>
+
+<Callout icon="info" color="#6366f1">
+  **Flow format (testers):** The Discord runner only expands **graphJson v3** (`v: 3`). Legacy v1–v2 flows fail at run until you save again. The builder opens legacy flows and writes v3 on save—there is no resave banner in the product yet. If you have an older flow, open it and **save once** to migrate; otherwise run fails.
+</Callout>
+
 Categories mirror the builder block palette. Search the palette or use the links below to jump to a specific block.
 
 ## Blocks
